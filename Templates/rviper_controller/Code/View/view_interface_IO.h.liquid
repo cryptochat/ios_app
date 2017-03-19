@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+
+@protocol {{ prefix }}{{ module_info.name }}ViewInterfaceOutputView <NSObject>
+
+
+@end
+
+@protocol {{ prefix }}{{ module_info.name }}ViewInterfaceInputPresenter <NSObject>
+
+-(void)viewInit;
+
+@end

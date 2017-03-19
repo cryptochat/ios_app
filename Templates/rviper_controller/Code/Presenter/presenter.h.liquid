@@ -1,0 +1,16 @@
+{% include 'header' %}
+
+#import "UiKit/UIViewController.h"
+#import "{{ prefix }}{{ module_info.name }}ViewInterfaceIO.h"
+#import "{{ prefix }}{{ module_info.name }}InteractorInterfaceIO.h"
+#import "{{ prefix }}{{ module_info.name }}Router.h"
+
+
+
+@interface {{ prefix }}{{ module_info.name }}Presenter : NSObject <{{ prefix }}{{ module_info.name }}InteractorInterfaceOutput, {{ prefix }}{{ module_info.name }}ViewInterfaceInputPresenter>
+
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}ViewInterfaceOutputView> userInterface;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorInterfaceInput> interactor;
+@property (nonatomic, strong) {{ prefix }}{{ module_info.name }}Router* router;
+
+@end

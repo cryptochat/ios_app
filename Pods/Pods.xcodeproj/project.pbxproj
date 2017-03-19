@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01ADB8B8DC434C86F482AF09C45D7E46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		2E0283601E70403351353CDBDBDEA2F3 /* Pods-Cryptochat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F30AF3A2FBAB4BA80164ECBDDDB46D8D /* Pods-Cryptochat-dummy.m */; };
+		37059775E27BDA147E57B540241D897D /* Pods-CryptochatUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D8A0F54D45A3A59D9A218CD98784C /* Pods-CryptochatUITests-dummy.m */; };
+		40E4FC35AB4F59F3F38A0D02E67F8C54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		87AEE065B61E714EE757A07DCA9C76BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		E17315917DECC2505B2E022CF25F31E3 /* Pods-CryptochatTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38040D228C903BEE42C475139AB5C6C0 /* Pods-CryptochatTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		065B54DEF0128F22B54DE6B5310CC255 /* Pods-CryptochatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		295F22F04DC8D0181914ED6542F74792 /* Pods-CryptochatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D14CE887145C371D461565ECA437F2B /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CryptochatUITests.a"; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC160F6B840531428B5462A5272903E /* libPods-CryptochatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CryptochatTests.a"; path = "libPods-CryptochatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		339743662239DC0F1C009D0A7610FFC8 /* Pods-CryptochatTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptochatTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		38040D228C903BEE42C475139AB5C6C0 /* Pods-CryptochatTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptochatTests-dummy.m"; sourceTree = "<group>"; };
+		3ED7FE597AC13420A7AFDF886A4ECDD5 /* Pods-CryptochatUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptochatUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4838B5A7CD326A763BD00261EC5EB908 /* Pods-Cryptochat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cryptochat-acknowledgements.plist"; sourceTree = "<group>"; };
+		64562D2688DA6B31A8823CA366A92166 /* Pods-CryptochatUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CryptochatUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7025AA9BD4D431CE8DCC5C1E38D66D3A /* Pods-Cryptochat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cryptochat-frameworks.sh"; sourceTree = "<group>"; };
+		7E3C5AC76E6CF241BCB2743887809F64 /* Pods-CryptochatTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatTests-resources.sh"; sourceTree = "<group>"; };
+		7E9806A08F4EA9D61B7C73703EF09EA6 /* Pods-CryptochatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E9D8A0F54D45A3A59D9A218CD98784C /* Pods-CryptochatUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptochatUITests-dummy.m"; sourceTree = "<group>"; };
+		81697C8264B1069058E9BA3160E370B8 /* Pods-Cryptochat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptochat.release.xcconfig"; sourceTree = "<group>"; };
+		910CDE9D418E56441F60629A1433B874 /* Pods-Cryptochat-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cryptochat-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DBB29B979CBF54E977F05E42F5563BD /* Pods-CryptochatUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatUITests-resources.sh"; sourceTree = "<group>"; };
+		A5EEE49563F5C396734B8CC83D598EDF /* Pods-CryptochatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatTests.release.xcconfig"; sourceTree = "<group>"; };
+		AC8823EDA465BB0DA61741A2A03032FB /* Pods-Cryptochat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cryptochat-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B41BA1080D704A62A6837B70AF284E09 /* Pods-CryptochatUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C180DA8560D4BDC1EEA12D2AA9446FA7 /* Pods-CryptochatTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CryptochatTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC34C82D43C59D7477D3C440271CFFBB /* Pods-CryptochatTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatTests-frameworks.sh"; sourceTree = "<group>"; };
+		E4023DC8B763716041361297CDDFAE3F /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Cryptochat.a"; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B4FBBEB24A3F88DA2331D1A4716647 /* Pods-Cryptochat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptochat.debug.xcconfig"; sourceTree = "<group>"; };
+		F30AF3A2FBAB4BA80164ECBDDDB46D8D /* Pods-Cryptochat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cryptochat-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2683ECF2D98CF52B8CE41324FA95D58A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87AEE065B61E714EE757A07DCA9C76BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0F3DEB36BE99981A87889EFB2CDC4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E4FC35AB4F59F3F38A0D02E67F8C54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1A9AF71A97C9AB6A1FEB809748854A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ADB8B8DC434C86F482AF09C45D7E46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AB97BE4F405625AEB919985D64385A7 /* Pods-Cryptochat */ = {
+			isa = PBXGroup;
+			children = (
+				AC8823EDA465BB0DA61741A2A03032FB /* Pods-Cryptochat-acknowledgements.markdown */,
+				4838B5A7CD326A763BD00261EC5EB908 /* Pods-Cryptochat-acknowledgements.plist */,
+				F30AF3A2FBAB4BA80164ECBDDDB46D8D /* Pods-Cryptochat-dummy.m */,
+				7025AA9BD4D431CE8DCC5C1E38D66D3A /* Pods-Cryptochat-frameworks.sh */,
+				910CDE9D418E56441F60629A1433B874 /* Pods-Cryptochat-resources.sh */,
+				E6B4FBBEB24A3F88DA2331D1A4716647 /* Pods-Cryptochat.debug.xcconfig */,
+				81697C8264B1069058E9BA3160E370B8 /* Pods-Cryptochat.release.xcconfig */,
+			);
+			name = "Pods-Cryptochat";
+			path = "Target Support Files/Pods-Cryptochat";
+			sourceTree = "<group>";
+		};
+		4BE1C738382DD97A4DA1B5D83347C1E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4023DC8B763716041361297CDDFAE3F /* libPods-Cryptochat.a */,
+				2EC160F6B840531428B5462A5272903E /* libPods-CryptochatTests.a */,
+				2D14CE887145C371D461565ECA437F2B /* libPods-CryptochatUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4BE1C738382DD97A4DA1B5D83347C1E9 /* Products */,
+				AA200B52B325643ECF4ECAC9500BC21C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AA200B52B325643ECF4ECAC9500BC21C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AB97BE4F405625AEB919985D64385A7 /* Pods-Cryptochat */,
+				ACFE615DF2C0058AE307F1D3B4FD13FF /* Pods-CryptochatTests */,
+				CEA082C3CE3800EAF4B641ACAE45FC33 /* Pods-CryptochatUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ACFE615DF2C0058AE307F1D3B4FD13FF /* Pods-CryptochatTests */ = {
+			isa = PBXGroup;
+			children = (
+				C180DA8560D4BDC1EEA12D2AA9446FA7 /* Pods-CryptochatTests-acknowledgements.markdown */,
+				339743662239DC0F1C009D0A7610FFC8 /* Pods-CryptochatTests-acknowledgements.plist */,
+				38040D228C903BEE42C475139AB5C6C0 /* Pods-CryptochatTests-dummy.m */,
+				DC34C82D43C59D7477D3C440271CFFBB /* Pods-CryptochatTests-frameworks.sh */,
+				7E3C5AC76E6CF241BCB2743887809F64 /* Pods-CryptochatTests-resources.sh */,
+				065B54DEF0128F22B54DE6B5310CC255 /* Pods-CryptochatTests.debug.xcconfig */,
+				A5EEE49563F5C396734B8CC83D598EDF /* Pods-CryptochatTests.release.xcconfig */,
+			);
+			name = "Pods-CryptochatTests";
+			path = "Target Support Files/Pods-CryptochatTests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEA082C3CE3800EAF4B641ACAE45FC33 /* Pods-CryptochatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64562D2688DA6B31A8823CA366A92166 /* Pods-CryptochatUITests-acknowledgements.markdown */,
+				3ED7FE597AC13420A7AFDF886A4ECDD5 /* Pods-CryptochatUITests-acknowledgements.plist */,
+				7E9D8A0F54D45A3A59D9A218CD98784C /* Pods-CryptochatUITests-dummy.m */,
+				B41BA1080D704A62A6837B70AF284E09 /* Pods-CryptochatUITests-frameworks.sh */,
+				9DBB29B979CBF54E977F05E42F5563BD /* Pods-CryptochatUITests-resources.sh */,
+				295F22F04DC8D0181914ED6542F74792 /* Pods-CryptochatUITests.debug.xcconfig */,
+				7E9806A08F4EA9D61B7C73703EF09EA6 /* Pods-CryptochatUITests.release.xcconfig */,
+			);
+			name = "Pods-CryptochatUITests";
+			path = "Target Support Files/Pods-CryptochatUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E5F042AB0B347CD3A718CF032571FD7 /* Pods-CryptochatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 226CC5027C4A449147308B293A57D6E8 /* Build configuration list for PBXNativeTarget "Pods-CryptochatUITests" */;
+			buildPhases = (
+				70601901C54A177AF9A4D63A314350C2 /* Sources */,
+				4C0F3DEB36BE99981A87889EFB2CDC4F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CryptochatUITests";
+			productName = "Pods-CryptochatUITests";
+			productReference = 2D14CE887145C371D461565ECA437F2B /* libPods-CryptochatUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A3F3E482A762F278B61EE9B275138473 /* Pods-CryptochatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B265083B02F132C4A5D6F53B7DD3C7E0 /* Build configuration list for PBXNativeTarget "Pods-CryptochatTests" */;
+			buildPhases = (
+				DB8B7CA463BCA876AC5B2C3A45FCD17B /* Sources */,
+				B1A9AF71A97C9AB6A1FEB809748854A8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CryptochatTests";
+			productName = "Pods-CryptochatTests";
+			productReference = 2EC160F6B840531428B5462A5272903E /* libPods-CryptochatTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA1190EA6308D4F89EFFC6011A431F4F /* Pods-Cryptochat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF789F622650DB468135C913962FBF8D /* Build configuration list for PBXNativeTarget "Pods-Cryptochat" */;
+			buildPhases = (
+				837B21938CDB1C51AEC9C071A539B779 /* Sources */,
+				2683ECF2D98CF52B8CE41324FA95D58A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Cryptochat";
+			productName = "Pods-Cryptochat";
+			productReference = E4023DC8B763716041361297CDDFAE3F /* libPods-Cryptochat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4BE1C738382DD97A4DA1B5D83347C1E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA1190EA6308D4F89EFFC6011A431F4F /* Pods-Cryptochat */,
+				A3F3E482A762F278B61EE9B275138473 /* Pods-CryptochatTests */,
+				6E5F042AB0B347CD3A718CF032571FD7 /* Pods-CryptochatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70601901C54A177AF9A4D63A314350C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37059775E27BDA147E57B540241D897D /* Pods-CryptochatUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837B21938CDB1C51AEC9C071A539B779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0283601E70403351353CDBDBDEA2F3 /* Pods-Cryptochat-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB8B7CA463BCA876AC5B2C3A45FCD17B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17315917DECC2505B2E022CF25F31E3 /* Pods-CryptochatTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4429EC709C2E34D4C8E19FD583DB0E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5EEE49563F5C396734B8CC83D598EDF /* Pods-CryptochatTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CDCD7F17B447727E4FE600C2B939392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6B4FBBEB24A3F88DA2331D1A4716647 /* Pods-Cryptochat.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9D79BFD4399488EE644874D122BFC03B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 065B54DEF0128F22B54DE6B5310CC255 /* Pods-CryptochatTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D2105B7F45F3D6C1A3FD52AF5FFDE6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 295F22F04DC8D0181914ED6542F74792 /* Pods-CryptochatUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D928E1D55A83FA4AB5824061D0167E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81697C8264B1069058E9BA3160E370B8 /* Pods-Cryptochat.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E8EC7ECD6A73C0CD3991702438A6C050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9806A08F4EA9D61B7C73703EF09EA6 /* Pods-CryptochatUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		226CC5027C4A449147308B293A57D6E8 /* Build configuration list for PBXNativeTarget "Pods-CryptochatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2105B7F45F3D6C1A3FD52AF5FFDE6FA /* Debug */,
+				E8EC7ECD6A73C0CD3991702438A6C050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B265083B02F132C4A5D6F53B7DD3C7E0 /* Build configuration list for PBXNativeTarget "Pods-CryptochatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D79BFD4399488EE644874D122BFC03B /* Debug */,
+				4429EC709C2E34D4C8E19FD583DB0E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF789F622650DB468135C913962FBF8D /* Build configuration list for PBXNativeTarget "Pods-Cryptochat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CDCD7F17B447727E4FE600C2B939392 /* Debug */,
+				D928E1D55A83FA4AB5824061D0167E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

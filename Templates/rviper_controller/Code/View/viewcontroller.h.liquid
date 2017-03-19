@@ -1,0 +1,11 @@
+{% include 'header' %}
+
+#import <UIKit/UIKit.h>
+
+#import "{{ prefix }}{{ module_info.name }}ViewInterfaceIO.h"
+
+@interface {{ prefix }}{{ module_info.name }}ViewController : UIViewController <{{ prefix }}{{ module_info.name }}ViewInterfaceOutputView>
+
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}ViewInterfaceInputPresenter> presenter;
+
+@end

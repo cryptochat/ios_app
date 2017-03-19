@@ -1,0 +1,102 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Router.h"
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}Interactor.h"
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+#import "UiKit/UIViewController.h"
+#import "UiKit/UINavigationController.h"
+#import "UiKit/UIView.h"
+
+
+
+
+#warning Заполните данные ниже
+static NSString* nameStoryboard = @"";
+static NSString* identifierViewController = @"";
+
+@interface {{ prefix }}{{ module_info.name }}Router()
+
+@property(weak, nonatomic){{ prefix }}{{ module_info.name }}ViewController *userInterface;
+@property(weak, nonatomic){{ prefix }}{{ module_info.name }}Presenter *presenter;
+
+@end
+
+
+@implementation {{ prefix }}{{ module_info.name }}Router
+
+// NavigationController
+/*
+-(void)present{{ prefix }}{{ module_info.name }}InterfaceFromViewController:(UIViewController*)viewController{
+
+     {{ prefix }}{{ module_info.name }}ViewController* userInterface = [self {{ prefix }}{{ module_info.name }}ViewControllerFromStoryboard];
+
+     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:userInterface];
+
+     self.userInterface = userInterface;
+     [self configureDependencies];
+
+     [viewController.view addSubview:navController.view];
+     [viewController addChildViewController:navController];
+     [navController didMoveToParentViewController:viewController];
+}
+*/
+
+//ViewController
+/*
+-(void)present{{ prefix }}{{ module_info.name }}InterfaceFromViewController:(UIViewController*)viewController{
+
+     {{ prefix }}{{ module_info.name }}ViewController* userInterface = [self {{ prefix }}{{ module_info.name }}ViewControllerFromStoryboard];
+
+     self.userInterface = userInterface;
+     [self configureDependencies];
+
+     [viewController.view addSubview:userInterface.view];
+     [viewController addChildViewController:userInterface];
+     [userInterface didMoveToParentViewController:viewController];
+}
+*/
+
+//View Piece
+/*
+-(void)present{{ prefix }}{{ module_info.name }}InterfaceFromViewController:(UIViewController*)viewController container:(UIView*)container{
+
+    {{ prefix }}{{ module_info.name }}ViewController* userInterface = [self {{ prefix }}{{ module_info.name }}ViewControllerFromStoryboard];
+    self.userInterface = userInterface;
+    [self configureDependencies];
+
+    [container addSubview:userInterface.view];
+    [viewController addChildViewController:userInterface];
+    [userInterface didMoveToParentViewController:viewController];
+    [userInterface.view setFrame:container.bounds];
+}
+
+*/
+
+-(void)configureDependencies{
+    {{ prefix }}{{ module_info.name }}Interactor * interactor = [{{ prefix }}{{ module_info.name }}Interactor new];
+    {{ prefix }}{{ module_info.name }}Presenter * presenter = [{{ prefix }}{{ module_info.name }}Presenter new];
+
+    presenter.router = self;
+    self.presenter = presenter;
+
+    self.userInterface.presenter = presenter;
+    self.presenter.userInterface = self.userInterface;
+
+    self.presenter.interactor = interactor;
+    interactor.presenter = presenter;
+}
+
+-({{ prefix }}{{ module_info.name }}ViewController*){{ prefix }}{{ module_info.name }}ViewControllerFromStoryboard{
+    UIStoryboard* storyboard = [self userStoryboard];
+    {{ prefix }}{{ module_info.name }}ViewController *vc = (id) [storyboard instantiateViewControllerWithIdentifier:identifierViewController];
+    return vc;
+}
+
+-(UIStoryboard*)userStoryboard{
+    return [UIStoryboard storyboardWithName:nameStoryboard bundle:[NSBundle mainBundle]];
+}
+
+
+
+@end

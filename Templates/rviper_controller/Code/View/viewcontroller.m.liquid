@@ -1,0 +1,20 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+
+
+@implementation {{ prefix }}{{ module_info.name }}ViewController
+
+#pragma mark - Методы жизненного цикла
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+
+	[self.presenter viewInit];
+}
+
+#pragma mark - {{ prefix }}{{ module_info.name }}ViewInterfaceOutputView <NSObject>
+
+
+
+@end

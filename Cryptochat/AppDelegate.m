@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CRMediator.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [CRMediator instance].window = self.window;
+    
+    [[CRMediator instance]showAuthorization];
+    
     return YES;
 }
 
