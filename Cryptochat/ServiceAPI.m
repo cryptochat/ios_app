@@ -17,6 +17,7 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
 }
 
 
+#pragma mark - Authorization
 -(void)getPublicKeyWithCompleteResponse:(APIServiceResponse)completeResponse{
     
     NSString* url = @"http://wishbyte.org/api/v1/key_exchanger/get_public";
@@ -33,6 +34,29 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
         NSLog(@"%@", url);
         completeResponse(dicReponse, status);
     }];
+}
+
+- (void)sendMyPublicKeyToServer:(NSString *)myPublicKey identifier:(NSString *)identifier complete:(APIServiceResponse)completeResponse {
+    
+    NSString* urlString = [NSString stringWithFormat:@"%@/key_exchanger/send_public", BASE_API_URL];
+    
+    NSURLComponents* components = [[NSURLComponents alloc] initWithString:urlString];
+    
+    NSURLQueryItem *itemIdentifier = [NSURLQueryItem queryItemWithName:@"identifier" value:identifier];
+    NSURLQueryItem *itemPublicKey = [NSURLQueryItem queryItemWithName:@"public_key" value:myPublicKey];
+    components.queryItems = @[itemIdentifier, itemPublicKey];
+    
+    NSMutableURLRequest* request = [NSMutableURLRequest new];
+    request.URL = components.URL;
+    request.HTTPMethod = @"POST";
+    
+    [self addRequestContentType:request];
+    
+    [TransportLayer fetchRequest:request complete:^(NSDictionary *dicReponse, TransportResponseStatus status, NSData* data) {
+        NSLog(@"%@", urlString);
+        completeResponse(dicReponse, status);
+    }];
+
 }
 
 -(void)authUserWithIndetifier:(NSString*)identifier email:(NSString*)email password:(NSString*)password completeResponse:(APIServiceResponse)completeResponse{

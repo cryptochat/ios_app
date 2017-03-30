@@ -19,6 +19,7 @@
 @end
 
 @implementation AuthService
+
 -(instancetype)init{
     self = [super init];
     if(self){
@@ -26,6 +27,16 @@
         self.authParser = [AuthParser new];
     }
     return self;
+}
+
+- (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse {
+    [self.serviceAPI getPublicKeyWithCompleteResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
+        
+    }];
+}
+
+- (void)sendMyPublicKeyToServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse {
+    self.serviceAPI
 }
 
 -(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, AuthorizationModel* model ))completeResponse{
