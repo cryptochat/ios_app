@@ -11,10 +11,12 @@
 #import "AuthorizationModel.h"
 #import "AuthViewModel.h"
 #import "AuthParser.h"
+#import "Base64Coder.h"
 
 @interface AuthService()
 @property(strong, nonatomic)ServiceAPI* serviceAPI;
 @property(strong, nonatomic)AuthParser* authParser;
+@property(strong, nonatomic)Base64Coder* base64Coder;
 
 @end
 
@@ -25,18 +27,25 @@
     if(self){
         self.serviceAPI = [ServiceAPI new];
         self.authParser = [AuthParser new];
+        self.base64Coder = [Base64Coder new];
     }
     return self;
 }
 
-- (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse {
+- (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey, NSString *identifier))completeResponse {
     [self.serviceAPI getPublicKeyWithCompleteResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
-        
+        if (status != TransportResponseStatusSuccess) {
+            completeResponse (status, nil, nil);
+        } else {
+            NSString *decodedKey = [self.base64Coder decodedBase64StringFromString:dicReponse[@"public_key"]];
+            NSData *publicKey = [decodedKey dataUsingEncoding:NSUTF8StringEncoding];
+            completeResponse (status, publicKey, dicReponse[@"identifier"]);
+        }
     }];
 }
 
 - (void)sendMyPublicKeyToServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse {
-    self.serviceAPI
+    //self.serviceAPI
 }
 
 -(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, AuthorizationModel* model ))completeResponse{

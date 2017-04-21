@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "CRMediator.h"
 
+#import "AuthService.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,6 +24,11 @@
     [CRMediator instance].window = self.window;
     
     [[CRMediator instance]showAuthorization];
+    
+    AuthService *service = [AuthService new];
+    [service getPublicKeyFromServerWithComplete:^(TransportResponseStatus status, NSData *publicKey, NSString *identifier) {
+        
+    }];
     
     return YES;
 }
