@@ -15,6 +15,5 @@
 @property(strong, nonatomic)NSString* firstName;
 @property(strong, nonatomic)NSString* lastName;
 @property(strong, nonatomic)NSString* token;
-@property(strong, nonatomic)NSString* errorLogin;
-@property(strong, nonatomic)NSString* errorPassword;
+@property(assign, nonatomic)BOOL isValid;
 @end

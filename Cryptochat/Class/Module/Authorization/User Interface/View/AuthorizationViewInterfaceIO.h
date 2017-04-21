@@ -10,7 +10,9 @@
 #import "AuthViewModel.h"
 
 @protocol AuthorizationViewInterfaceOutputView <NSObject>
-
+-(void)showAlertMessage:(NSString *)message;
+-(void)showProgress;
+-(void)hideProgress;
 
 @end
 
@@ -18,5 +20,6 @@
 
 -(void)viewInit;
 -(void)authUserWithModel:(AuthViewModel*)model;
+
 
 @end

@@ -18,20 +18,15 @@
     }
     
     AuthorizationModel* authModel = [AuthorizationModel new];
-    if([dicResponse[@"status"] isEqualToString:@"400"]){
-        authModel.errorLogin = dicResponse[@"errors"][@"login"];
-        authModel.errorPassword =dicResponse[@"errors"][@"password"];
-        
-    }
-    
-    if([dicResponse[@"status"] isEqualToString:@"OK"]){
-        authModel.uuid = dicResponse[@"uuid"];
-        authModel.email = dicResponse[@"email"];
-        authModel.username = dicResponse[@"username"];
-        authModel.firstName = dicResponse[@"first_name"];
-        authModel.lastName = dicResponse[@"last_name"];
-        authModel.token = dicResponse[@"token"];
-    }
+
+    authModel.uuid = dicResponse[@"data"][@"uuid"];
+    authModel.email = dicResponse[@"data"][@"email"];
+    authModel.username = dicResponse[@"data"][@"username"];
+    authModel.firstName = dicResponse[@"data"][@"first_name"];
+    authModel.lastName = dicResponse[@"data"][@"last_name"];
+    authModel.token = dicResponse[@"data"][@"token"];
+    authModel.isValid = YES;
+
     return authModel;
 }
 @end

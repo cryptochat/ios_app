@@ -37,31 +37,29 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
 
 -(void)authUserWithIndetifier:(NSString*)identifier email:(NSString*)email password:(NSString*)password completeResponse:(APIServiceResponse)completeResponse{
     
-    NSString* url = @"http://wishbyte.org/api/v1/users/auth";
+    NSString* strURL = @"http://wishbyte.org/api/v1/users/auth";
     
-    NSURLComponents* components = [[NSURLComponents alloc] initWithString:url];
+    NSURLQueryItem* itemPassword = [[NSURLQueryItem alloc] initWithName:@"password" value:password];
+    NSURLQueryItem* itemEmail = [[NSURLQueryItem alloc] initWithName:@"email" value:email];
+    NSURLQueryItem* itemIdentifier = [[NSURLQueryItem alloc] initWithName:@"identifier" value:identifier];
+    
+    NSURLComponents* components = [[NSURLComponents alloc] initWithURL:[NSURL URLWithString:strURL] resolvingAgainstBaseURL:NO];
+    components.queryItems = @[itemPassword, itemEmail, itemIdentifier];
     
     NSMutableURLRequest* request = [NSMutableURLRequest new];
+    
     request.URL = components.URL;
     request.HTTPMethod = @"POST";
-    
-    NSDictionary *jsonDictionary = @{
-                                     @"identifier" : email,
-                                     @"data[email]" : password,
-                                     @"data[password]" : identifier,
-                                     };
-    
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:jsonDictionary
-                                                       options:NSJSONWritingPrettyPrinted error:nil];
-    
-    request.HTTPBody = jsonData;
-    
-    [self addRequestContentType:request];
+    request.HTTPBody = [[components percentEncodedQuery] dataUsingEncoding:NSUTF8StringEncoding];
+    [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     
     [TransportLayer fetchRequest:request complete:^(NSDictionary *dicReponse, TransportResponseStatus status, NSData* data) {
-        NSLog(@"%@", url);
+        
+        NSLog(@"%@", strURL);
         completeResponse(dicReponse, status);
     }];
+    
+    
 }
 
 

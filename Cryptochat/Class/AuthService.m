@@ -29,14 +29,17 @@
 }
 
 -(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, AuthorizationModel* model ))completeResponse{
-    [_serviceAPI authUserWithIndetifier:@"4fffbcc4-89a8-4016-a6fb-542f8c603bea" email:authViewModel.email password:authViewModel.password completeResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
+    
+#warning MOCK IDENTIFIER
+    [_serviceAPI authUserWithIndetifier:@"76c93ee0-20e3-4340-ab7b-ef1c2371dcda" email:authViewModel.email password:authViewModel.password completeResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
         if(status == TransportResponseStatusSuccess){
+
+            AuthorizationModel* authModel = [_authParser createAuthorizationModelFromResponse:dicReponse];
+            completeResponse(status, authModel );
             
-            //AuthorizationModel* authModel = [_authParser createAuthorizationModelFromResponse:dicReponse];
-            //completeResponse(status, authModel );
             
         }else{
-            //completeResponse(status, nil);
+            completeResponse(status, nil);
         }
         
     }];
