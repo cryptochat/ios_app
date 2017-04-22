@@ -34,18 +34,20 @@
 
 - (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey, NSString *identifier))completeResponse {
     [self.serviceAPI getPublicKeyWithCompleteResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
-        if (status != TransportResponseStatusSuccess) {
+        if (status != TransportResponseStatusSuccess || !dicReponse) {
             completeResponse (status, nil, nil);
         } else {
-            NSString *decodedKey = [self.base64Coder decodedBase64StringFromString:dicReponse[@"public_key"]];
-            NSData *publicKey = [decodedKey dataUsingEncoding:NSUTF8StringEncoding];
-            completeResponse (status, publicKey, dicReponse[@"identifier"]);
+            NSData *decodedKey = [self.base64Coder decodedBase64StringFromString:dicReponse[@"public_key"]];
+            completeResponse (status, decodedKey, dicReponse[@"identifier"]);
         }
     }];
 }
 
-- (void)sendMyPublicKeyToServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse {
-    //self.serviceAPI
+- (void)sendMyPublicKeyToServer:(NSData *)myPublicKey identifier:(NSString *)identifier complete:(void (^)(TransportResponseStatus status))completeResponse {
+    NSString *base64Key = [self.base64Coder encodedStringFromBase64Data:myPublicKey];
+    [self.serviceAPI sendMyPublicKeyToServer:base64Key identifier:identifier complete:^(NSDictionary *dicReponse, TransportResponseStatus status) {
+        completeResponse (status);
+    }];
 }
 
 -(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, AuthorizationModel* model ))completeResponse{

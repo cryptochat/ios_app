@@ -10,6 +10,9 @@
 #import "CRMediator.h"
 
 #import "AuthService.h"
+#import <Curve25519.h>
+#import <Ed25519.h>
+
 
 @interface AppDelegate ()
 
@@ -27,7 +30,12 @@
     
     AuthService *service = [AuthService new];
     [service getPublicKeyFromServerWithComplete:^(TransportResponseStatus status, NSData *publicKey, NSString *identifier) {
+        ECKeyPair *curve25519Key = [Curve25519 generateKeyPair];
+        NSData *sharedSecret = [Curve25519 generateSharedSecretFromPublicKey:publicKey andKeyPair:curve25519Key];
         
+        [service sendMyPublicKeyToServer:sharedSecret identifier:identifier complete:^(TransportResponseStatus status) {
+            NSLog(@"%ld",(long)status);
+        }];
     }];
     
     return YES;

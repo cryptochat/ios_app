@@ -14,6 +14,6 @@
 @interface AuthService : NSObject
 
 - (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey, NSString *identifier))completeResponse;
-- (void)sendMyPublicKeyToServer:(NSString *)myPublicKey identifier:(NSString *)identifier complete:(void (^)(TransportResponseStatus status))completeResponse;
+- (void)sendMyPublicKeyToServer:(NSData *)myPublicKey identifier:(NSString *)identifier complete:(void (^)(TransportResponseStatus status))completeResponse;
 -(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, AuthorizationModel* model ))completeResponse;
 @end
