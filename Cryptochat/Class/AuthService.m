@@ -12,12 +12,13 @@
 #import "AuthViewModel.h"
 #import "AuthParser.h"
 #import "Base64Coder.h"
+#import "KeyChainService.h"
 
 @interface AuthService()
-@property(strong, nonatomic)ServiceAPI* serviceAPI;
-@property(strong, nonatomic)AuthParser* authParser;
-@property(strong, nonatomic)Base64Coder* base64Coder;
-
+@property (strong, nonatomic) ServiceAPI* serviceAPI;
+@property (strong, nonatomic) AuthParser* authParser;
+@property (strong, nonatomic) Base64Coder* base64Coder;
+@property (strong, nonatomic) KeyChainService* keyChainService;
 @end
 
 @implementation AuthService
@@ -28,24 +29,29 @@
         self.serviceAPI = [ServiceAPI new];
         self.authParser = [AuthParser new];
         self.base64Coder = [Base64Coder new];
+        self.keyChainService = [KeyChainService new];
     }
     return self;
 }
 
-- (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey, NSString *identifier))completeResponse {
+- (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey))completeResponse {
     [self.serviceAPI getPublicKeyWithCompleteResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
         if (status != TransportResponseStatusSuccess || !dicReponse) {
-            completeResponse (status, nil, nil);
+            completeResponse (status, nil);
         } else {
             NSData *decodedKey = [self.base64Coder decodedBase64StringFromString:dicReponse[@"public_key"]];
-            completeResponse (status, decodedKey, dicReponse[@"identifier"]);
+            [self.keyChainService saveIdentifier:dicReponse[@"identifier"]];
+            
+            completeResponse (status, decodedKey);
         }
     }];
 }
 
-- (void)sendMyPublicKeyToServer:(NSData *)myPublicKey identifier:(NSString *)identifier complete:(void (^)(TransportResponseStatus status))completeResponse {
-    NSString *base64Key = [self.base64Coder encodedStringFromBase64Data:myPublicKey];
-    [self.serviceAPI sendMyPublicKeyToServer:base64Key identifier:identifier complete:^(NSDictionary *dicReponse, TransportResponseStatus status) {
+- (void)sendMyPublicKeyToServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse {
+    
+    NSString *base64Key = [self.base64Coder encodedStringFromBase64Data:[self.keyChainService getPublicKey]];
+    [self.serviceAPI sendMyPublicKeyToServer:base64Key identifier:[self.keyChainService getIdentifier]
+                                    complete:^(NSDictionary *dicReponse, TransportResponseStatus status) {
         completeResponse (status);
     }];
 }

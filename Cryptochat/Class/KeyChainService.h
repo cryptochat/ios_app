@@ -10,7 +10,13 @@
 
 @interface KeyChainService : NSObject
 
-- (void)saveMyPublicKeyToKeyChain:(NSString *)puplicKey;
-- (NSString *)myPublicKeyFromKeyChain;
+- (void)createMySharedKeyFromPublicKey:(NSData *)publicKey;
+- (NSData *)mySharedKeyFromKeyChain;
 
+//Identifier
+- (void)saveIdentifier:(NSString *)identifier;
+- (NSString *)getIdentifier;
+
+//PublicKey
+- (NSData *)getPublicKey;
 @end
