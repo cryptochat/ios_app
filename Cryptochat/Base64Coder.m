@@ -11,7 +11,12 @@
 @implementation Base64Coder
 
 - (NSString *)encodedStringFromBase64Data:(NSData *)base64Data {
-    return [base64Data base64EncodedStringWithOptions:0];
+    NSString *base64String = [base64Data base64EncodedStringWithOptions:0];
+    base64String = [base64String stringByReplacingOccurrencesOfString:@"/"
+                                                           withString:@"_"];
+    base64String = [base64String stringByReplacingOccurrencesOfString:@"+"
+                                                           withString:@"-"];
+    return base64String;
 }
 
 - (NSData *)decodedBase64StringFromString:(NSString *)base64String {
