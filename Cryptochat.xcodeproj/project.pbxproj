@@ -17,11 +17,16 @@
 		200243111B9802721A364448 /* libPods-Cryptochat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */; };
 		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
 		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
+		5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F04FB851EAD09C8007D5EBE /* CryptoService.m */; };
 		5F4ED2601EAA577D0055D605 /* RSProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED25F1EAA577D0055D605 /* RSProgress.m */; };
+		5F4ED2641EAB82A30055D605 /* RealmDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2631EAB82A30055D605 /* RealmDataStore.m */; };
+		5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2661EAB83410055D605 /* UserAuthModel.m */; };
+		5F4ED26D1EAB84160055D605 /* UserAuthRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED26A1EAB84160055D605 /* UserAuthRealm.m */; };
+		5F4ED26E1EAB84160055D605 /* UserAuthRealm+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED26C1EAB84160055D605 /* UserAuthRealm+Model.m */; };
+		5F4ED2711EAB842C0055D605 /* UserAuthModel+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2701EAB842C0055D605 /* UserAuthModel+Realm.m */; };
 		5F5C563C1E7EC298002E62E7 /* ServiceAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C563B1E7EC298002E62E7 /* ServiceAPI.m */; };
 		5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C563E1E7EC2B4002E62E7 /* TransportLayer.m */; };
 		5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56421E7EC6AC002E62E7 /* AuthService.m */; };
-		5F5C56471E7EC922002E62E7 /* AuthorizationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56461E7EC922002E62E7 /* AuthorizationModel.m */; };
 		5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56491E7EC956002E62E7 /* AuthParser.m */; };
 		5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0D0551E7E9C86004343A6 /* CRMediator.m */; };
 		5FD0D0581E7E9E02004343A6 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD0D0571E7E9E02004343A6 /* Authorization.storyboard */; };
@@ -80,16 +85,26 @@
 		4BAF65F5891B9BE4AB0FB9A3 /* RegistrationInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractorInterfaceIO.h; sourceTree = "<group>"; };
 		50A1961D5FFF9225E460CA0D /* Pods-Cryptochat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptochat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptochat/Pods-Cryptochat.release.xcconfig"; sourceTree = "<group>"; };
 		5EF843D7506E8027BB67EE8C /* AuthorizationInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractorInterfaceIO.h; sourceTree = "<group>"; };
+		5F04FB841EAD09C8007D5EBE /* CryptoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoService.h; sourceTree = "<group>"; };
+		5F04FB851EAD09C8007D5EBE /* CryptoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoService.m; sourceTree = "<group>"; };
 		5F4ED25E1EAA577D0055D605 /* RSProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProgress.h; sourceTree = "<group>"; };
 		5F4ED25F1EAA577D0055D605 /* RSProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProgress.m; sourceTree = "<group>"; };
+		5F4ED2621EAB82A30055D605 /* RealmDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmDataStore.h; sourceTree = "<group>"; };
+		5F4ED2631EAB82A30055D605 /* RealmDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmDataStore.m; sourceTree = "<group>"; };
+		5F4ED2651EAB83410055D605 /* UserAuthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthModel.h; sourceTree = "<group>"; };
+		5F4ED2661EAB83410055D605 /* UserAuthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthModel.m; sourceTree = "<group>"; };
+		5F4ED2691EAB84160055D605 /* UserAuthRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthRealm.h; sourceTree = "<group>"; };
+		5F4ED26A1EAB84160055D605 /* UserAuthRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthRealm.m; sourceTree = "<group>"; };
+		5F4ED26B1EAB84160055D605 /* UserAuthRealm+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserAuthRealm+Model.h"; sourceTree = "<group>"; };
+		5F4ED26C1EAB84160055D605 /* UserAuthRealm+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserAuthRealm+Model.m"; sourceTree = "<group>"; };
+		5F4ED26F1EAB842C0055D605 /* UserAuthModel+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserAuthModel+Realm.h"; sourceTree = "<group>"; };
+		5F4ED2701EAB842C0055D605 /* UserAuthModel+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserAuthModel+Realm.m"; sourceTree = "<group>"; };
 		5F5C563A1E7EC298002E62E7 /* ServiceAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceAPI.h; sourceTree = "<group>"; };
 		5F5C563B1E7EC298002E62E7 /* ServiceAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceAPI.m; sourceTree = "<group>"; };
 		5F5C563D1E7EC2AC002E62E7 /* TransportLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportLayer.h; sourceTree = "<group>"; };
 		5F5C563E1E7EC2B4002E62E7 /* TransportLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportLayer.m; sourceTree = "<group>"; };
 		5F5C56411E7EC6AC002E62E7 /* AuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
 		5F5C56421E7EC6AC002E62E7 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
-		5F5C56451E7EC922002E62E7 /* AuthorizationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationModel.h; sourceTree = "<group>"; };
-		5F5C56461E7EC922002E62E7 /* AuthorizationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationModel.m; sourceTree = "<group>"; };
 		5F5C56481E7EC956002E62E7 /* AuthParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthParser.h; sourceTree = "<group>"; };
 		5F5C56491E7EC956002E62E7 /* AuthParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthParser.m; sourceTree = "<group>"; };
 		5FD0D0541E7E9C86004343A6 /* CRMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRMediator.h; sourceTree = "<group>"; };
@@ -182,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				5F4ED25D1EAA57600055D605 /* Libs */,
+				5F4ED2611EAB82820055D605 /* Realm */,
 				5FD0D04E1E7E99DA004343A6 /* Common */,
 				A3DD76720BE00B65D2099355 /* Class */,
 				5FD0D04F1E7E99E4004343A6 /* Resources */,
@@ -248,6 +264,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5F04FB821EAD0989007D5EBE /* Auth Service */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C56441E7EC90F002E62E7 /* Model */,
+				5F5C56411E7EC6AC002E62E7 /* AuthService.h */,
+				5F5C56421E7EC6AC002E62E7 /* AuthService.m */,
+				5F5C56481E7EC956002E62E7 /* AuthParser.h */,
+				5F5C56491E7EC956002E62E7 /* AuthParser.m */,
+			);
+			name = "Auth Service";
+			sourceTree = "<group>";
+		};
+		5F04FB831EAD0998007D5EBE /* Crypto Service */ = {
+			isa = PBXGroup;
+			children = (
+				5F04FB841EAD09C8007D5EBE /* CryptoService.h */,
+				5F04FB851EAD09C8007D5EBE /* CryptoService.m */,
+			);
+			name = "Crypto Service";
+			sourceTree = "<group>";
+		};
 		5F4ED25D1EAA57600055D605 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +292,27 @@
 				5F4ED25F1EAA577D0055D605 /* RSProgress.m */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		5F4ED2611EAB82820055D605 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				5F4ED2681EAB84010055D605 /* UserAuthRealm */,
+				5F4ED2621EAB82A30055D605 /* RealmDataStore.h */,
+				5F4ED2631EAB82A30055D605 /* RealmDataStore.m */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		5F4ED2681EAB84010055D605 /* UserAuthRealm */ = {
+			isa = PBXGroup;
+			children = (
+				5F4ED2691EAB84160055D605 /* UserAuthRealm.h */,
+				5F4ED26A1EAB84160055D605 /* UserAuthRealm.m */,
+				5F4ED26B1EAB84160055D605 /* UserAuthRealm+Model.h */,
+				5F4ED26C1EAB84160055D605 /* UserAuthRealm+Model.m */,
+			);
+			name = UserAuthRealm;
 			sourceTree = "<group>";
 		};
 		5F5C56391E7EC26F002E62E7 /* Network */ = {
@@ -271,11 +329,8 @@
 		5F5C56401E7EC56D002E62E7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				5F5C56441E7EC90F002E62E7 /* Model */,
-				5F5C56411E7EC6AC002E62E7 /* AuthService.h */,
-				5F5C56421E7EC6AC002E62E7 /* AuthService.m */,
-				5F5C56481E7EC956002E62E7 /* AuthParser.h */,
-				5F5C56491E7EC956002E62E7 /* AuthParser.m */,
+				5F04FB831EAD0998007D5EBE /* Crypto Service */,
+				5F04FB821EAD0989007D5EBE /* Auth Service */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -283,8 +338,10 @@
 		5F5C56441E7EC90F002E62E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5F5C56451E7EC922002E62E7 /* AuthorizationModel.h */,
-				5F5C56461E7EC922002E62E7 /* AuthorizationModel.m */,
+				5F4ED2651EAB83410055D605 /* UserAuthModel.h */,
+				5F4ED2661EAB83410055D605 /* UserAuthModel.m */,
+				5F4ED26F1EAB842C0055D605 /* UserAuthModel+Realm.h */,
+				5F4ED2701EAB842C0055D605 /* UserAuthModel+Realm.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -733,15 +790,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FD0D05F1E7EBE50004343A6 /* AuthViewModel.m in Sources */,
-				5F5C56471E7EC922002E62E7 /* AuthorizationModel.m in Sources */,
 				0F5373F31E7E78790003926E /* AppDelegate.m in Sources */,
 				0F5373F01E7E78790003926E /* main.m in Sources */,
 				5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */,
+				5F4ED2641EAB82A30055D605 /* RealmDataStore.m in Sources */,
+				5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */,
 				F2E8DA58E6E02E7D219B4AA3 /* AuthorizationInteractor.m in Sources */,
 				6C5B21080CA3E52A582B223A /* AuthorizationRouter.m in Sources */,
+				5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */,
 				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
 				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,
+				5F4ED26D1EAB84160055D605 /* UserAuthRealm.m in Sources */,
 				BCD77F861FAD8A3447A909C3 /* AuthorizationPresenter.m in Sources */,
+				5F4ED2711EAB842C0055D605 /* UserAuthModel+Realm.m in Sources */,
 				C9FC6DE5D57B0A5C5E382A1B /* AuthorizationViewController.m in Sources */,
 				ADD6A39AFFF766D6D8252C14 /* RegistrationInteractor.m in Sources */,
 				2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */,
@@ -749,6 +810,7 @@
 				5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */,
 				5F4ED2601EAA577D0055D605 /* RSProgress.m in Sources */,
 				5F5C563C1E7EC298002E62E7 /* ServiceAPI.m in Sources */,
+				5F4ED26E1EAB84160055D605 /* UserAuthRealm+Model.m in Sources */,
 				31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

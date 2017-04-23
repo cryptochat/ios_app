@@ -150,6 +150,11 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self onLogin:_loginButton];
+    return YES;
+}
+
 -(BOOL)NSStringIsValidEmail:(NSString *)checkString
 {
     BOOL stricterFilter = NO;

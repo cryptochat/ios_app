@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class AuthorizationModel;
+@class UserAuthModel;
 
 @interface AuthParser : NSObject
--(AuthorizationModel*)createAuthorizationModelFromResponse:(NSDictionary*)dicResponse;
+-(UserAuthModel*)createAuthorizationModelFromResponse:(NSDictionary*)dicResponse;
 @end

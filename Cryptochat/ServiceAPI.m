@@ -37,7 +37,8 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
 
 -(void)authUserWithIndetifier:(NSString*)identifier email:(NSString*)email password:(NSString*)password completeResponse:(APIServiceResponse)completeResponse{
     
-    NSString* strURL = @"http://wishbyte.org/api/v1/users/auth";
+
+    NSString* strURL = [NSString stringWithFormat:@"%@/users/auth",BASE_API_URL];
     
     NSURLQueryItem* itemPassword = [[NSURLQueryItem alloc] initWithName:@"password" value:password];
     NSURLQueryItem* itemEmail = [[NSURLQueryItem alloc] initWithName:@"email" value:email];
