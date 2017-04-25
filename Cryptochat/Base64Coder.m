@@ -20,6 +20,10 @@
 }
 
 - (NSData *)decodedBase64StringFromString:(NSString *)base64String {
+    base64String = [base64String stringByReplacingOccurrencesOfString:@"_"
+                                                           withString:@"/"];
+    base64String = [base64String stringByReplacingOccurrencesOfString:@"-"
+                                                           withString:@"+"];
     return [[NSData alloc] initWithBase64EncodedString:base64String options:NSDataBase64DecodingIgnoreUnknownCharacters];
 }
 
