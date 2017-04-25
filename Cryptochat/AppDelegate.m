@@ -9,8 +9,7 @@
 #import "AppDelegate.h"
 #import "CRMediator.h"
 
-#import "AuthService.h"
-#import "KeyChainService.h"
+#import "ExchangeService.h"
 
 
 @interface AppDelegate ()
@@ -27,19 +26,12 @@
     
     [[CRMediator instance]showAuthorization];
     
-    AuthService *service = [AuthService new];
-    KeyChainService *keyChain = [KeyChainService new];
+    ExchangeService *service = [ExchangeService new];
+    [service keyExchangeWithCompleteStatus:^(TransportResponseStatus status) {
+        NSLog(@"Status: %ld", (long)status);
     
-    [service getPublicKeyFromServerWithComplete:^(TransportResponseStatus status, NSData *publicKey) {
-        if (publicKey) {
-            [keyChain createMySharedKeyFromPublicKey:publicKey];
-            
-            [service sendMyPublicKeyToServerWithComplete:^(TransportResponseStatus status) {
-                NSLog(@"%ld",(long)status);
-            }];
-        }
     }];
-    
+
     return YES;
 }
 
