@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "CRMediator.h"
 
+#import "ExchangeService.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -23,6 +26,12 @@
     
     [[CRMediator instance]showAuthorization];
     
+    ExchangeService *service = [ExchangeService new];
+    [service keyExchangeWithCompleteStatus:^(TransportResponseStatus status) {
+        NSLog(@"Status: %ld", (long)status);
+    
+    }];
+
     return YES;
 }
 

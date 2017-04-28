@@ -7,57 +7,240 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01ADB8B8DC434C86F482AF09C45D7E46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		2E0283601E70403351353CDBDBDEA2F3 /* Pods-Cryptochat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F30AF3A2FBAB4BA80164ECBDDDB46D8D /* Pods-Cryptochat-dummy.m */; };
+		0160C5E9C38FE2EF6D07FCA086ECED3E /* ge_p1p1_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F765F0C6FF95FAA50D6A9EBB02314E3 /* ge_p1p1_to_p2.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		01ADB8B8DC434C86F482AF09C45D7E46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */; };
+		042090CF657A9F095C96FFD67378B551 /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = 424D347C1051F38E12F4C89F53E77657 /* crypto_hash_sha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		04FD58281E2ADC709220DD895E2AA32A /* ge_p3_to_cached.c in Sources */ = {isa = PBXBuildFile; fileRef = DC10EB294253CCC6435FBF7F233077FF /* ge_p3_to_cached.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		097AC4EBA990587EB9CB86D0CF518BF7 /* ge_p2_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = BC0DEB580643943DCF3A1800DEF97336 /* ge_p2_dbl.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		09C28030F76317D7E38D49076E6D2376 /* fe_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D638243ADADE52F554CC80A5ABCD348 /* fe_sub.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0C7740870C9418FB2195E2236B43B1FA /* sign_modified.c in Sources */ = {isa = PBXBuildFile; fileRef = 88A23B4317B4263C5C5C050BD671012B /* sign_modified.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0DFBAFF6BB251D102205D3FCCE402BA8 /* Ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A1D31AF38551764FABC151A0E76491 /* Ed25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FD75357E0D0FF235A646BA2AAF50BC7 /* ge_madd.c in Sources */ = {isa = PBXBuildFile; fileRef = C12E8B15A825732DB422368BA0FF2EE5 /* ge_madd.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		147A3A5C6860D4F2D84E4F787B71D1E8 /* compare.c in Sources */ = {isa = PBXBuildFile; fileRef = D1842F3AB354CB56E80AC5CF872CFA67 /* compare.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		174C9675A2D0BDE5A718BDD5D5FFF03D /* zeroize.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8445F88432C92FEB7727160893F38 /* zeroize.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		19AC200D4C06022E989F11A92CD5B54B /* Randomness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF16E618E230ED2397C1239F10E5E2 /* Randomness.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1B1FC54AFB8089F47AB9585CCCED0D51 /* Ed25519.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2B5764A3171D58BF5DD3096413FC3 /* Ed25519.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1C1A6170A1E09596655F73842C7B5183 /* pow225521.h in Headers */ = {isa = PBXBuildFile; fileRef = A12A918E7B45817A59E5334D45DF6E30 /* pow225521.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1C7D05B3C281AFA85CD0F9F049D23116 /* ge_msub.h in Headers */ = {isa = PBXBuildFile; fileRef = 531A75358D56BCE534CA0706652C8B2A /* ge_msub.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1E30BEC977C988D42F8CC6E0A0007E12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */; };
+		1E6D36D410023E81D9386FA184185904 /* d.h in Headers */ = {isa = PBXBuildFile; fileRef = F7DAC818FE65B08C1168BE79D1B968BA /* d.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1F0EC9D701CB9002E9924E9C09F193CD /* fe_sq.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FACC59FCE02C8B2985BC0158A5E70 /* fe_sq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		209A0DFB224408CB2617E7CAC3095924 /* open.c in Sources */ = {isa = PBXBuildFile; fileRef = E4247FFFAC2E758B1289446A4812ABA4 /* open.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		20DB9A851758C3D398F553FDD20C9326 /* sc_reduce.c in Sources */ = {isa = PBXBuildFile; fileRef = CEF8B5F447908F7660DB552A8D4ABD26 /* sc_reduce.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2791D2F59695636C80963B49B22D8055 /* base2.h in Headers */ = {isa = PBXBuildFile; fileRef = 75156307614364FBE18740542099BD5A /* base2.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		2806BCBD178B005675B06567681BC318 /* ge_double_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = A7E3EF140D2A4006DDC40148B4F7849E /* ge_double_scalarmult.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2CE20B204D246448517D203AB8469F85 /* sc_muladd.c in Sources */ = {isa = PBXBuildFile; fileRef = 5554EC3D6A5F8D543F42838C0C7E58C2 /* sc_muladd.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		313E25485AAADAD8E7890B9E6E800A82 /* fe_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 002960C2401ED49826E7DB35BA6F7493 /* fe_add.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		34EEE1F8C28493FD996F4C8F29BF20DF /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = F7DA26834EB8DC2A3587E7AC7C28DF09 /* crypto_sign_edwards25519sha512batch.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		37059775E27BDA147E57B540241D897D /* Pods-CryptochatUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D8A0F54D45A3A59D9A218CD98784C /* Pods-CryptochatUITests-dummy.m */; };
-		40E4FC35AB4F59F3F38A0D02E67F8C54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		87AEE065B61E714EE757A07DCA9C76BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3744C4F4703E11FB166B5F62181F17EC /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = E94382F74F2278A555CE3F12E05BAC05 /* crypto_sign.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3846DC637028F63F67704938511BAF90 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD66A254A21AEC59168148D6ECA0F65 /* blocks.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3AF99D12C9037C1B5AE33EDB070F4248 /* Pods-Cryptochat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F30AF3A2FBAB4BA80164ECBDDDB46D8D /* Pods-Cryptochat-dummy.m */; };
+		3B65F911B11389FDD622809FB0082E45 /* fe_isnegative.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2B7370EC09C216908D7094EEAE342 /* fe_isnegative.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3C641A4EB0AFE9D4DDC1773AD5DF8D09 /* ge_p1p1_to_p3.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2CFC840E9E73F26864CFD69742A21 /* ge_p1p1_to_p3.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		40E4FC35AB4F59F3F38A0D02E67F8C54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */; };
+		439B0EF63052F415EB671E7B8BBD44FD /* Curve25519.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9CDC69840372E24DA436D479B8D7E /* Curve25519.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4A17C221B6F33E9E90673589911E4DCE /* zeroize.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FBD251D329653EB68524725CF9268D /* zeroize.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4A49A8D83BEDD846917E0F8E8C913E62 /* ge_p3_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = B18310B10EEB62EA24D3313C599E8C57 /* ge_p3_tobytes.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4EDA754B692B1E8CA62090D80F68C339 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = 76D272A850B26744F737D6F6A8E520DA /* sign.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5DBB36D72AD9A201CD5B30E7A19E3F1D /* ge_p3_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = 22B506BDACC88B2A1FC0FC9E410C17FE /* ge_p3_dbl.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		60A3EE401E36AC6B31867C288041D80E /* ge_p3_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CFC3F9D9FECC8A6EA70A8AC58568F68 /* ge_p3_0.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		60DEBF1364F998822D5F94540DC115AC /* curve_sigs.c in Sources */ = {isa = PBXBuildFile; fileRef = D11196C352280B2830224E59F48B0090 /* curve_sigs.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		635DB2F2D6069235A63CE2B706333D64 /* sqrtm1.h in Headers */ = {isa = PBXBuildFile; fileRef = 9255F52CE6EE9F93AE9947DAB24665DB /* sqrtm1.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6ADC51FEE4F0C08CFEE6E186DFE7583E /* crypto_int32.h in Headers */ = {isa = PBXBuildFile; fileRef = EACCD07A7D8F7E8727EC26CE3E13D7D4 /* crypto_int32.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6DFAD4EF2E743DA790D29BA0F237D8DA /* ge_add.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD7EB1A4D249065CB67A663EB98CC18 /* ge_add.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6E0A7B8BA08F0B11AE5BBD55ED87DBC9 /* ge_p2_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C6FA092D6539DADD92E451A45FA27D7 /* ge_p2_0.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6EE99CAA6B3C021A9EC355478D144118 /* ge_madd.h in Headers */ = {isa = PBXBuildFile; fileRef = A6E2FBBD74A5E513262B7CCCA84849C0 /* ge_madd.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		70558F60F98C3F6ABCD437555544886B /* ge_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 33BB94A81B0540686B9A28C11AE082FF /* ge_frombytes.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		772F1A1448C26AA377E014A2A26D8428 /* pow22523.h in Headers */ = {isa = PBXBuildFile; fileRef = BE228DE8C402DA3946CDE7E7B880414B /* pow22523.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7A397A308DC4E4470373CC4F648D33B2 /* Randomness.h in Headers */ = {isa = PBXBuildFile; fileRef = 1634099F4A02F2744EF70E3D02B35AD9 /* Randomness.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B181F44D66B6E70CF8F340270E93347 /* fe_cmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 220FEAF1FE1BE66E86124AEB3106F015 /* fe_cmov.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7B6530E923B798FD3481BC63E0482F18 /* fe_isnonzero.c in Sources */ = {isa = PBXBuildFile; fileRef = C3836E56FCD14AFC201ED69E58BC7170 /* fe_isnonzero.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7E357216ACB7D25AB28B09097E4BBD2A /* ge_sub.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C63ADAD60575A812FADA792914BF860 /* ge_sub.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		81CCC907DDEA804723FC0E08C85EE35A /* 25519-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0044CED125B5E68B9D97AD5587F49 /* 25519-dummy.m */; };
+		84358AC8A3E15702036EFA31ECE53FCB /* fe_sq2.c in Sources */ = {isa = PBXBuildFile; fileRef = AB1FF055B43242C470EB3078015EE597 /* fe_sq2.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		864FB96A1CE24469D311FDA4988D3873 /* d2.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F568E968C44C0369684ED1D5277908 /* d2.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		946F6EEBF361B01DCB66EABFF074C64C /* ge_precomp_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 797D33699A36A6807CA0338F66A80880 /* ge_precomp_0.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		94BDBFE28CAD8EA02129B6CE69B7D5E5 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = FFD4320DE5DB92430FBAC4BA73370A6E /* curve25519-donna.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9B9EA4C596A59027AF9356580F6316C4 /* crypto_uint64.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63423F7F61492BDB54328E9C1E8D6C /* crypto_uint64.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9DC020CF95960A5463C41749FB2BDD94 /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F93B1B4A167B78CEB8BCE1140F11B5 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FC4742AC520AEA7C641064B60D77D21 /* sc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5749433CC5224970806D99F501747E55 /* sc.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A38D900019B5CD401DF25C14CF16FF33 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D12F795BD45CFF5C870A689171F1D /* hash.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B6A754CCFCD1C26612E7673A8C63B718 /* curve_sigs.h in Headers */ = {isa = PBXBuildFile; fileRef = 431228D356C9D1E6248829232534F9D6 /* curve_sigs.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B8654ED713E357D0CB77F0075DD76079 /* fe_0.c in Sources */ = {isa = PBXBuildFile; fileRef = B35077E3D341AD9651A1DDAD823D68D2 /* fe_0.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BF4732EB5A37C561416C4582D265D94F /* crypto_verify_32.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B960ACAA2F6EE2593285957BB918531 /* crypto_verify_32.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C16742224EBD7DCA14185B4799DC7439 /* crypto_int64.h in Headers */ = {isa = PBXBuildFile; fileRef = 0692E6CF6C7E35FE904B494F538D2049 /* crypto_int64.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C392F0BC10C2BEA87DC5BB309B829F3E /* ge.h in Headers */ = {isa = PBXBuildFile; fileRef = 695CF4D858E619DF3487522480620488 /* ge.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C5DFF288FC2453D68CEDFE3F41DDABE7 /* fe_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = 2BCE7BE283D7BEF3A492C21B681753C0 /* fe_neg.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C9F0F1C99404629F7DF456B4B233A6F1 /* ge_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 94E05E08CB9D480D66AB14A6E4DC0D58 /* ge_add.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D16F5830C2FAA3F68C7F97B124875B9D /* ge_p2_dbl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F6D2FB61D8B18CBC38E3CBCBF4D8ECF /* ge_p2_dbl.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D4DD486C4B5BA0F81B05B4385E1C0953 /* fe_pow22523.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5956FDE129695E07F824A1A789AF8B /* fe_pow22523.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DA207919DAEA85729DC93A9A4715346E /* crypto_uint32.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FAE7596B4A8C89E4C155D667368E6B /* crypto_uint32.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DF3E29CD6D9B3BAC9DE38B72C8F0A055 /* fe_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 19D926D0C09E6420386E3D191758124D /* fe_1.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E17315917DECC2505B2E022CF25F31E3 /* Pods-CryptochatTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38040D228C903BEE42C475139AB5C6C0 /* Pods-CryptochatTests-dummy.m */; };
+		E32FC4326407C60777F60B455E6AF916 /* fe_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 4531125CC396AB7E21813390EF731A97 /* fe_frombytes.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E428518E32506B54C0CFFB9ED3C6F5E1 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D704BFB08EC0188E0867B947C3A8429 /* fe.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E4ECD54A4EAF1C982856D0A348E647F3 /* fe_mul.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E27441D3F50099C0600D05F5E21B0 /* fe_mul.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E50CAAA63F6BBE593F7AB244719699A3 /* ge_p3_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = E5D328BD06FC4E9B3C4CB7DFFCD4666E /* ge_p3_to_p2.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E5EFBCAD9F19E30CB3DFACE7A34A03F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */; };
+		E804FBA5692F6B05DAB001E0B6F87581 /* fe_invert.c in Sources */ = {isa = PBXBuildFile; fileRef = FDCDAA12C3E109F9A8AF455911CFD00A /* fe_invert.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E82E439422598063CE3D454A9BB1FFC8 /* ge_scalarmult_base.c in Sources */ = {isa = PBXBuildFile; fileRef = 9568D35BBB53DD6AAC44259085D5E98C /* ge_scalarmult_base.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EC5193E69A9B3E92842CEEEC73913EF7 /* fe_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 42BB51C8A164D4F1D3FC2B3C70367F5B /* fe_tobytes.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ED254E53162F00D6AF0EBFA11EEE9F48 /* compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D10A1743362B0BE2BBD2C50975D9B5 /* compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F5DD6D651A6CEA426F7AFF0AAC360904 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFD15069DBFFAF7E7CD48183E2D230C /* Security.framework */; };
+		F6C219E7F1CC6D8294540F8BCA350B4F /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 728F8710DA50F642FD618BFCB3FAE421 /* api.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8957A7725BD6B2D3F77206FBC34BB1A /* ge_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 28E2540408A552B643A8E7F144B6DE3C /* ge_sub.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9BB47555F4F75E48FDA15449A7E52E6 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = 88DCE6EF9C9419AC2F0DCE2DB856724D /* base.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FA47A70A5B8F54B8882C9A1A594E7A55 /* ge_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0F1D3CF204A265885F4709288E2B0 /* ge_tobytes.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FD9B9F440FCC54CFF71BC7FF8765633F /* ge_msub.c in Sources */ = {isa = PBXBuildFile; fileRef = C615D510A796F232314B7F981878F70A /* ge_msub.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FEE92572FDBA4D90F173E33E903321B9 /* fe_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 250BE8CC23B423B73AFB4C36F7608DDC /* fe_copy.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		91A29F0A0F2A705F99D3B926E6E2FFFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C458758E53DAB90149D869AB72E45C9;
+			remoteInfo = 25519;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		002960C2401ED49826E7DB35BA6F7493 /* fe_add.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_add.c; path = Sources/ed25519/fe_add.c; sourceTree = "<group>"; };
 		065B54DEF0128F22B54DE6B5310CC255 /* Pods-CryptochatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0692E6CF6C7E35FE904B494F538D2049 /* crypto_int64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_int64.h; path = Sources/ed25519/nacl_includes/crypto_int64.h; sourceTree = "<group>"; };
+		07D10A1743362B0BE2BBD2C50975D9B5 /* compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = compare.h; path = Sources/ed25519/additions/compare.h; sourceTree = "<group>"; };
+		0B960ACAA2F6EE2593285957BB918531 /* crypto_verify_32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_verify_32.h; path = Sources/ed25519/nacl_includes/crypto_verify_32.h; sourceTree = "<group>"; };
+		1634099F4A02F2744EF70E3D02B35AD9 /* Randomness.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Randomness.h; path = Classes/Randomness.h; sourceTree = "<group>"; };
+		19D926D0C09E6420386E3D191758124D /* fe_1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_1.c; path = Sources/ed25519/fe_1.c; sourceTree = "<group>"; };
+		1F765F0C6FF95FAA50D6A9EBB02314E3 /* ge_p1p1_to_p2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p1p1_to_p2.c; path = Sources/ed25519/ge_p1p1_to_p2.c; sourceTree = "<group>"; };
+		21F568E968C44C0369684ED1D5277908 /* d2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = d2.h; path = Sources/ed25519/d2.h; sourceTree = "<group>"; };
+		220FEAF1FE1BE66E86124AEB3106F015 /* fe_cmov.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_cmov.c; path = Sources/ed25519/fe_cmov.c; sourceTree = "<group>"; };
+		22B506BDACC88B2A1FC0FC9E410C17FE /* ge_p3_dbl.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p3_dbl.c; path = Sources/ed25519/ge_p3_dbl.c; sourceTree = "<group>"; };
+		230A6129C87D31D40FB0C7FFC0B2942F /* libPods-CryptochatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CryptochatTests.a"; path = "libPods-CryptochatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F9CDC69840372E24DA436D479B8D7E /* Curve25519.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Curve25519.m; path = Classes/Curve25519.m; sourceTree = "<group>"; };
+		250BE8CC23B423B73AFB4C36F7608DDC /* fe_copy.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_copy.c; path = Sources/ed25519/fe_copy.c; sourceTree = "<group>"; };
+		26E0044CED125B5E68B9D97AD5587F49 /* 25519-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "25519-dummy.m"; sourceTree = "<group>"; };
+		28E2540408A552B643A8E7F144B6DE3C /* ge_sub.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_sub.c; path = Sources/ed25519/ge_sub.c; sourceTree = "<group>"; };
 		295F22F04DC8D0181914ED6542F74792 /* Pods-CryptochatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D14CE887145C371D461565ECA437F2B /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CryptochatUITests.a"; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EC160F6B840531428B5462A5272903E /* libPods-CryptochatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CryptochatTests.a"; path = "libPods-CryptochatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AC2B7370EC09C216908D7094EEAE342 /* fe_isnegative.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_isnegative.c; path = Sources/ed25519/fe_isnegative.c; sourceTree = "<group>"; };
+		2BCE7BE283D7BEF3A492C21B681753C0 /* fe_neg.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_neg.c; path = Sources/ed25519/fe_neg.c; sourceTree = "<group>"; };
+		2C6FA092D6539DADD92E451A45FA27D7 /* ge_p2_0.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p2_0.c; path = Sources/ed25519/ge_p2_0.c; sourceTree = "<group>"; };
+		2CD66A254A21AEC59168148D6ECA0F65 /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blocks.c; path = Sources/ed25519/nacl_sha512/blocks.c; sourceTree = "<group>"; };
+		2D638243ADADE52F554CC80A5ABCD348 /* fe_sub.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_sub.c; path = Sources/ed25519/fe_sub.c; sourceTree = "<group>"; };
+		2E4E27441D3F50099C0600D05F5E21B0 /* fe_mul.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_mul.c; path = Sources/ed25519/fe_mul.c; sourceTree = "<group>"; };
+		30FAE7596B4A8C89E4C155D667368E6B /* crypto_uint32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_uint32.h; path = Sources/ed25519/nacl_includes/crypto_uint32.h; sourceTree = "<group>"; };
 		339743662239DC0F1C009D0A7610FFC8 /* Pods-CryptochatTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptochatTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		33BB94A81B0540686B9A28C11AE082FF /* ge_frombytes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_frombytes.c; path = Sources/ed25519/ge_frombytes.c; sourceTree = "<group>"; };
 		38040D228C903BEE42C475139AB5C6C0 /* Pods-CryptochatTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptochatTests-dummy.m"; sourceTree = "<group>"; };
+		3C63ADAD60575A812FADA792914BF860 /* ge_sub.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ge_sub.h; path = Sources/ed25519/ge_sub.h; sourceTree = "<group>"; };
+		3CFC3F9D9FECC8A6EA70A8AC58568F68 /* ge_p3_0.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p3_0.c; path = Sources/ed25519/ge_p3_0.c; sourceTree = "<group>"; };
+		3D45529BF8E52A54E720F3A3D0ADB88E /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CryptochatUITests.a"; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED7FE597AC13420A7AFDF886A4ECDD5 /* Pods-CryptochatUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptochatUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		41F93B1B4A167B78CEB8BCE1140F11B5 /* Curve25519.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Curve25519.h; path = Classes/Curve25519.h; sourceTree = "<group>"; };
+		424D347C1051F38E12F4C89F53E77657 /* crypto_hash_sha512.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_hash_sha512.h; path = Sources/ed25519/additions/crypto_hash_sha512.h; sourceTree = "<group>"; };
+		42BB51C8A164D4F1D3FC2B3C70367F5B /* fe_tobytes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_tobytes.c; path = Sources/ed25519/fe_tobytes.c; sourceTree = "<group>"; };
+		431228D356C9D1E6248829232534F9D6 /* curve_sigs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = curve_sigs.h; path = Sources/ed25519/additions/curve_sigs.h; sourceTree = "<group>"; };
+		4531125CC396AB7E21813390EF731A97 /* fe_frombytes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_frombytes.c; path = Sources/ed25519/fe_frombytes.c; sourceTree = "<group>"; };
 		4838B5A7CD326A763BD00261EC5EB908 /* Pods-Cryptochat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cryptochat-acknowledgements.plist"; sourceTree = "<group>"; };
+		4B2FACC59FCE02C8B2985BC0158A5E70 /* fe_sq.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_sq.c; path = Sources/ed25519/fe_sq.c; sourceTree = "<group>"; };
+		4BFF16E618E230ED2397C1239F10E5E2 /* Randomness.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Randomness.m; path = Classes/Randomness.m; sourceTree = "<group>"; };
+		50A1D31AF38551764FABC151A0E76491 /* Ed25519.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ed25519.h; path = Classes/Ed25519.h; sourceTree = "<group>"; };
+		531A75358D56BCE534CA0706652C8B2A /* ge_msub.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ge_msub.h; path = Sources/ed25519/ge_msub.h; sourceTree = "<group>"; };
+		5554EC3D6A5F8D543F42838C0C7E58C2 /* sc_muladd.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sc_muladd.c; path = Sources/ed25519/sc_muladd.c; sourceTree = "<group>"; };
+		5749433CC5224970806D99F501747E55 /* sc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sc.h; path = Sources/ed25519/sc.h; sourceTree = "<group>"; };
+		5AA8445F88432C92FEB7727160893F38 /* zeroize.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zeroize.c; path = Sources/ed25519/additions/zeroize.c; sourceTree = "<group>"; };
 		64562D2688DA6B31A8823CA366A92166 /* Pods-CryptochatUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CryptochatUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		695CF4D858E619DF3487522480620488 /* ge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ge.h; path = Sources/ed25519/ge.h; sourceTree = "<group>"; };
+		6E142094BC55DE9AF94FD15F0041EC61 /* lib25519.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = lib25519.a; path = lib25519.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E8D12F795BD45CFF5C870A689171F1D /* hash.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hash.c; path = Sources/ed25519/nacl_sha512/hash.c; sourceTree = "<group>"; };
 		7025AA9BD4D431CE8DCC5C1E38D66D3A /* Pods-Cryptochat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cryptochat-frameworks.sh"; sourceTree = "<group>"; };
+		728F8710DA50F642FD618BFCB3FAE421 /* api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = api.h; path = Sources/ed25519/api.h; sourceTree = "<group>"; };
+		75156307614364FBE18740542099BD5A /* base2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base2.h; path = Sources/ed25519/base2.h; sourceTree = "<group>"; };
+		76D272A850B26744F737D6F6A8E520DA /* sign.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sign.c; path = Sources/ed25519/sign.c; sourceTree = "<group>"; };
+		797D33699A36A6807CA0338F66A80880 /* ge_precomp_0.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_precomp_0.c; path = Sources/ed25519/ge_precomp_0.c; sourceTree = "<group>"; };
+		7D704BFB08EC0188E0867B947C3A8429 /* fe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fe.h; path = Sources/ed25519/fe.h; sourceTree = "<group>"; };
 		7E3C5AC76E6CF241BCB2743887809F64 /* Pods-CryptochatTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatTests-resources.sh"; sourceTree = "<group>"; };
 		7E9806A08F4EA9D61B7C73703EF09EA6 /* Pods-CryptochatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E9D8A0F54D45A3A59D9A218CD98784C /* Pods-CryptochatUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptochatUITests-dummy.m"; sourceTree = "<group>"; };
+		80FBD251D329653EB68524725CF9268D /* zeroize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zeroize.h; path = Sources/ed25519/additions/zeroize.h; sourceTree = "<group>"; };
 		81697C8264B1069058E9BA3160E370B8 /* Pods-Cryptochat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptochat.release.xcconfig"; sourceTree = "<group>"; };
+		831180CFC3625A15E389B529757D0BAC /* 25519.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = 25519.xcconfig; sourceTree = "<group>"; };
+		88A23B4317B4263C5C5C050BD671012B /* sign_modified.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sign_modified.c; path = Sources/ed25519/additions/sign_modified.c; sourceTree = "<group>"; };
+		88DCE6EF9C9419AC2F0DCE2DB856724D /* base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base.h; path = Sources/ed25519/base.h; sourceTree = "<group>"; };
+		8B5956FDE129695E07F824A1A789AF8B /* fe_pow22523.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_pow22523.c; path = Sources/ed25519/fe_pow22523.c; sourceTree = "<group>"; };
+		8BA2CFC840E9E73F26864CFD69742A21 /* ge_p1p1_to_p3.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p1p1_to_p3.c; path = Sources/ed25519/ge_p1p1_to_p3.c; sourceTree = "<group>"; };
+		8DF0F1D3CF204A265885F4709288E2B0 /* ge_tobytes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_tobytes.c; path = Sources/ed25519/ge_tobytes.c; sourceTree = "<group>"; };
 		910CDE9D418E56441F60629A1433B874 /* Pods-Cryptochat-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cryptochat-resources.sh"; sourceTree = "<group>"; };
+		9255F52CE6EE9F93AE9947DAB24665DB /* sqrtm1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqrtm1.h; path = Sources/ed25519/sqrtm1.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94E05E08CB9D480D66AB14A6E4DC0D58 /* ge_add.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_add.c; path = Sources/ed25519/ge_add.c; sourceTree = "<group>"; };
+		9568D35BBB53DD6AAC44259085D5E98C /* ge_scalarmult_base.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_scalarmult_base.c; path = Sources/ed25519/ge_scalarmult_base.c; sourceTree = "<group>"; };
 		9DBB29B979CBF54E977F05E42F5563BD /* Pods-CryptochatUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatUITests-resources.sh"; sourceTree = "<group>"; };
+		9F6D2FB61D8B18CBC38E3CBCBF4D8ECF /* ge_p2_dbl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ge_p2_dbl.h; path = Sources/ed25519/ge_p2_dbl.h; sourceTree = "<group>"; };
+		A12A918E7B45817A59E5334D45DF6E30 /* pow225521.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pow225521.h; path = Sources/ed25519/pow225521.h; sourceTree = "<group>"; };
 		A5EEE49563F5C396734B8CC83D598EDF /* Pods-CryptochatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptochatTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6E2FBBD74A5E513262B7CCCA84849C0 /* ge_madd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ge_madd.h; path = Sources/ed25519/ge_madd.h; sourceTree = "<group>"; };
+		A7E3EF140D2A4006DDC40148B4F7849E /* ge_double_scalarmult.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_double_scalarmult.c; path = Sources/ed25519/ge_double_scalarmult.c; sourceTree = "<group>"; };
+		AB1FF055B43242C470EB3078015EE597 /* fe_sq2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_sq2.c; path = Sources/ed25519/fe_sq2.c; sourceTree = "<group>"; };
 		AC8823EDA465BB0DA61741A2A03032FB /* Pods-Cryptochat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cryptochat-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B18310B10EEB62EA24D3313C599E8C57 /* ge_p3_tobytes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p3_tobytes.c; path = Sources/ed25519/ge_p3_tobytes.c; sourceTree = "<group>"; };
+		B35077E3D341AD9651A1DDAD823D68D2 /* fe_0.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_0.c; path = Sources/ed25519/fe_0.c; sourceTree = "<group>"; };
 		B41BA1080D704A62A6837B70AF284E09 /* Pods-CryptochatUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatUITests-frameworks.sh"; sourceTree = "<group>"; };
+		B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BAC9649E2C4FE0453BE677E39EF64936 /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Cryptochat.a"; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0DEB580643943DCF3A1800DEF97336 /* ge_p2_dbl.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p2_dbl.c; path = Sources/ed25519/ge_p2_dbl.c; sourceTree = "<group>"; };
+		BE228DE8C402DA3946CDE7E7B880414B /* pow22523.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pow22523.h; path = Sources/ed25519/pow22523.h; sourceTree = "<group>"; };
+		C12E8B15A825732DB422368BA0FF2EE5 /* ge_madd.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_madd.c; path = Sources/ed25519/ge_madd.c; sourceTree = "<group>"; };
 		C180DA8560D4BDC1EEA12D2AA9446FA7 /* Pods-CryptochatTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CryptochatTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C3836E56FCD14AFC201ED69E58BC7170 /* fe_isnonzero.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_isnonzero.c; path = Sources/ed25519/fe_isnonzero.c; sourceTree = "<group>"; };
+		C615D510A796F232314B7F981878F70A /* ge_msub.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_msub.c; path = Sources/ed25519/ge_msub.c; sourceTree = "<group>"; };
+		CAD7EB1A4D249065CB67A663EB98CC18 /* ge_add.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ge_add.h; path = Sources/ed25519/ge_add.h; sourceTree = "<group>"; };
+		CAFD15069DBFFAF7E7CD48183E2D230C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		CE267E6D9837D053D9336AD7A0F89BF3 /* 25519-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "25519-prefix.pch"; sourceTree = "<group>"; };
+		CEF8B5F447908F7660DB552A8D4ABD26 /* sc_reduce.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sc_reduce.c; path = Sources/ed25519/sc_reduce.c; sourceTree = "<group>"; };
+		D11196C352280B2830224E59F48B0090 /* curve_sigs.c */ = {isa = PBXFileReference; includeInIndex = 1; name = curve_sigs.c; path = Sources/ed25519/additions/curve_sigs.c; sourceTree = "<group>"; };
+		D1842F3AB354CB56E80AC5CF872CFA67 /* compare.c */ = {isa = PBXFileReference; includeInIndex = 1; name = compare.c; path = Sources/ed25519/additions/compare.c; sourceTree = "<group>"; };
+		DC10EB294253CCC6435FBF7F233077FF /* ge_p3_to_cached.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p3_to_cached.c; path = Sources/ed25519/ge_p3_to_cached.c; sourceTree = "<group>"; };
 		DC34C82D43C59D7477D3C440271CFFBB /* Pods-CryptochatTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptochatTests-frameworks.sh"; sourceTree = "<group>"; };
-		E4023DC8B763716041361297CDDFAE3F /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Cryptochat.a"; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4247FFFAC2E758B1289446A4812ABA4 /* open.c */ = {isa = PBXFileReference; includeInIndex = 1; name = open.c; path = Sources/ed25519/open.c; sourceTree = "<group>"; };
+		E5D328BD06FC4E9B3C4CB7DFFCD4666E /* ge_p3_to_p2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ge_p3_to_p2.c; path = Sources/ed25519/ge_p3_to_p2.c; sourceTree = "<group>"; };
 		E6B4FBBEB24A3F88DA2331D1A4716647 /* Pods-Cryptochat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptochat.debug.xcconfig"; sourceTree = "<group>"; };
+		E6F2B5764A3171D58BF5DD3096413FC3 /* Ed25519.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Ed25519.m; path = Classes/Ed25519.m; sourceTree = "<group>"; };
+		E94382F74F2278A555CE3F12E05BAC05 /* crypto_sign.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_sign.h; path = Sources/ed25519/nacl_includes/crypto_sign.h; sourceTree = "<group>"; };
+		EA63423F7F61492BDB54328E9C1E8D6C /* crypto_uint64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_uint64.h; path = Sources/ed25519/nacl_includes/crypto_uint64.h; sourceTree = "<group>"; };
+		EACCD07A7D8F7E8727EC26CE3E13D7D4 /* crypto_int32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_int32.h; path = Sources/ed25519/nacl_includes/crypto_int32.h; sourceTree = "<group>"; };
 		F30AF3A2FBAB4BA80164ECBDDDB46D8D /* Pods-Cryptochat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cryptochat-dummy.m"; sourceTree = "<group>"; };
+		F7DA26834EB8DC2A3587E7AC7C28DF09 /* crypto_sign_edwards25519sha512batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_sign_edwards25519sha512batch.h; path = Sources/ed25519/nacl_includes/crypto_sign_edwards25519sha512batch.h; sourceTree = "<group>"; };
+		F7DAC818FE65B08C1168BE79D1B968BA /* d.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = d.h; path = Sources/ed25519/d.h; sourceTree = "<group>"; };
+		FDCDAA12C3E109F9A8AF455911CFD00A /* fe_invert.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fe_invert.c; path = Sources/ed25519/fe_invert.c; sourceTree = "<group>"; };
+		FFD4320DE5DB92430FBAC4BA73370A6E /* curve25519-donna.c */ = {isa = PBXFileReference; includeInIndex = 1; name = "curve25519-donna.c"; path = "Sources/Curve25519/curve25519-donna.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2683ECF2D98CF52B8CE41324FA95D58A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				87AEE065B61E714EE757A07DCA9C76BD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4C0F3DEB36BE99981A87889EFB2CDC4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				40E4FC35AB4F59F3F38A0D02E67F8C54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C645217349BC776107BF1AF2B935D86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5EFBCAD9F19E30CB3DFACE7A34A03F6 /* Foundation.framework in Frameworks */,
+				F5DD6D651A6CEA426F7AFF0AAC360904 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8D49C58635F010084039CD4C88F0E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E30BEC977C988D42F8CC6E0A0007E12 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +255,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014877106CC0083FB7F3E05A64E6121B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				831180CFC3625A15E389B529757D0BAC /* 25519.xcconfig */,
+				26E0044CED125B5E68B9D97AD5587F49 /* 25519-dummy.m */,
+				CE267E6D9837D053D9336AD7A0F89BF3 /* 25519-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/25519";
+			sourceTree = "<group>";
+		};
+		19E8A5DCF15416EA269BFFAEAC9BCD28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A6A164FE19DE177AC5CBF7F6E7824A3 /* 25519 */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1AB97BE4F405625AEB919985D64385A7 /* Pods-Cryptochat */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,32 +289,119 @@
 			path = "Target Support Files/Pods-Cryptochat";
 			sourceTree = "<group>";
 		};
-		4BE1C738382DD97A4DA1B5D83347C1E9 /* Products */ = {
+		2E339049816F198EB76DEA4264EF8374 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E4023DC8B763716041361297CDDFAE3F /* libPods-Cryptochat.a */,
-				2EC160F6B840531428B5462A5272903E /* libPods-CryptochatTests.a */,
-				2D14CE887145C371D461565ECA437F2B /* libPods-CryptochatUITests.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */,
+				CAFD15069DBFFAF7E7CD48183E2D230C /* Security.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E339049816F198EB76DEA4264EF8374 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4BE1C738382DD97A4DA1B5D83347C1E9 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				19E8A5DCF15416EA269BFFAEAC9BCD28 /* Pods */,
+				C3A7BFEAC72679F23ED52A44A250C916 /* Products */,
 				AA200B52B325643ECF4ECAC9500BC21C /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9A6A164FE19DE177AC5CBF7F6E7824A3 /* 25519 */ = {
+			isa = PBXGroup;
+			children = (
+				728F8710DA50F642FD618BFCB3FAE421 /* api.h */,
+				88DCE6EF9C9419AC2F0DCE2DB856724D /* base.h */,
+				75156307614364FBE18740542099BD5A /* base2.h */,
+				2CD66A254A21AEC59168148D6ECA0F65 /* blocks.c */,
+				D1842F3AB354CB56E80AC5CF872CFA67 /* compare.c */,
+				07D10A1743362B0BE2BBD2C50975D9B5 /* compare.h */,
+				424D347C1051F38E12F4C89F53E77657 /* crypto_hash_sha512.h */,
+				EACCD07A7D8F7E8727EC26CE3E13D7D4 /* crypto_int32.h */,
+				0692E6CF6C7E35FE904B494F538D2049 /* crypto_int64.h */,
+				E94382F74F2278A555CE3F12E05BAC05 /* crypto_sign.h */,
+				F7DA26834EB8DC2A3587E7AC7C28DF09 /* crypto_sign_edwards25519sha512batch.h */,
+				30FAE7596B4A8C89E4C155D667368E6B /* crypto_uint32.h */,
+				EA63423F7F61492BDB54328E9C1E8D6C /* crypto_uint64.h */,
+				0B960ACAA2F6EE2593285957BB918531 /* crypto_verify_32.h */,
+				41F93B1B4A167B78CEB8BCE1140F11B5 /* Curve25519.h */,
+				23F9CDC69840372E24DA436D479B8D7E /* Curve25519.m */,
+				FFD4320DE5DB92430FBAC4BA73370A6E /* curve25519-donna.c */,
+				D11196C352280B2830224E59F48B0090 /* curve_sigs.c */,
+				431228D356C9D1E6248829232534F9D6 /* curve_sigs.h */,
+				F7DAC818FE65B08C1168BE79D1B968BA /* d.h */,
+				21F568E968C44C0369684ED1D5277908 /* d2.h */,
+				50A1D31AF38551764FABC151A0E76491 /* Ed25519.h */,
+				E6F2B5764A3171D58BF5DD3096413FC3 /* Ed25519.m */,
+				7D704BFB08EC0188E0867B947C3A8429 /* fe.h */,
+				B35077E3D341AD9651A1DDAD823D68D2 /* fe_0.c */,
+				19D926D0C09E6420386E3D191758124D /* fe_1.c */,
+				002960C2401ED49826E7DB35BA6F7493 /* fe_add.c */,
+				220FEAF1FE1BE66E86124AEB3106F015 /* fe_cmov.c */,
+				250BE8CC23B423B73AFB4C36F7608DDC /* fe_copy.c */,
+				4531125CC396AB7E21813390EF731A97 /* fe_frombytes.c */,
+				FDCDAA12C3E109F9A8AF455911CFD00A /* fe_invert.c */,
+				2AC2B7370EC09C216908D7094EEAE342 /* fe_isnegative.c */,
+				C3836E56FCD14AFC201ED69E58BC7170 /* fe_isnonzero.c */,
+				2E4E27441D3F50099C0600D05F5E21B0 /* fe_mul.c */,
+				2BCE7BE283D7BEF3A492C21B681753C0 /* fe_neg.c */,
+				8B5956FDE129695E07F824A1A789AF8B /* fe_pow22523.c */,
+				4B2FACC59FCE02C8B2985BC0158A5E70 /* fe_sq.c */,
+				AB1FF055B43242C470EB3078015EE597 /* fe_sq2.c */,
+				2D638243ADADE52F554CC80A5ABCD348 /* fe_sub.c */,
+				42BB51C8A164D4F1D3FC2B3C70367F5B /* fe_tobytes.c */,
+				695CF4D858E619DF3487522480620488 /* ge.h */,
+				94E05E08CB9D480D66AB14A6E4DC0D58 /* ge_add.c */,
+				CAD7EB1A4D249065CB67A663EB98CC18 /* ge_add.h */,
+				A7E3EF140D2A4006DDC40148B4F7849E /* ge_double_scalarmult.c */,
+				33BB94A81B0540686B9A28C11AE082FF /* ge_frombytes.c */,
+				C12E8B15A825732DB422368BA0FF2EE5 /* ge_madd.c */,
+				A6E2FBBD74A5E513262B7CCCA84849C0 /* ge_madd.h */,
+				C615D510A796F232314B7F981878F70A /* ge_msub.c */,
+				531A75358D56BCE534CA0706652C8B2A /* ge_msub.h */,
+				1F765F0C6FF95FAA50D6A9EBB02314E3 /* ge_p1p1_to_p2.c */,
+				8BA2CFC840E9E73F26864CFD69742A21 /* ge_p1p1_to_p3.c */,
+				2C6FA092D6539DADD92E451A45FA27D7 /* ge_p2_0.c */,
+				BC0DEB580643943DCF3A1800DEF97336 /* ge_p2_dbl.c */,
+				9F6D2FB61D8B18CBC38E3CBCBF4D8ECF /* ge_p2_dbl.h */,
+				3CFC3F9D9FECC8A6EA70A8AC58568F68 /* ge_p3_0.c */,
+				22B506BDACC88B2A1FC0FC9E410C17FE /* ge_p3_dbl.c */,
+				DC10EB294253CCC6435FBF7F233077FF /* ge_p3_to_cached.c */,
+				E5D328BD06FC4E9B3C4CB7DFFCD4666E /* ge_p3_to_p2.c */,
+				B18310B10EEB62EA24D3313C599E8C57 /* ge_p3_tobytes.c */,
+				797D33699A36A6807CA0338F66A80880 /* ge_precomp_0.c */,
+				9568D35BBB53DD6AAC44259085D5E98C /* ge_scalarmult_base.c */,
+				28E2540408A552B643A8E7F144B6DE3C /* ge_sub.c */,
+				3C63ADAD60575A812FADA792914BF860 /* ge_sub.h */,
+				8DF0F1D3CF204A265885F4709288E2B0 /* ge_tobytes.c */,
+				6E8D12F795BD45CFF5C870A689171F1D /* hash.c */,
+				E4247FFFAC2E758B1289446A4812ABA4 /* open.c */,
+				BE228DE8C402DA3946CDE7E7B880414B /* pow22523.h */,
+				A12A918E7B45817A59E5334D45DF6E30 /* pow225521.h */,
+				1634099F4A02F2744EF70E3D02B35AD9 /* Randomness.h */,
+				4BFF16E618E230ED2397C1239F10E5E2 /* Randomness.m */,
+				5749433CC5224970806D99F501747E55 /* sc.h */,
+				5554EC3D6A5F8D543F42838C0C7E58C2 /* sc_muladd.c */,
+				CEF8B5F447908F7660DB552A8D4ABD26 /* sc_reduce.c */,
+				76D272A850B26744F737D6F6A8E520DA /* sign.c */,
+				88A23B4317B4263C5C5C050BD671012B /* sign_modified.c */,
+				9255F52CE6EE9F93AE9947DAB24665DB /* sqrtm1.h */,
+				5AA8445F88432C92FEB7727160893F38 /* zeroize.c */,
+				80FBD251D329653EB68524725CF9268D /* zeroize.h */,
+				014877106CC0083FB7F3E05A64E6121B /* Support Files */,
+			);
+			name = 25519;
+			path = 25519;
 			sourceTree = "<group>";
 		};
 		AA200B52B325643ECF4ECAC9500BC21C /* Targets Support Files */ = {
@@ -140,12 +429,15 @@
 			path = "Target Support Files/Pods-CryptochatTests";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C3A7BFEAC72679F23ED52A44A250C916 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				6E142094BC55DE9AF94FD15F0041EC61 /* lib25519.a */,
+				BAC9649E2C4FE0453BE677E39EF64936 /* libPods-Cryptochat.a */,
+				230A6129C87D31D40FB0C7FFC0B2942F /* libPods-CryptochatTests.a */,
+				3D45529BF8E52A54E720F3A3D0ADB88E /* libPods-CryptochatUITests.a */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CEA082C3CE3800EAF4B641ACAE45FC33 /* Pods-CryptochatUITests */ = {
@@ -165,6 +457,46 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		39910500C414A0FD6D3A7AD4B49CC902 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C219E7F1CC6D8294540F8BCA350B4F /* api.h in Headers */,
+				F9BB47555F4F75E48FDA15449A7E52E6 /* base.h in Headers */,
+				2791D2F59695636C80963B49B22D8055 /* base2.h in Headers */,
+				ED254E53162F00D6AF0EBFA11EEE9F48 /* compare.h in Headers */,
+				042090CF657A9F095C96FFD67378B551 /* crypto_hash_sha512.h in Headers */,
+				6ADC51FEE4F0C08CFEE6E186DFE7583E /* crypto_int32.h in Headers */,
+				C16742224EBD7DCA14185B4799DC7439 /* crypto_int64.h in Headers */,
+				3744C4F4703E11FB166B5F62181F17EC /* crypto_sign.h in Headers */,
+				34EEE1F8C28493FD996F4C8F29BF20DF /* crypto_sign_edwards25519sha512batch.h in Headers */,
+				DA207919DAEA85729DC93A9A4715346E /* crypto_uint32.h in Headers */,
+				9B9EA4C596A59027AF9356580F6316C4 /* crypto_uint64.h in Headers */,
+				BF4732EB5A37C561416C4582D265D94F /* crypto_verify_32.h in Headers */,
+				9DC020CF95960A5463C41749FB2BDD94 /* Curve25519.h in Headers */,
+				B6A754CCFCD1C26612E7673A8C63B718 /* curve_sigs.h in Headers */,
+				1E6D36D410023E81D9386FA184185904 /* d.h in Headers */,
+				864FB96A1CE24469D311FDA4988D3873 /* d2.h in Headers */,
+				0DFBAFF6BB251D102205D3FCCE402BA8 /* Ed25519.h in Headers */,
+				E428518E32506B54C0CFFB9ED3C6F5E1 /* fe.h in Headers */,
+				C392F0BC10C2BEA87DC5BB309B829F3E /* ge.h in Headers */,
+				6DFAD4EF2E743DA790D29BA0F237D8DA /* ge_add.h in Headers */,
+				6EE99CAA6B3C021A9EC355478D144118 /* ge_madd.h in Headers */,
+				1C7D05B3C281AFA85CD0F9F049D23116 /* ge_msub.h in Headers */,
+				D16F5830C2FAA3F68C7F97B124875B9D /* ge_p2_dbl.h in Headers */,
+				7E357216ACB7D25AB28B09097E4BBD2A /* ge_sub.h in Headers */,
+				772F1A1448C26AA377E014A2A26D8428 /* pow22523.h in Headers */,
+				1C1A6170A1E09596655F73842C7B5183 /* pow225521.h in Headers */,
+				7A397A308DC4E4470373CC4F648D33B2 /* Randomness.h in Headers */,
+				9FC4742AC520AEA7C641064B60D77D21 /* sc.h in Headers */,
+				635DB2F2D6069235A63CE2B706333D64 /* sqrtm1.h in Headers */,
+				4A17C221B6F33E9E90673589911E4DCE /* zeroize.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		6E5F042AB0B347CD3A718CF032571FD7 /* Pods-CryptochatUITests */ = {
 			isa = PBXNativeTarget;
@@ -179,7 +511,24 @@
 			);
 			name = "Pods-CryptochatUITests";
 			productName = "Pods-CryptochatUITests";
-			productReference = 2D14CE887145C371D461565ECA437F2B /* libPods-CryptochatUITests.a */;
+			productReference = 3D45529BF8E52A54E720F3A3D0ADB88E /* libPods-CryptochatUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9C458758E53DAB90149D869AB72E45C9 /* 25519 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7B10EBB108B337340366AFCD126239 /* Build configuration list for PBXNativeTarget "25519" */;
+			buildPhases = (
+				9E33EE261CDD4110F658DF939CC23A09 /* Sources */,
+				4C645217349BC776107BF1AF2B935D86 /* Frameworks */,
+				39910500C414A0FD6D3A7AD4B49CC902 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 25519;
+			productName = 25519;
+			productReference = 6E142094BC55DE9AF94FD15F0041EC61 /* lib25519.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		A3F3E482A762F278B61EE9B275138473 /* Pods-CryptochatTests */ = {
@@ -195,23 +544,24 @@
 			);
 			name = "Pods-CryptochatTests";
 			productName = "Pods-CryptochatTests";
-			productReference = 2EC160F6B840531428B5462A5272903E /* libPods-CryptochatTests.a */;
+			productReference = 230A6129C87D31D40FB0C7FFC0B2942F /* libPods-CryptochatTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		EA1190EA6308D4F89EFFC6011A431F4F /* Pods-Cryptochat */ = {
+		A654A9465ECAE31F19E377F966B2A31B /* Pods-Cryptochat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF789F622650DB468135C913962FBF8D /* Build configuration list for PBXNativeTarget "Pods-Cryptochat" */;
+			buildConfigurationList = 7B260303B0175BE0BD097C75CB6BF472 /* Build configuration list for PBXNativeTarget "Pods-Cryptochat" */;
 			buildPhases = (
-				837B21938CDB1C51AEC9C071A539B779 /* Sources */,
-				2683ECF2D98CF52B8CE41324FA95D58A /* Frameworks */,
+				E264ED412DA11C5449E68D6BBB2C9CD3 /* Sources */,
+				8F8D49C58635F010084039CD4C88F0E5 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F592C8071BF43A148C521E87A08397A8 /* PBXTargetDependency */,
 			);
 			name = "Pods-Cryptochat";
 			productName = "Pods-Cryptochat";
-			productReference = E4023DC8B763716041361297CDDFAE3F /* libPods-Cryptochat.a */;
+			productReference = BAC9649E2C4FE0453BE677E39EF64936 /* libPods-Cryptochat.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -231,11 +581,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4BE1C738382DD97A4DA1B5D83347C1E9 /* Products */;
+			productRefGroup = C3A7BFEAC72679F23ED52A44A250C916 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA1190EA6308D4F89EFFC6011A431F4F /* Pods-Cryptochat */,
+				9C458758E53DAB90149D869AB72E45C9 /* 25519 */,
+				A654A9465ECAE31F19E377F966B2A31B /* Pods-Cryptochat */,
 				A3F3E482A762F278B61EE9B275138473 /* Pods-CryptochatTests */,
 				6E5F042AB0B347CD3A718CF032571FD7 /* Pods-CryptochatUITests */,
 			);
@@ -251,11 +602,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		837B21938CDB1C51AEC9C071A539B779 /* Sources */ = {
+		9E33EE261CDD4110F658DF939CC23A09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E0283601E70403351353CDBDBDEA2F3 /* Pods-Cryptochat-dummy.m in Sources */,
+				81CCC907DDEA804723FC0E08C85EE35A /* 25519-dummy.m in Sources */,
+				3846DC637028F63F67704938511BAF90 /* blocks.c in Sources */,
+				147A3A5C6860D4F2D84E4F787B71D1E8 /* compare.c in Sources */,
+				94BDBFE28CAD8EA02129B6CE69B7D5E5 /* curve25519-donna.c in Sources */,
+				439B0EF63052F415EB671E7B8BBD44FD /* Curve25519.m in Sources */,
+				60DEBF1364F998822D5F94540DC115AC /* curve_sigs.c in Sources */,
+				1B1FC54AFB8089F47AB9585CCCED0D51 /* Ed25519.m in Sources */,
+				B8654ED713E357D0CB77F0075DD76079 /* fe_0.c in Sources */,
+				DF3E29CD6D9B3BAC9DE38B72C8F0A055 /* fe_1.c in Sources */,
+				313E25485AAADAD8E7890B9E6E800A82 /* fe_add.c in Sources */,
+				7B181F44D66B6E70CF8F340270E93347 /* fe_cmov.c in Sources */,
+				FEE92572FDBA4D90F173E33E903321B9 /* fe_copy.c in Sources */,
+				E32FC4326407C60777F60B455E6AF916 /* fe_frombytes.c in Sources */,
+				E804FBA5692F6B05DAB001E0B6F87581 /* fe_invert.c in Sources */,
+				3B65F911B11389FDD622809FB0082E45 /* fe_isnegative.c in Sources */,
+				7B6530E923B798FD3481BC63E0482F18 /* fe_isnonzero.c in Sources */,
+				E4ECD54A4EAF1C982856D0A348E647F3 /* fe_mul.c in Sources */,
+				C5DFF288FC2453D68CEDFE3F41DDABE7 /* fe_neg.c in Sources */,
+				D4DD486C4B5BA0F81B05B4385E1C0953 /* fe_pow22523.c in Sources */,
+				1F0EC9D701CB9002E9924E9C09F193CD /* fe_sq.c in Sources */,
+				84358AC8A3E15702036EFA31ECE53FCB /* fe_sq2.c in Sources */,
+				09C28030F76317D7E38D49076E6D2376 /* fe_sub.c in Sources */,
+				EC5193E69A9B3E92842CEEEC73913EF7 /* fe_tobytes.c in Sources */,
+				C9F0F1C99404629F7DF456B4B233A6F1 /* ge_add.c in Sources */,
+				2806BCBD178B005675B06567681BC318 /* ge_double_scalarmult.c in Sources */,
+				70558F60F98C3F6ABCD437555544886B /* ge_frombytes.c in Sources */,
+				0FD75357E0D0FF235A646BA2AAF50BC7 /* ge_madd.c in Sources */,
+				FD9B9F440FCC54CFF71BC7FF8765633F /* ge_msub.c in Sources */,
+				0160C5E9C38FE2EF6D07FCA086ECED3E /* ge_p1p1_to_p2.c in Sources */,
+				3C641A4EB0AFE9D4DDC1773AD5DF8D09 /* ge_p1p1_to_p3.c in Sources */,
+				6E0A7B8BA08F0B11AE5BBD55ED87DBC9 /* ge_p2_0.c in Sources */,
+				097AC4EBA990587EB9CB86D0CF518BF7 /* ge_p2_dbl.c in Sources */,
+				60A3EE401E36AC6B31867C288041D80E /* ge_p3_0.c in Sources */,
+				5DBB36D72AD9A201CD5B30E7A19E3F1D /* ge_p3_dbl.c in Sources */,
+				04FD58281E2ADC709220DD895E2AA32A /* ge_p3_to_cached.c in Sources */,
+				E50CAAA63F6BBE593F7AB244719699A3 /* ge_p3_to_p2.c in Sources */,
+				4A49A8D83BEDD846917E0F8E8C913E62 /* ge_p3_tobytes.c in Sources */,
+				946F6EEBF361B01DCB66EABFF074C64C /* ge_precomp_0.c in Sources */,
+				E82E439422598063CE3D454A9BB1FFC8 /* ge_scalarmult_base.c in Sources */,
+				F8957A7725BD6B2D3F77206FBC34BB1A /* ge_sub.c in Sources */,
+				FA47A70A5B8F54B8882C9A1A594E7A55 /* ge_tobytes.c in Sources */,
+				A38D900019B5CD401DF25C14CF16FF33 /* hash.c in Sources */,
+				209A0DFB224408CB2617E7CAC3095924 /* open.c in Sources */,
+				19AC200D4C06022E989F11A92CD5B54B /* Randomness.m in Sources */,
+				2CE20B204D246448517D203AB8469F85 /* sc_muladd.c in Sources */,
+				20DB9A851758C3D398F553FDD20C9326 /* sc_reduce.c in Sources */,
+				4EDA754B692B1E8CA62090D80F68C339 /* sign.c in Sources */,
+				0C7740870C9418FB2195E2236B43B1FA /* sign_modified.c in Sources */,
+				174C9675A2D0BDE5A718BDD5D5FFF03D /* zeroize.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +666,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E264ED412DA11C5449E68D6BBB2C9CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AF99D12C9037C1B5AE33EDB070F4248 /* Pods-Cryptochat-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F592C8071BF43A148C521E87A08397A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = 25519;
+			target = 9C458758E53DAB90149D869AB72E45C9 /* 25519 */;
+			targetProxy = 91A29F0A0F2A705F99D3B926E6E2FFFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2B5FEA04B5419F9340D8019F245D0FD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81697C8264B1069058E9BA3160E370B8 /* Pods-Cryptochat.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3F14097A8FA61D9DE4E04B7DA11620AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831180CFC3625A15E389B529757D0BAC /* 25519.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/25519/25519-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		4429EC709C2E34D4C8E19FD583DB0E13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5EEE49563F5C396734B8CC83D598EDF /* Pods-CryptochatTests.release.xcconfig */;
@@ -333,7 +795,7 @@
 			};
 			name = Release;
 		};
-		7CDCD7F17B447727E4FE600C2B939392 /* Debug */ = {
+		940DDF221F96841813EBD467189A9251 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6B4FBBEB24A3F88DA2331D1A4716647 /* Pods-Cryptochat.debug.xcconfig */;
 			buildSettings = {
@@ -402,29 +864,6 @@
 			};
 			name = Debug;
 		};
-		D928E1D55A83FA4AB5824061D0167E1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81697C8264B1069058E9BA3160E370B8 /* Pods-Cryptochat.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -468,6 +907,29 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		E51CA696F1E671F591E09891A867EA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831180CFC3625A15E389B529757D0BAC /* 25519.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/25519/25519-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		E8EC7ECD6A73C0CD3991702438A6C050 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -513,20 +975,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5C7B10EBB108B337340366AFCD126239 /* Build configuration list for PBXNativeTarget "25519" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F14097A8FA61D9DE4E04B7DA11620AC /* Debug */,
+				E51CA696F1E671F591E09891A867EA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B260303B0175BE0BD097C75CB6BF472 /* Build configuration list for PBXNativeTarget "Pods-Cryptochat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940DDF221F96841813EBD467189A9251 /* Debug */,
+				2B5FEA04B5419F9340D8019F245D0FD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B265083B02F132C4A5D6F53B7DD3C7E0 /* Build configuration list for PBXNativeTarget "Pods-CryptochatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D79BFD4399488EE644874D122BFC03B /* Debug */,
 				4429EC709C2E34D4C8E19FD583DB0E13 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CF789F622650DB468135C913962FBF8D /* Build configuration list for PBXNativeTarget "Pods-Cryptochat" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7CDCD7F17B447727E4FE600C2B939392 /* Debug */,
-				D928E1D55A83FA4AB5824061D0167E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

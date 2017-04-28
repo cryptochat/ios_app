@@ -15,6 +15,10 @@
 		0F5374091E7E787A0003926E /* CryptochatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374081E7E787A0003926E /* CryptochatTests.m */; };
 		0F5374141E7E787A0003926E /* CryptochatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374131E7E787A0003926E /* CryptochatUITests.m */; };
 		200243111B9802721A364448 /* libPods-Cryptochat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */; };
+		2027040F1E8D8A98006F7C74 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027040E1E8D8A98006F7C74 /* KeychainWrapper.m */; };
+		202704121E8D8B00006F7C74 /* KeyChainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 202704111E8D8B00006F7C74 /* KeyChainService.m */; };
+		202704151E8D9067006F7C74 /* Base64Coder.m in Sources */ = {isa = PBXBuildFile; fileRef = 202704141E8D9067006F7C74 /* Base64Coder.m */; };
+		20E8D8511EAFDD48000A2C60 /* ExchangeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E8D8501EAFDD48000A2C60 /* ExchangeService.m */; };
 		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
 		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
 		5F5C563C1E7EC298002E62E7 /* ServiceAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C563B1E7EC298002E62E7 /* ServiceAPI.m */; };
@@ -72,6 +76,14 @@
 		0F5374131E7E787A0003926E /* CryptochatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptochatUITests.m; sourceTree = "<group>"; };
 		0F5374151E7E787A0003926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7D018A30715EAD60F5CA10 /* AuthorizationInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractor.h; sourceTree = "<group>"; };
+		2027040D1E8D8A98006F7C74 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		2027040E1E8D8A98006F7C74 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		202704101E8D8B00006F7C74 /* KeyChainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainService.h; sourceTree = "<group>"; };
+		202704111E8D8B00006F7C74 /* KeyChainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainService.m; sourceTree = "<group>"; };
+		202704131E8D9067006F7C74 /* Base64Coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Coder.h; sourceTree = "<group>"; };
+		202704141E8D9067006F7C74 /* Base64Coder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Coder.m; sourceTree = "<group>"; };
+		20E8D84F1EAFDD48000A2C60 /* ExchangeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeService.h; sourceTree = "<group>"; };
+		20E8D8501EAFDD48000A2C60 /* ExchangeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeService.m; sourceTree = "<group>"; };
 		2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CA8268DB24B4A9B3E357E3 /* AuthorizationRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationRouter.h; sourceTree = "<group>"; };
 		494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +190,7 @@
 		0F5373ED1E7E78790003926E /* Cryptochat */ = {
 			isa = PBXGroup;
 			children = (
+				2027040C1E8D8A82006F7C74 /* Helpers */,
 				5FD0D04E1E7E99DA004343A6 /* Common */,
 				A3DD76720BE00B65D2099355 /* Class */,
 				5FD0D04F1E7E99E4004343A6 /* Resources */,
@@ -222,6 +235,17 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		2027040C1E8D8A82006F7C74 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2027040D1E8D8A98006F7C74 /* KeychainWrapper.h */,
+				2027040E1E8D8A98006F7C74 /* KeychainWrapper.m */,
+				202704131E8D9067006F7C74 /* Base64Coder.h */,
+				202704141E8D9067006F7C74 /* Base64Coder.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2FCB3D0AE2A92608A16905F5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +287,10 @@
 				5F5C56421E7EC6AC002E62E7 /* AuthService.m */,
 				5F5C56481E7EC956002E62E7 /* AuthParser.h */,
 				5F5C56491E7EC956002E62E7 /* AuthParser.m */,
+				202704101E8D8B00006F7C74 /* KeyChainService.h */,
+				202704111E8D8B00006F7C74 /* KeyChainService.m */,
+				20E8D84F1EAFDD48000A2C60 /* ExchangeService.h */,
+				20E8D8501EAFDD48000A2C60 /* ExchangeService.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -511,7 +539,7 @@
 				TargetAttributes = {
 					0F5373EA1E7E78790003926E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = PPDS96G2C4;
+						DevelopmentTeam = 4G6R7VZQA2;
 						ProvisioningStyle = Automatic;
 					};
 					0F5374031E7E787A0003926E = {
@@ -722,12 +750,16 @@
 				5FD0D05F1E7EBE50004343A6 /* AuthViewModel.m in Sources */,
 				5F5C56471E7EC922002E62E7 /* AuthorizationModel.m in Sources */,
 				0F5373F31E7E78790003926E /* AppDelegate.m in Sources */,
+				20E8D8511EAFDD48000A2C60 /* ExchangeService.m in Sources */,
 				0F5373F01E7E78790003926E /* main.m in Sources */,
 				5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */,
+				202704121E8D8B00006F7C74 /* KeyChainService.m in Sources */,
+				202704151E8D9067006F7C74 /* Base64Coder.m in Sources */,
 				F2E8DA58E6E02E7D219B4AA3 /* AuthorizationInteractor.m in Sources */,
 				6C5B21080CA3E52A582B223A /* AuthorizationRouter.m in Sources */,
 				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
 				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,
+				2027040F1E8D8A98006F7C74 /* KeychainWrapper.m in Sources */,
 				BCD77F861FAD8A3447A909C3 /* AuthorizationPresenter.m in Sources */,
 				C9FC6DE5D57B0A5C5E382A1B /* AuthorizationViewController.m in Sources */,
 				ADD6A39AFFF766D6D8252C14 /* RegistrationInteractor.m in Sources */,
@@ -885,7 +917,7 @@
 			baseConfigurationReference = D45FB9643C6C173B77537AFB /* Pods-Cryptochat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PPDS96G2C4;
+				DEVELOPMENT_TEAM = 4G6R7VZQA2;
 				INFOPLIST_FILE = Cryptochat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.Cryptochat";
@@ -898,7 +930,7 @@
 			baseConfigurationReference = 50A1961D5FFF9225E460CA0D /* Pods-Cryptochat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PPDS96G2C4;
+				DEVELOPMENT_TEAM = 4G6R7VZQA2;
 				INFOPLIST_FILE = Cryptochat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.Cryptochat";

@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, TransportResponseStatus){
-    TransportResponseStatusSuccess,
-    TransportResponseStatusUnAuthorized,
-    TransportResponseStatusBadRequest,
-    TransportResponseStatusServerError,
-    TransportResponseStatusNoInternet,
-    TransportResponseStatusConflict,
-    TransportResponseStatusNotFound,
+    TransportResponseStatusSuccess = 200,
+    TransportResponseStatusUnAuthorized = 401,
+    TransportResponseStatusBadRequest = 400,
+    TransportResponseStatusServerError = 500,
+    TransportResponseStatusNoInternet = 503,
+    TransportResponseStatusConflict = 409,
+    TransportResponseStatusNotFound = 404,
 };
 
 @interface TransportLayer : NSObject
