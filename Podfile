@@ -7,7 +7,7 @@ target 'Cryptochat' do
 pod '25519'
 pod 'Realm'
 
-  # Pods for Cryptochat
+   pod '25519', '~> 1.2'
 
 
   target 'CryptochatTests' do
