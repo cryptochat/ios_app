@@ -14,5 +14,7 @@
 @interface AuthService : NSObject
 -(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, UserAuthModel* model ))completeResponse;
 
+- (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey))completeResponse;
+- (void)sendMyPublicKeyToServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse;
 -(BOOL)isAuthorized;
 @end

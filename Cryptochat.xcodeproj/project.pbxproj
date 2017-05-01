@@ -28,6 +28,10 @@
 		5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C563E1E7EC2B4002E62E7 /* TransportLayer.m */; };
 		5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56421E7EC6AC002E62E7 /* AuthService.m */; };
 		5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56491E7EC956002E62E7 /* AuthParser.m */; };
+		5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD519B1EB752BA007D440E /* KeychainWrapper.m */; };
+		5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD519D1EB752BA007D440E /* Base64Coder.m */; };
+		5FAD51A41EB7536F007D440E /* KeyChainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD51A11EB7536E007D440E /* KeyChainService.m */; };
+		5FAD51A51EB7536F007D440E /* ExchangeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD51A31EB7536F007D440E /* ExchangeService.m */; };
 		5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0D0551E7E9C86004343A6 /* CRMediator.m */; };
 		5FD0D0581E7E9E02004343A6 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD0D0571E7E9E02004343A6 /* Authorization.storyboard */; };
 		5FD0D05F1E7EBE50004343A6 /* AuthViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0D05E1E7EBE50004343A6 /* AuthViewModel.m */; };
@@ -107,6 +111,14 @@
 		5F5C56421E7EC6AC002E62E7 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
 		5F5C56481E7EC956002E62E7 /* AuthParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthParser.h; sourceTree = "<group>"; };
 		5F5C56491E7EC956002E62E7 /* AuthParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthParser.m; sourceTree = "<group>"; };
+		5FAD519A1EB752BA007D440E /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		5FAD519B1EB752BA007D440E /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		5FAD519C1EB752BA007D440E /* Base64Coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Coder.h; sourceTree = "<group>"; };
+		5FAD519D1EB752BA007D440E /* Base64Coder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Coder.m; sourceTree = "<group>"; };
+		5FAD51A01EB7536E007D440E /* KeyChainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainService.h; sourceTree = "<group>"; };
+		5FAD51A11EB7536E007D440E /* KeyChainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainService.m; sourceTree = "<group>"; };
+		5FAD51A21EB7536E007D440E /* ExchangeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeService.h; sourceTree = "<group>"; };
+		5FAD51A31EB7536F007D440E /* ExchangeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeService.m; sourceTree = "<group>"; };
 		5FD0D0541E7E9C86004343A6 /* CRMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRMediator.h; sourceTree = "<group>"; };
 		5FD0D0551E7E9C86004343A6 /* CRMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMediator.m; sourceTree = "<group>"; };
 		5FD0D0571E7E9E02004343A6 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
@@ -288,8 +300,8 @@
 		5F4ED25D1EAA57600055D605 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				5F4ED25E1EAA577D0055D605 /* RSProgress.h */,
-				5F4ED25F1EAA577D0055D605 /* RSProgress.m */,
+				5FAD51991EB752AF007D440E /* Helpers */,
+				5FAD51981EB752A3007D440E /* RSProgress */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -329,6 +341,7 @@
 		5F5C56401E7EC56D002E62E7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5FAD51A61EB75417007D440E /* Exchange&KeyChain Service */,
 				5F04FB831EAD0998007D5EBE /* Crypto Service */,
 				5F04FB821EAD0989007D5EBE /* Auth Service */,
 			);
@@ -344,6 +357,37 @@
 				5F4ED2701EAB842C0055D605 /* UserAuthModel+Realm.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5FAD51981EB752A3007D440E /* RSProgress */ = {
+			isa = PBXGroup;
+			children = (
+				5F4ED25E1EAA577D0055D605 /* RSProgress.h */,
+				5F4ED25F1EAA577D0055D605 /* RSProgress.m */,
+			);
+			name = RSProgress;
+			sourceTree = "<group>";
+		};
+		5FAD51991EB752AF007D440E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD519A1EB752BA007D440E /* KeychainWrapper.h */,
+				5FAD519B1EB752BA007D440E /* KeychainWrapper.m */,
+				5FAD519C1EB752BA007D440E /* Base64Coder.h */,
+				5FAD519D1EB752BA007D440E /* Base64Coder.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		5FAD51A61EB75417007D440E /* Exchange&KeyChain Service */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD51A01EB7536E007D440E /* KeyChainService.h */,
+				5FAD51A11EB7536E007D440E /* KeyChainService.m */,
+				5FAD51A21EB7536E007D440E /* ExchangeService.h */,
+				5FAD51A31EB7536F007D440E /* ExchangeService.m */,
+			);
+			name = "Exchange&KeyChain Service";
 			sourceTree = "<group>";
 		};
 		5FD0D04E1E7E99DA004343A6 /* Common */ = {
@@ -789,16 +833,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FAD51A51EB7536F007D440E /* ExchangeService.m in Sources */,
 				5FD0D05F1E7EBE50004343A6 /* AuthViewModel.m in Sources */,
 				0F5373F31E7E78790003926E /* AppDelegate.m in Sources */,
 				0F5373F01E7E78790003926E /* main.m in Sources */,
+				5FAD51A41EB7536F007D440E /* KeyChainService.m in Sources */,
 				5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */,
 				5F4ED2641EAB82A30055D605 /* RealmDataStore.m in Sources */,
 				5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */,
 				F2E8DA58E6E02E7D219B4AA3 /* AuthorizationInteractor.m in Sources */,
 				6C5B21080CA3E52A582B223A /* AuthorizationRouter.m in Sources */,
 				5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */,
+				5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */,
 				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
+				5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */,
 				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,
 				5F4ED26D1EAB84160055D605 /* UserAuthRealm.m in Sources */,
 				BCD77F861FAD8A3447A909C3 /* AuthorizationPresenter.m in Sources */,
