@@ -16,6 +16,8 @@
 #import "Base64Coder.h"
 #import "KeyChainService.h"
 
+const NSString* mockIdentifier = @"76c93ee0-20e3-4340-ab7b-ef1c2371dcda";
+
 @interface AuthService()
 @property(strong, nonatomic)ServiceAPI* serviceAPI;
 @property(strong, nonatomic)AuthParser* authParser;
@@ -69,10 +71,8 @@
                                      @"password":authViewModel.password
                                      };
     [_cryptService encrypt:shoudCryptDict type:CryptTypeAuth complete:^(BOOL isOk, NSDictionary *validDict) {
-        
-        
-#warning MOCK IDENTIFIER
-        [_serviceAPI authUserWithIndetifier:@"76c93ee0-20e3-4340-ab7b-ef1c2371dcda" email:validDict[@"email"] password:validDict[@"password"] completeResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
+
+        [_serviceAPI authUserWithIndetifier:[self.keyChainService getIdentifier] email:validDict[@"email"] password:validDict[@"password"] completeResponse:^(NSDictionary *dicReponse, TransportResponseStatus status) {
             if(status == TransportResponseStatusSuccess){
                 
                 UserAuthModel* authModel = [_authParser createAuthorizationModelFromResponse:dicReponse];
