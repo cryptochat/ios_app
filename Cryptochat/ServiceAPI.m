@@ -63,12 +63,22 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
 
     NSString* strURL = [NSString stringWithFormat:@"%@/users/auth",BASE_API_URL];
     
-    NSURLQueryItem* itemPassword = [[NSURLQueryItem alloc] initWithName:@"password" value:password];
-    NSURLQueryItem* itemEmail = [[NSURLQueryItem alloc] initWithName:@"email" value:email];
+    NSDictionary* dataDict = @{@"email":email,
+                               @"password":password};
+    
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dataDict
+                                                       options:NSJSONWritingPrettyPrinted error:nil];
+    NSString* dataString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    dataString = [dataString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    dataString = [dataString stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+
+    
+    NSURLQueryItem* itemData = [[NSURLQueryItem alloc] initWithName:@"data" value:dataString];
     NSURLQueryItem* itemIdentifier = [[NSURLQueryItem alloc] initWithName:@"identifier" value:identifier];
     
     NSURLComponents* components = [[NSURLComponents alloc] initWithURL:[NSURL URLWithString:strURL] resolvingAgainstBaseURL:NO];
-    components.queryItems = @[itemPassword, itemEmail, itemIdentifier];
+    components.queryItems = @[itemIdentifier, itemData];
     
     NSMutableURLRequest* request = [NSMutableURLRequest new];
     

@@ -19,12 +19,12 @@
     
     UserAuthModel* authModel = [UserAuthModel new];
 
-    authModel.uuid = dicResponse[@"data"][@"uuid"];
-    authModel.email = dicResponse[@"data"][@"email"];
-    authModel.username = dicResponse[@"data"][@"username"];
-    authModel.firstName = dicResponse[@"data"][@"first_name"];
-    authModel.lastName = dicResponse[@"data"][@"last_name"];
-    authModel.token = dicResponse[@"data"][@"token"];
+    authModel.uuid = dicResponse[@"cipher_message"][@"user"][@"uuid"];
+    authModel.email = dicResponse[@"cipher_message"][@"user"][@"email"];
+    authModel.username = dicResponse[@"cipher_message"][@"user"][@"username"];
+    authModel.firstName = dicResponse[@"cipher_message"][@"user"][@"first_name"];
+    authModel.lastName = dicResponse[@"cipher_message"][@"user"][@"last_name"];
+    authModel.token = dicResponse[@"cipher_message"][@"user"][@"token"];
 
     return authModel;
 }
