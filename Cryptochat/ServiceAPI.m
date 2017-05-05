@@ -17,7 +17,6 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
 }
 
 
-#pragma mark - Authorization
 -(void)getPublicKeyWithCompleteResponse:(APIServiceResponse)completeResponse{
     
     NSString* url = @"http://wishbyte.org/api/v1/key_exchanger/get_public";
@@ -29,7 +28,7 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
     request.HTTPMethod = @"GET";
     
     [self addRequestContentType:request];
-  
+    
     [TransportLayer fetchRequest:request complete:^(NSDictionary *dicReponse, TransportResponseStatus status, NSData* data) {
         NSLog(@"%@", url);
         completeResponse(dicReponse, status);
@@ -56,36 +55,45 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
         NSLog(@"%@", urlString);
         completeResponse(dicReponse, status);
     }];
-
+    
 }
 
 -(void)authUserWithIndetifier:(NSString*)identifier email:(NSString*)email password:(NSString*)password completeResponse:(APIServiceResponse)completeResponse{
     
-    NSString* url = @"http://wishbyte.org/api/v1/users/auth";
+
+    NSString* strURL = [NSString stringWithFormat:@"%@/users/auth",BASE_API_URL];
     
-    NSURLComponents* components = [[NSURLComponents alloc] initWithString:url];
+    NSDictionary* dataDict = @{@"email":email,
+                               @"password":password};
+    
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dataDict
+                                                       options:NSJSONWritingPrettyPrinted error:nil];
+    NSString* dataString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    dataString = [dataString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    dataString = [dataString stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+
+    
+    NSURLQueryItem* itemData = [[NSURLQueryItem alloc] initWithName:@"data" value:dataString];
+    NSURLQueryItem* itemIdentifier = [[NSURLQueryItem alloc] initWithName:@"identifier" value:identifier];
+    
+    NSURLComponents* components = [[NSURLComponents alloc] initWithURL:[NSURL URLWithString:strURL] resolvingAgainstBaseURL:NO];
+    components.queryItems = @[itemIdentifier, itemData];
     
     NSMutableURLRequest* request = [NSMutableURLRequest new];
+    
     request.URL = components.URL;
     request.HTTPMethod = @"POST";
-    
-    NSDictionary *jsonDictionary = @{
-                                     @"identifier" : email,
-                                     @"data[email]" : password,
-                                     @"data[password]" : identifier,
-                                     };
-    
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:jsonDictionary
-                                                       options:NSJSONWritingPrettyPrinted error:nil];
-    
-    request.HTTPBody = jsonData;
-    
-    [self addRequestContentType:request];
+    request.HTTPBody = [[components percentEncodedQuery] dataUsingEncoding:NSUTF8StringEncoding];
+    [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     
     [TransportLayer fetchRequest:request complete:^(NSDictionary *dicReponse, TransportResponseStatus status, NSData* data) {
-        NSLog(@"%@", url);
+        
+        NSLog(@"%@", strURL);
         completeResponse(dicReponse, status);
     }];
+    
+    
 }
 
 

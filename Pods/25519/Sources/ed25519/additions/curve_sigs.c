@@ -1,8 +1,8 @@
 #include <string.h>
+#include <stdlib.h>
 #include "ge.h"
 #include "curve_sigs.h"
 #include "crypto_sign.h"
-#include <stdlib.h>
 
 void curve25519_keygen(unsigned char* curve25519_pubkey_out,
                        const unsigned char* curve25519_privkey_in)
@@ -126,13 +126,13 @@ int curve25519_verify(const unsigned char* signature,
 
   err:
 
-//  if (verifybuf != NULL) {
-//    free(verifybuf);
-//  }
-//
-//  if (verifybuf2 != NULL) {
-//    free(verifybuf2);
-//  }
+  if (verifybuf != NULL) {
+    free(verifybuf);
+  }
+
+  if (verifybuf2 != NULL) {
+    free(verifybuf2);
+  }
 
   return result;
 }

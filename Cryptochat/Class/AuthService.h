@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "ServiceAPI.h"
-@class AuthorizationModel;
+@class UserAuthModel;
 @class AuthViewModel;
 
 @interface AuthService : NSObject
+-(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, UserAuthModel* model ))completeResponse;
 
 - (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey))completeResponse;
 - (void)sendMyPublicKeyToServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse;
--(void)authUserWithAuthViewModel:(AuthViewModel*)authViewModel WithCompleteResponse:(void (^)(TransportResponseStatus status, AuthorizationModel* model ))completeResponse;
+-(BOOL)isAuthorized;
 @end

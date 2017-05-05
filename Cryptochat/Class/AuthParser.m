@@ -7,31 +7,25 @@
 //
 
 #import "AuthParser.h"
-#import "AuthorizationModel.h"
+#import "UserAuthModel.h"
 
 
 
 @implementation AuthParser
--(AuthorizationModel*)createAuthorizationModelFromResponse:(NSDictionary*)dicResponse{
+-(UserAuthModel*)createAuthorizationModelFromResponse:(NSDictionary*)dicResponse{
     if(dicResponse == nil){
         return nil;
     }
     
-    AuthorizationModel* authModel = [AuthorizationModel new];
-    if([dicResponse[@"status"] isEqualToString:@"400"]){
-        authModel.errorLogin = dicResponse[@"errors"][@"login"];
-        authModel.errorPassword =dicResponse[@"errors"][@"password"];
-        
-    }
-    
-    if([dicResponse[@"status"] isEqualToString:@"OK"]){
-        authModel.uuid = dicResponse[@"uuid"];
-        authModel.email = dicResponse[@"email"];
-        authModel.username = dicResponse[@"username"];
-        authModel.firstName = dicResponse[@"first_name"];
-        authModel.lastName = dicResponse[@"last_name"];
-        authModel.token = dicResponse[@"token"];
-    }
+    UserAuthModel* authModel = [UserAuthModel new];
+
+    authModel.uuid = dicResponse[@"cipher_message"][@"user"][@"uuid"];
+    authModel.email = dicResponse[@"cipher_message"][@"user"][@"email"];
+    authModel.username = dicResponse[@"cipher_message"][@"user"][@"username"];
+    authModel.firstName = dicResponse[@"cipher_message"][@"user"][@"first_name"];
+    authModel.lastName = dicResponse[@"cipher_message"][@"user"][@"last_name"];
+    authModel.token = dicResponse[@"cipher_message"][@"user"][@"token"];
+
     return authModel;
 }
 @end

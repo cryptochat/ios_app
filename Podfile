@@ -4,8 +4,11 @@
 target 'Cryptochat' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
+pod '25519'
+pod 'Realm'
 
    pod '25519', '~> 1.2'
+
 
   target 'CryptochatTests' do
     inherit! :search_paths

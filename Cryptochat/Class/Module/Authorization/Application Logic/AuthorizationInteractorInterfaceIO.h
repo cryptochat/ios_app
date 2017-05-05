@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TransportLayer.h"
 @class AuthViewModel;
 
 @protocol AuthorizationInteractorInterfaceInput <NSObject>
@@ -14,5 +15,7 @@
 @end
 
 @protocol AuthorizationInteractorInterfaceOutput <NSObject>
-
+-(void)showMessage:(TransportResponseStatus)status;
+-(void)hideProgress;
+-(void)showProgress;
 @end

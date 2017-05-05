@@ -9,6 +9,7 @@
 #import "AuthorizationViewController.h"
 #import "AuthViewModel.h"
 #import "Constants.h"
+#import "RSProgress.h"
 
 @interface AuthorizationViewController()<UITextFieldDelegate>
 @property(weak, nonatomic)IBOutlet UIView* containView;
@@ -17,6 +18,9 @@
 @property(weak, nonatomic)IBOutlet UIButton* loginButton;
 @property(weak, nonatomic)IBOutlet UIButton* regButton;
 @property(weak, nonatomic)IBOutlet UIScrollView* scrollView;
+
+@property(weak, nonatomic)IBOutlet UILabel* passLabel;
+@property(weak, nonatomic)IBOutlet UILabel* emailLabel;
 
 -(IBAction)onLogin:(id)sender;
 -(IBAction)onReg:(id)sender;
@@ -50,14 +54,12 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 
 -(void)configTextField:(UITextField*)textField{
     textField.delegate = self;
-    textField.alpha = ALPHA;
-    [textField addTarget:self action:@selector(textFieldDidBeginEditing:) forControlEvents:UIControlEventEditingDidBegin];
     if([textField isEqual:_passTextField]){
-        _passTextField.text = PLACEHOLDER_PASS;
+        _passLabel.hidden = NO;
     }
     
     if([textField isEqual:_emailTextField]){
-        _emailTextField.text = PLACEHOLDER_EMAIL;
+        _emailLabel.hidden = NO;
     }
 }
 
@@ -81,11 +83,15 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 #pragma mark - Actions
 
 -(IBAction)onLogin:(id)sender{
+    
     if([self NSStringIsValidEmail:_emailTextField.text]){
-        if(![_passTextField.text isEqualToString:@""] && ![_passTextField.text isEqualToString:PLACEHOLDER_PASS]){
+        if(![_passTextField.text isEqualToString:@""] && _passLabel.hidden){
             
            //SUCCESS CASE
-            [self.presenter authUserWithModel:[self createViewModel]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                 [self.presenter authUserWithModel:[self createViewModel]];
+            });
+           
         }else{
              [self showAlertMessage:INVALID_PASSWORD];
         }
@@ -106,36 +112,47 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 
 - (void)keyboardWillBeHidden:(NSNotification *)aNotification
 {
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
     self.scrollView.scrollEnabled = NO;
     [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
     
     if([_emailTextField.text isEqualToString:@""]){
-        _emailTextField.text = PLACEHOLDER_EMAIL;
-        _emailTextField.alpha = ALPHA;
+        
+        _emailLabel.hidden = NO;
+    }else{
+        _emailLabel.hidden = YES;
     }
     
     if([_passTextField.text isEqualToString:@""]){
-        _passTextField.text = PLACEHOLDER_PASS;
-        _passTextField.alpha = ALPHA;
+        _passLabel.hidden = NO;
+    }else{
+        _passLabel.hidden = YES;
     }
-    
+
 }
 
--(void)textFieldDidBeginEditing:(UITextField*)textField{
-    if([textField isEqual:self.emailTextField]){
-        if([textField.text isEqualToString:PLACEHOLDER_EMAIL]){
-            self.emailTextField.text = @"";
-            self.emailTextField.alpha = 1;
-        }
-    }
-    
-    if([textField isEqual:self.passTextField]){
-        if([textField.text isEqualToString:PLACEHOLDER_PASS]){
-            self.passTextField.text = @"";
-            self.passTextField.alpha = 1;
-        }
-    }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+        if([textField isEqual:self.emailTextField]){
+            _emailLabel.hidden = YES;
+        }
+    
+        if([textField isEqual:self.passTextField]){
+            _passLabel.hidden = YES;
+        }
+    });
+    return YES;
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self onLogin:_loginButton];
+    return YES;
 }
 
 -(BOOL)NSStringIsValidEmail:(NSString *)checkString
@@ -168,9 +185,16 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
     return authModel;
 }
 
+-(void)showProgress{
+    [[RSProgress instance]showProgress];
+}
+
+-(void)hideProgress{
+    [[RSProgress instance]hideProgress];
+}
+
 
 #pragma mark - AuthorizationViewInterfaceOutputView <NSObject>
-
 
 
 @end

@@ -1,12 +1,17 @@
 PODS:
-  - 25519 (1.9)
+  - 25519 (2.0.2)
+  - Realm (2.6.1):
+    - Realm/Headers (= 2.6.1)
+  - Realm/Headers (2.6.1)
 
 DEPENDENCIES:
-  - 25519 (~> 1.2)
+  - '25519'
+  - Realm
 
 SPEC CHECKSUMS:
-  '25519': 64b9ee595df81056693072b0a84246483988afac
+  '25519': dc4bad7e2dbcbf1efa121068a705a44cd98c80fc
+  Realm: 9abfd4f87519376daa5ae3a4603155de408bf8b3
 
-PODFILE CHECKSUM: f80987f9f9cf7f0aee5d8f311badd6db177b87e4
+PODFILE CHECKSUM: 731f8cdae88bf1ba458a639818e804c06c0faa08
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.1.1
