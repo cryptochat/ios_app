@@ -14,6 +14,7 @@
 #import "UiKit/UINavigationController.h"
 #import "UiKit/UIView.h"
 #import "AuthorizationDelegateInterface.h"
+#import "ChatListRouter.h"
 
 
 static NSString* nameStoryboard = @"Authorization";
@@ -33,14 +34,12 @@ static NSString* identifierViewController = @"AuthorizationViewController";
                                        delegate:(id<AuthorizationDelegateInterface>)delegate{
     
     AuthorizationViewController *regViewController = [self AuthorizationViewControllerFromStoryboard];
-    
     self.userInterface = regViewController;
     [self configureDependencies];
     self.presenter.delegate = delegate;
   
     window.rootViewController = regViewController;
     [window makeKeyAndVisible];
-    
 }
 
 -(void)configureDependencies{
@@ -55,6 +54,12 @@ static NSString* identifierViewController = @"AuthorizationViewController";
 
     self.presenter.interactor = interactor;
     interactor.presenter = presenter;
+}
+
+-(void)presentChatList{
+    ChatListRouter* router = [ChatListRouter new];
+    [router presentChatListInterfaceFromViewController:self.userInterface container:self.userInterface.view delegate:self.presenter];
+    
 }
 
 -(AuthorizationViewController*)AuthorizationViewControllerFromStoryboard{

@@ -11,9 +11,9 @@
 #import "AuthorizationInteractorInterfaceIO.h"
 #import "AuthorizationRouter.h"
 #import "AuthorizationDelegateInterface.h"
+#import "ChatListDelegateInterface.h"
 
-
-@interface AuthorizationPresenter : NSObject <AuthorizationInteractorInterfaceOutput, AuthorizationViewInterfaceInputPresenter>
+@interface AuthorizationPresenter : NSObject <AuthorizationInteractorInterfaceOutput, AuthorizationViewInterfaceInputPresenter, ChatListDelegateInterface>
 
 @property (nonatomic, weak) id<AuthorizationViewInterfaceOutputView> userInterface;
 @property (nonatomic, strong) id<AuthorizationInteractorInterfaceInput> interactor;

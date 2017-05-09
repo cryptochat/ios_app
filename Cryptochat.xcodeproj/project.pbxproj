@@ -14,11 +14,18 @@
 		0F5373FE1E7E78790003926E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5373FC1E7E78790003926E /* LaunchScreen.storyboard */; };
 		0F5374091E7E787A0003926E /* CryptochatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374081E7E787A0003926E /* CryptochatTests.m */; };
 		0F5374141E7E787A0003926E /* CryptochatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374131E7E787A0003926E /* CryptochatUITests.m */; };
+		158039FC6B9E427724CBA920 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680F2EBB0C9FAD866C9D8794 /* ChatListViewController.m */; };
+		16231CB7E9CCE4F05FA30A47 /* ChatListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6FB7E51344AFFB246FC017 /* ChatListPresenter.m */; };
 		200243111B9802721A364448 /* libPods-Cryptochat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */; };
+		268C3064C54D5CC30663D159 /* ChatListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 569600909B0F1A9DFCD90333 /* ChatListRouter.m */; };
 		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
 		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
+		4ACD91F82098D26069DE80E1 /* ChatListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 76240B640B05DA1715421A56 /* ChatListInteractor.m */; };
 		5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F04FB851EAD09C8007D5EBE /* CryptoService.m */; };
-		5F4ED2601EAA577D0055D605 /* RSProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED25F1EAA577D0055D605 /* RSProgress.m */; };
+		5F420B2F1EC0744C00971A18 /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F420B2E1EC0744C00971A18 /* ChatList.storyboard */; };
+		5F420B341EC077F000971A18 /* ChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F420B321EC077F000971A18 /* ChatListCell.m */; };
+		5F420B351EC077F000971A18 /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F420B331EC077F000971A18 /* ChatListCell.xib */; };
+		5F420B391EC0780800971A18 /* ChatListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F420B381EC0780800971A18 /* ChatListViewModel.m */; };
 		5F4ED2641EAB82A30055D605 /* RealmDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2631EAB82A30055D605 /* RealmDataStore.m */; };
 		5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2661EAB83410055D605 /* UserAuthModel.m */; };
 		5F4ED26D1EAB84160055D605 /* UserAuthRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED26A1EAB84160055D605 /* UserAuthRealm.m */; };
@@ -64,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		012517E9AEE2EF8E62516FFE /* AuthorizationPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationPresenter.m; sourceTree = "<group>"; };
+		0369000D83B34685CCDCDE29 /* ChatListInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListInteractorInterfaceIO.h; sourceTree = "<group>"; };
 		07CFCAFF080DDF3527046AC9 /* RegistrationPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationPresenter.h; sourceTree = "<group>"; };
 		0A9E263E8600F5DF95E57672 /* AuthorizationPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationPresenter.h; sourceTree = "<group>"; };
 		0DA30055277E751236112F0C /* RegistrationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
@@ -82,17 +90,26 @@
 		0F5374131E7E787A0003926E /* CryptochatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptochatUITests.m; sourceTree = "<group>"; };
 		0F5374151E7E787A0003926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7D018A30715EAD60F5CA10 /* AuthorizationInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractor.h; sourceTree = "<group>"; };
+		2223F5C4F2D65CF5F7D34E14 /* ChatListPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListPresenter.h; sourceTree = "<group>"; };
+		26BB4E70A932F35B821CE7E2 /* ChatListViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewInterfaceIO.h; sourceTree = "<group>"; };
 		2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45296E4BBE5E019344D4C35A /* ChatListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		48546AB35EC0414E42612673 /* ChatListInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListInteractor.h; sourceTree = "<group>"; };
 		48CA8268DB24B4A9B3E357E3 /* AuthorizationRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationRouter.h; sourceTree = "<group>"; };
 		494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5374768EE956FBBE0D0B3E /* AuthorizationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
 		4BAF65F5891B9BE4AB0FB9A3 /* RegistrationInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractorInterfaceIO.h; sourceTree = "<group>"; };
 		50A1961D5FFF9225E460CA0D /* Pods-Cryptochat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptochat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptochat/Pods-Cryptochat.release.xcconfig"; sourceTree = "<group>"; };
+		569600909B0F1A9DFCD90333 /* ChatListRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListRouter.m; sourceTree = "<group>"; };
 		5EF843D7506E8027BB67EE8C /* AuthorizationInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractorInterfaceIO.h; sourceTree = "<group>"; };
 		5F04FB841EAD09C8007D5EBE /* CryptoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoService.h; sourceTree = "<group>"; };
 		5F04FB851EAD09C8007D5EBE /* CryptoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoService.m; sourceTree = "<group>"; };
-		5F4ED25E1EAA577D0055D605 /* RSProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProgress.h; sourceTree = "<group>"; };
-		5F4ED25F1EAA577D0055D605 /* RSProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProgress.m; sourceTree = "<group>"; };
+		5F420B2E1EC0744C00971A18 /* ChatList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
+		5F420B311EC077F000971A18 /* ChatListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListCell.h; sourceTree = "<group>"; };
+		5F420B321EC077F000971A18 /* ChatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListCell.m; sourceTree = "<group>"; };
+		5F420B331EC077F000971A18 /* ChatListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
+		5F420B371EC0780800971A18 /* ChatListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewModel.h; sourceTree = "<group>"; };
+		5F420B381EC0780800971A18 /* ChatListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewModel.m; sourceTree = "<group>"; };
 		5F4ED2621EAB82A30055D605 /* RealmDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmDataStore.h; sourceTree = "<group>"; };
 		5F4ED2631EAB82A30055D605 /* RealmDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmDataStore.m; sourceTree = "<group>"; };
 		5F4ED2651EAB83410055D605 /* UserAuthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthModel.h; sourceTree = "<group>"; };
@@ -128,16 +145,21 @@
 		617B63A943FE942E7182DB5C /* Pods-CryptochatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptochatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptochatTests/Pods-CryptochatTests.release.xcconfig"; sourceTree = "<group>"; };
 		62A1AF39D881100987CA81AC /* AuthorizationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
 		6661A66E42963A2C3B328638 /* RegistrationInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractor.h; sourceTree = "<group>"; };
+		680F2EBB0C9FAD866C9D8794 /* ChatListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
 		6E5D9B7A4B3668C0BAE94A69 /* libPods-CryptochatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F4957895E77CA9C114F4CC3 /* RegistrationDelegateInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationDelegateInterface.h; sourceTree = "<group>"; };
 		75292A3237BFDD30A2C49B05 /* RegistrationPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegistrationPresenter.m; sourceTree = "<group>"; };
 		75CF26AB3B394232DED11D3E /* AuthorizationViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewInterfaceIO.h; sourceTree = "<group>"; };
+		76240B640B05DA1715421A56 /* ChatListInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListInteractor.m; sourceTree = "<group>"; };
 		7CF073E88F7819C0D104FB26 /* RegistrationRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationRouter.h; sourceTree = "<group>"; };
 		9AD805A5042C129EFA59CF0E /* RegistrationInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegistrationInteractor.m; sourceTree = "<group>"; };
 		9AF666977B558BC53AF2D084 /* AuthorizationRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationRouter.m; sourceTree = "<group>"; };
+		AD6FB7E51344AFFB246FC017 /* ChatListPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListPresenter.m; sourceTree = "<group>"; };
 		BA06C3619CC2786ECFBCA4B8 /* RegistrationViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationViewInterfaceIO.h; sourceTree = "<group>"; };
+		C3CF3B20E4C2EC9E1EC38744 /* ChatListDelegateInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListDelegateInterface.h; sourceTree = "<group>"; };
 		CACDFB1F4559ADA248BF746F /* Pods-CryptochatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptochatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptochatUITests/Pods-CryptochatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegistrationRouter.m; sourceTree = "<group>"; };
+		CE6F43E24DDDB59170C928B0 /* ChatListRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListRouter.h; sourceTree = "<group>"; };
 		D45FB9643C6C173B77537AFB /* Pods-Cryptochat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptochat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptochat/Pods-Cryptochat.debug.xcconfig"; sourceTree = "<group>"; };
 		D75390540659B5BA99F1BF57 /* Pods-CryptochatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptochatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptochatTests/Pods-CryptochatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E06A7999ABCC6B5B7CC12389 /* AuthorizationInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationInteractor.m; sourceTree = "<group>"; };
@@ -250,8 +272,18 @@
 			children = (
 				DC642F8EFA776A72320451F0 /* Authorization */,
 				0CA1B2CC8E3D4B14455484D3 /* Registration */,
+				219ACA21FAC88871A486E447 /* ChatList */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		219ACA21FAC88871A486E447 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				7599538FAF327688AEC29276 /* Application Logic */,
+				463798C2C9DA7CAD2FD3CCAA /* User Interface */,
+			);
+			path = ChatList;
 			sourceTree = "<group>";
 		};
 		2FCB3D0AE2A92608A16905F5 /* Presenter */ = {
@@ -276,6 +308,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		463798C2C9DA7CAD2FD3CCAA /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				46DCBAFE492699B5126836EE /* Router */,
+				E74C66E5B205788A5C74B1F2 /* Presenter */,
+				6909F63DB25C06A436AF3C5B /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		46DCBAFE492699B5126836EE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C3CF3B20E4C2EC9E1EC38744 /* ChatListDelegateInterface.h */,
+				CE6F43E24DDDB59170C928B0 /* ChatListRouter.h */,
+				569600909B0F1A9DFCD90333 /* ChatListRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		5F04FB821EAD0989007D5EBE /* Auth Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,11 +349,29 @@
 			name = "Crypto Service";
 			sourceTree = "<group>";
 		};
+		5F420B301EC077C600971A18 /* ChatListCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F420B311EC077F000971A18 /* ChatListCell.h */,
+				5F420B321EC077F000971A18 /* ChatListCell.m */,
+				5F420B331EC077F000971A18 /* ChatListCell.xib */,
+			);
+			name = ChatListCell;
+			sourceTree = "<group>";
+		};
+		5F420B361EC077F500971A18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F420B371EC0780800971A18 /* ChatListViewModel.h */,
+				5F420B381EC0780800971A18 /* ChatListViewModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		5F4ED25D1EAA57600055D605 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
 				5FAD51991EB752AF007D440E /* Helpers */,
-				5FAD51981EB752A3007D440E /* RSProgress */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -359,15 +429,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		5FAD51981EB752A3007D440E /* RSProgress */ = {
-			isa = PBXGroup;
-			children = (
-				5F4ED25E1EAA577D0055D605 /* RSProgress.h */,
-				5F4ED25F1EAA577D0055D605 /* RSProgress.m */,
-			);
-			name = RSProgress;
-			sourceTree = "<group>";
-		};
 		5FAD51991EB752AF007D440E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +479,7 @@
 				5FD0D0571E7E9E02004343A6 /* Authorization.storyboard */,
 				0F5373F71E7E78790003926E /* Main.storyboard */,
 				0F5373FC1E7E78790003926E /* LaunchScreen.storyboard */,
+				5F420B2E1EC0744C00971A18 /* ChatList.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -429,6 +491,28 @@
 				5FD0D05E1E7EBE50004343A6 /* AuthViewModel.m */,
 			);
 			name = AuthViewModel;
+			sourceTree = "<group>";
+		};
+		6909F63DB25C06A436AF3C5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F420B361EC077F500971A18 /* Model */,
+				5F420B301EC077C600971A18 /* ChatListCell */,
+				26BB4E70A932F35B821CE7E2 /* ChatListViewInterfaceIO.h */,
+				45296E4BBE5E019344D4C35A /* ChatListViewController.h */,
+				680F2EBB0C9FAD866C9D8794 /* ChatListViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7599538FAF327688AEC29276 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				0369000D83B34685CCDCDE29 /* ChatListInteractorInterfaceIO.h */,
+				48546AB35EC0414E42612673 /* ChatListInteractor.h */,
+				76240B640B05DA1715421A56 /* ChatListInteractor.m */,
+			);
+			path = "Application Logic";
 			sourceTree = "<group>";
 		};
 		7C5911EAA082B0B7D7788464 /* User Interface */ = {
@@ -547,6 +631,15 @@
 				B468B66A40C48C6A2DDF79ED /* User Interface */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		E74C66E5B205788A5C74B1F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2223F5C4F2D65CF5F7D34E14 /* ChatListPresenter.h */,
+				AD6FB7E51344AFFB246FC017 /* ChatListPresenter.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,7 +763,9 @@
 				5FD0D0581E7E9E02004343A6 /* Authorization.storyboard in Resources */,
 				0F5373FE1E7E78790003926E /* LaunchScreen.storyboard in Resources */,
 				0F5373FB1E7E78790003926E /* Assets.xcassets in Resources */,
+				5F420B2F1EC0744C00971A18 /* ChatList.storyboard in Resources */,
 				0F5373F91E7E78790003926E /* Main.storyboard in Resources */,
+				5F420B351EC077F000971A18 /* ChatListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +933,7 @@
 				0F5373F31E7E78790003926E /* AppDelegate.m in Sources */,
 				0F5373F01E7E78790003926E /* main.m in Sources */,
 				5FAD51A41EB7536F007D440E /* KeyChainService.m in Sources */,
+				5F420B341EC077F000971A18 /* ChatListCell.m in Sources */,
 				5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */,
 				5F4ED2641EAB82A30055D605 /* RealmDataStore.m in Sources */,
 				5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */,
@@ -848,6 +944,7 @@
 				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
 				5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */,
 				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,
+				5F420B391EC0780800971A18 /* ChatListViewModel.m in Sources */,
 				5F4ED26D1EAB84160055D605 /* UserAuthRealm.m in Sources */,
 				BCD77F861FAD8A3447A909C3 /* AuthorizationPresenter.m in Sources */,
 				5F4ED2711EAB842C0055D605 /* UserAuthModel+Realm.m in Sources */,
@@ -856,10 +953,13 @@
 				2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */,
 				8787C5D61B7D1D4361F299AD /* RegistrationPresenter.m in Sources */,
 				5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */,
-				5F4ED2601EAA577D0055D605 /* RSProgress.m in Sources */,
 				5F5C563C1E7EC298002E62E7 /* ServiceAPI.m in Sources */,
 				5F4ED26E1EAB84160055D605 /* UserAuthRealm+Model.m in Sources */,
 				31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */,
+				4ACD91F82098D26069DE80E1 /* ChatListInteractor.m in Sources */,
+				268C3064C54D5CC30663D159 /* ChatListRouter.m in Sources */,
+				16231CB7E9CCE4F05FA30A47 /* ChatListPresenter.m in Sources */,
+				158039FC6B9E427724CBA920 /* ChatListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

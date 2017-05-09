@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat List View Controller-->
+        <scene sceneID="shf-xN-nga">
+            <objects>
+                <viewController storyboardIdentifier="ChatListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g2k-aQ-HTO" customClass="ChatListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CCi-9q-02D"/>
+                        <viewControllerLayoutGuide type="bottom" id="89b-TD-A5N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="km8-l9-CH4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAG-uQ-WPt">
+                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="qn3-MD-lAk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5xy-tB-QbH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TAG-uQ-WPt" firstAttribute="top" secondItem="5xy-tB-QbH" secondAttribute="bottom" id="9Nv-Eh-SZD"/>
+                            <constraint firstItem="5xy-tB-QbH" firstAttribute="leading" secondItem="km8-l9-CH4" secondAttribute="leading" id="IdM-jx-vzh"/>
+                            <constraint firstAttribute="trailing" secondItem="TAG-uQ-WPt" secondAttribute="trailing" id="LXd-CM-FYD"/>
+                            <constraint firstAttribute="trailing" secondItem="5xy-tB-QbH" secondAttribute="trailing" id="aHa-Nd-29y"/>
+                            <constraint firstItem="89b-TD-A5N" firstAttribute="top" secondItem="TAG-uQ-WPt" secondAttribute="bottom" id="bD0-gZ-8SQ"/>
+                            <constraint firstItem="5xy-tB-QbH" firstAttribute="top" secondItem="km8-l9-CH4" secondAttribute="top" id="eyM-dq-eQ6"/>
+                            <constraint firstItem="TAG-uQ-WPt" firstAttribute="leading" secondItem="km8-l9-CH4" secondAttribute="leading" id="k1e-V5-VsD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="5xy-tB-QbH" id="o19-EZ-2MY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNm-Bk-9YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="96.7016491754123"/>
+        </scene>
+    </scenes>
+</document>

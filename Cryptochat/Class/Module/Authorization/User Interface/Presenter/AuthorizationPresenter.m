@@ -8,10 +8,8 @@
 
 #import "AuthorizationPresenter.h"
 #import "TransportLayer.h"
+#import "Constants.h"
 
-static NSString* NO_INTERNET_TEXT = @"Возникла проблема с интернет-соединением";
-static NSString* ERROR_DEFAULT_TEXT = @"Возникла ошибка";
-static NSString* ERROR_PARAMS = @"Неверно введены email или пароль";
 
 @implementation AuthorizationPresenter
 
@@ -19,7 +17,6 @@ static NSString* ERROR_PARAMS = @"Неверно введены email или п�
 #pragma mark - AuthorizationViewInterfaceInputPresenter
 
 -(void)viewInit{
-	
 }
 
 -(void)authUserWithModel:(AuthViewModel *)model{
@@ -54,6 +51,14 @@ static NSString* ERROR_PARAMS = @"Неверно введены email или п�
 
 -(void)showProgress{
     [self.userInterface showProgress];
+}
+
+-(void)presentChatList{
+    [self.userInterface hideProgress];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.router presentChatList];
+    });
+    
 }
 
 @end
