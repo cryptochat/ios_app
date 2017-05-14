@@ -18,5 +18,6 @@
 @property (strong, nonatomic) NSURL* interlocutorURLAvatarBig;
 @property (strong, nonatomic) NSURL* interlocutorURLAvatarMedium;
 @property (strong, nonatomic) NSURL* interlocutorURLAvatarSmall;
+@property (assign, nonatomic) BOOL isOnline;
 
 @end

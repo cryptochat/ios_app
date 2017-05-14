@@ -56,10 +56,12 @@
     
         if (status != TransportResponseStatusSuccess) {
             completeResponse (status, nil, nil);
-        } else {
-            NSArray *interlocutorModelsArray = [self.chatParser createInterlocutorModelsArrayFromDictionary:dicReponse];
+            return;
         }
-        
+        NSArray *interlocutorModelsArray = [self.chatParser createInterlocutorModelsArrayFromDictionary:dicReponse];
+        NSArray *chatListModelsArray = [self.chatParser createChatListModelsArrayFromDictionary:dicReponse];
+            
+        completeResponse (status, interlocutorModelsArray, chatListModelsArray);
     }];
 }
 
