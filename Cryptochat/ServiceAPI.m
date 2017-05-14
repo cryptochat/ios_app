@@ -98,22 +98,21 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
 
 #pragma mark - Chat
 - (void)getChatListWithIdentifier:(NSString *)idetnitfier data:(NSString *)data complete:(APIServiceResponse)completeResponse {
-    NSString* url = @"http://wishbyte.org/api/v1/chat_messages/chat_list";
     
-    NSURLComponents* components = [[NSURLComponents alloc] initWithString:url];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/chat_messages/chat_list",BASE_API_URL]];
+    NSURLQueryItem* itemData = [[NSURLQueryItem alloc] initWithName:@"data" value:data];
+    NSURLQueryItem* itemIdentifier = [[NSURLQueryItem alloc] initWithName:@"identifier" value:idetnitfier];
     
-    NSMutableURLRequest* request = [NSMutableURLRequest new];
-    request.URL = components.URL;
-    request.HTTPMethod = @"GET";
-    
-    NSURLQueryItem *itemIdentifier = [NSURLQueryItem queryItemWithName:@"identifier" value:[NSString stringWithFormat:@"%@",idetnitfier]];
-    NSURLQueryItem *itemData = [NSURLQueryItem queryItemWithName:@"data" value:[NSString stringWithFormat:@"%@",data]];
+    NSURLComponents* components = [[NSURLComponents alloc] initWithURL:URL resolvingAgainstBaseURL:NO];
     components.queryItems = @[itemIdentifier, itemData];
-    
-    [self addRequestContentType:request];
-    
+
+    NSMutableURLRequest* request = [NSMutableURLRequest new];
+    request.HTTPMethod = @"GET";
+    request.URL = components.URL;
+    [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+
     [TransportLayer fetchRequest:request complete:^(NSDictionary *dicReponse, TransportResponseStatus status, NSData* data) {
-        NSLog(@"%@", url);
+        NSLog(@"%@", request.URL);
         completeResponse(dicReponse, status);
     }];
     

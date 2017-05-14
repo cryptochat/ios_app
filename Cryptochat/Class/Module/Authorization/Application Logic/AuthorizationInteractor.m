@@ -10,6 +10,8 @@
 #import "AuthService.h"
 #import "UserAuthModel.h"
 
+#import "ChatService.h"
+
 @interface AuthorizationInteractor()
 @property(strong, nonatomic)AuthService* authService;
 @end
@@ -30,7 +32,10 @@
         [self.presenter hideProgress];
         if(status == TransportResponseStatusSuccess){
             //TODO:
-            
+            ChatService *chat = [ChatService new];
+            [chat getChatListWithToken:model.token complete:^(TransportResponseStatus status, NSArray<UserModel *> *userArray, NSArray<ChatListModel *> *chatLustArray) {
+                
+            }];
         }else{
             [self.presenter showMessage:status];
         }
