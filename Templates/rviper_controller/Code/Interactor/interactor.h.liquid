@@ -1,0 +1,11 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}InteractorInterfaceIO.h"
+
+
+
+@interface {{ prefix }}{{ module_info.name }}Interactor : NSObject <{{ prefix }}{{ module_info.name }}InteractorInterfaceInput>
+
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}InteractorInterfaceOutput> presenter;
+
+@end

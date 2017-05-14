@@ -1,0 +1,29 @@
+# Template information section
+name: "rviper_controller"
+summary: "VIPER module template with UIViewController playing as a View. Used in IT-Machine"
+author: "Romankov Serget"
+version: "1.0"
+license: "MIT"
+
+# The declarations for code files
+code_files:
+
+
+# Interactor layer
+- {name: Application Logic/InteractorInterfaceIO.h, path: Code/Interactor/interactor_interface_IO.h.liquid}
+- {name: Application Logic/Interactor.h, path: Code/Interactor/interactor.h.liquid}
+- {name: Application Logic/Interactor.m, path: Code/Interactor/interactor.m.liquid}
+
+# Router layer
+- {name: User Interface/Router/DelegateInterface.h, path: Code/Router/router_input.h.liquid}
+- {name: User Interface/Router/Router.h, path: Code/Router/router.h.liquid}
+- {name: User Interface/Router/Router.m, path: Code/Router/router.m.liquid}
+
+# Presenter layer
+- {name: User Interface/Presenter/Presenter.h, path: Code/Presenter/presenter.h.liquid}
+- {name: User Interface/Presenter/Presenter.m, path: Code/Presenter/presenter.m.liquid}
+
+# View layer
+- {name: User Interface/View/ViewInterfaceIO.h, path: Code/View/view_interface_IO.h.liquid}
+- {name: User Interface/View/ViewController.h, path: Code/View/viewcontroller.h.liquid}
+- {name: User Interface/View/ViewController.m, path: Code/View/viewcontroller.m.liquid}
