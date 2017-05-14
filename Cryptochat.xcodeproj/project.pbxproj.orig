@@ -18,14 +18,17 @@
 		158039FC6B9E427724CBA920 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680F2EBB0C9FAD866C9D8794 /* ChatListViewController.m */; };
 		16231CB7E9CCE4F05FA30A47 /* ChatListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6FB7E51344AFFB246FC017 /* ChatListPresenter.m */; };
 		200243111B9802721A364448 /* libPods-Cryptochat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */; };
+<<<<<<< HEAD
+		20AF13483EB91EA064FEED4D /* SearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE81EE3693396B6E83F610C8 /* SearchingViewController.m */; };
+		268C3064C54D5CC30663D159 /* ChatListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 569600909B0F1A9DFCD90333 /* ChatListRouter.m */; };
+=======
 		20290B641EC8652200507479 /* ChatParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B611EC8652200507479 /* ChatParser.m */; };
 		20290B651EC8652200507479 /* ChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B631EC8652200507479 /* ChatService.m */; };
 		20290B6B1EC8657600507479 /* ChatListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B681EC8657600507479 /* ChatListModel.m */; };
 		20290B6C1EC8657600507479 /* InterlocutorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B6A1EC8657600507479 /* InterlocutorModel.m */; };
 		20290B701EC8C8E600507479 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B6F1EC8C8E600507479 /* UserService.m */; };
 		20290B731EC8C8FB00507479 /* UserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B721EC8C8FB00507479 /* UserParser.m */; };
-		20AF13483EB91EA064FEED4D /* SearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE81EE3693396B6E83F610C8 /* SearchingViewController.m */; };
-		268C3064C54D5CC30663D159 /* ChatListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 569600909B0F1A9DFCD90333 /* ChatListRouter.m */; };
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
 		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
 		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
 		4ACD91F82098D26069DE80E1 /* ChatListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 76240B640B05DA1715421A56 /* ChatListInteractor.m */; };
@@ -105,6 +108,12 @@
 		0F5374131E7E787A0003926E /* CryptochatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptochatUITests.m; sourceTree = "<group>"; };
 		0F5374151E7E787A0003926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7D018A30715EAD60F5CA10 /* AuthorizationInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractor.h; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		2223F5C4F2D65CF5F7D34E14 /* ChatListPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListPresenter.h; sourceTree = "<group>"; };
+		26BB4E70A932F35B821CE7E2 /* ChatListViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewInterfaceIO.h; sourceTree = "<group>"; };
+		2B48FD5E5B08662B2F92CD3F /* SearchingRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SearchingRouter.m; sourceTree = "<group>"; };
+		2C2BD40868314849C42BAA8D /* SearchingViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingViewInterfaceIO.h; sourceTree = "<group>"; };
+=======
 		20290B601EC8652200507479 /* ChatParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatParser.h; sourceTree = "<group>"; };
 		20290B611EC8652200507479 /* ChatParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatParser.m; sourceTree = "<group>"; };
 		20290B621EC8652200507479 /* ChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatService.h; sourceTree = "<group>"; };
@@ -117,10 +126,7 @@
 		20290B6F1EC8C8E600507479 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		20290B711EC8C8FB00507479 /* UserParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserParser.h; sourceTree = "<group>"; };
 		20290B721EC8C8FB00507479 /* UserParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserParser.m; sourceTree = "<group>"; };
-		2223F5C4F2D65CF5F7D34E14 /* ChatListPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListPresenter.h; sourceTree = "<group>"; };
-		26BB4E70A932F35B821CE7E2 /* ChatListViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewInterfaceIO.h; sourceTree = "<group>"; };
-		2B48FD5E5B08662B2F92CD3F /* SearchingRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SearchingRouter.m; sourceTree = "<group>"; };
-		2C2BD40868314849C42BAA8D /* SearchingViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingViewInterfaceIO.h; sourceTree = "<group>"; };
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
 		2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45296E4BBE5E019344D4C35A /* ChatListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
 		48546AB35EC0414E42612673 /* ChatListInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListInteractor.h; sourceTree = "<group>"; };
@@ -322,6 +328,25 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		219ACA21FAC88871A486E447 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				7599538FAF327688AEC29276 /* Application Logic */,
+				463798C2C9DA7CAD2FD3CCAA /* User Interface */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		2B85B46EEBB6F340C7BD9042 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BC30390CE0770E03D50B87B8 /* SearchingInteractorInterfaceIO.h */,
+				4D4096922E018FE1AC746E3E /* SearchingInteractor.h */,
+				D81AE2ED58440E190F406A61 /* SearchingInteractor.m */,
+			);
+			path = "Application Logic";
+=======
 		20290B661EC8655C00507479 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,25 +379,7 @@
 				20290B611EC8652200507479 /* ChatParser.m */,
 			);
 			name = Chat;
-			sourceTree = "<group>";
-		};
-		219ACA21FAC88871A486E447 /* ChatList */ = {
-			isa = PBXGroup;
-			children = (
-				7599538FAF327688AEC29276 /* Application Logic */,
-				463798C2C9DA7CAD2FD3CCAA /* User Interface */,
-			);
-			path = ChatList;
-			sourceTree = "<group>";
-		};
-		2B85B46EEBB6F340C7BD9042 /* Application Logic */ = {
-			isa = PBXGroup;
-			children = (
-				BC30390CE0770E03D50B87B8 /* SearchingInteractorInterfaceIO.h */,
-				4D4096922E018FE1AC746E3E /* SearchingInteractor.h */,
-				D81AE2ED58440E190F406A61 /* SearchingInteractor.m */,
-			);
-			path = "Application Logic";
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
 			sourceTree = "<group>";
 		};
 		2FCB3D0AE2A92608A16905F5 /* Presenter */ = {
@@ -1123,8 +1130,11 @@
 				2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */,
 				8787C5D61B7D1D4361F299AD /* RegistrationPresenter.m in Sources */,
 				5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */,
+<<<<<<< HEAD
+=======
 				5F4ED2601EAA577D0055D605 /* RSProgress.m in Sources */,
 				20290B731EC8C8FB00507479 /* UserParser.m in Sources */,
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
 				5F5C563C1E7EC298002E62E7 /* ServiceAPI.m in Sources */,
 				5F4ED26E1EAB84160055D605 /* UserAuthRealm+Model.m in Sources */,
 				31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */,

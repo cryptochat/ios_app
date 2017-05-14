@@ -12,7 +12,15 @@
 typedef void(^APIServiceResponse)(NSDictionary*dicReponse, TransportResponseStatus status);
 
 @interface ServiceAPI : NSObject
+
 - (void)getPublicKeyWithCompleteResponse:(APIServiceResponse)completeResponse;
 - (void)sendMyPublicKeyToServer:(NSString *)myPublicKey identifier:(NSString *)identifier complete:(APIServiceResponse)completeResponse;
 -(void)authUserWithIndetifier:(NSString*)identifier email:(NSString*)email password:(NSString*)password completeResponse:(APIServiceResponse)completeResponse;
+
+//Users
+- (void)getUsersWithIdentifier:(NSString *)idetnitfier data:(NSString *)data complete:(APIServiceResponse)completeResponse;
+
+//Chat
+- (void)getChatListWithIdentifier:(NSString *)idetnitfier data:(NSString *)data complete:(APIServiceResponse)completeResponse;
+
 @end

@@ -36,14 +36,16 @@ static NSString* identifierViewController = @"SearchingViewController";
     
     SearchingViewController* userInterface = [self SearchingViewControllerFromStoryboard];
 
+    self.userInterface = userInterface;
+    [self configureDependencies];
+    
     self.navController = navController;
      _searchController = [[UISearchController alloc]initWithSearchResultsController:userInterface];
     _searchController.delegate = self;
     _searchController.searchBar.delegate = userInterface;
     _searchController.searchResultsUpdater = (id)self;
     
-    self.userInterface = userInterface;
-    [self configureDependencies];
+    
     self.presenter.delegate = delegate;
     
     [self.navController presentViewController:_searchController animated:YES completion:nil];

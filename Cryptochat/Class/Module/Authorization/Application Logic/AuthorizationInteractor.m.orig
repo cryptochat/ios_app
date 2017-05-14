@@ -28,8 +28,11 @@
     [_authService authUserWithAuthViewModel:model WithCompleteResponse:^(TransportResponseStatus status, UserAuthModel *model) {
         [self.presenter hideProgress];
         if(status == TransportResponseStatusSuccess){
-            //TODO:
+<<<<<<< HEAD
             [self.presenter presentChatList];
+=======
+            //TODO:
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
         }else{
             [self.presenter showMessage:status];
         }

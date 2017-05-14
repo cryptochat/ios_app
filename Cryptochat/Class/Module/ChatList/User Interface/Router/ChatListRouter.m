@@ -39,10 +39,10 @@ static NSString* identifierViewController = @"ChatListViewController";
     
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:userInterface];
     self.navController = navController;
-    [userInterface.view setFrame:viewController.view.frame];
     
     self.userInterface = userInterface;
     [self configureDependencies];
+    [userInterface.view setFrame:viewController.view.frame];
     self.presenter.delegate = delegate;
     
     [viewController.view addSubview:navController.view];

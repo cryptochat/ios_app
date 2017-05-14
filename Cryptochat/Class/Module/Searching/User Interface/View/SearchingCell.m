@@ -8,6 +8,7 @@
 
 #import "SearchingCell.h"
 #import "SearchingModel.h"
+#import "UIImageView+WebCache.h"
 
 @interface SearchingCell()
 @property(weak, nonatomic)IBOutlet UIImageView* photoView;
@@ -22,8 +23,12 @@
 
 -(void)configCell:(SearchingModel*)model{
     //_photoView.image = [UIImage imageWithData:model.photoData];
+    if(model.photoURL){
+        [_photoView sd_setImageWithURL:model.photoURL];
+    }
     _nameLabel.text = model.name;
-    _photoView.layer.cornerRadius = 30;
+    _photoView.clipsToBounds = YES;
+    _photoView.layer.cornerRadius = 22;
 }
 
 @end

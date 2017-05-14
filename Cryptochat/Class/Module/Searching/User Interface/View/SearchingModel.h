@@ -12,4 +12,5 @@
 @property(strong, nonatomic)NSData* photoData;
 @property(strong, nonatomic)NSString* name;
 @property(assign, nonatomic)int index;
+@property(strong, nonatomic)NSURL* photoURL;
 @end

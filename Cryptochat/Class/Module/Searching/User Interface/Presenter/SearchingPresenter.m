@@ -21,6 +21,8 @@
 
 
 -(void)updateView:(NSArray<SearchingModel*>*)arrModels{
-    [self.userInterface updateView:arrModels];
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [self.userInterface updateView:arrModels];
+    });
 }
 @end

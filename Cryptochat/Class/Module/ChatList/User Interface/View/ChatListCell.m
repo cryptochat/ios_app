@@ -8,6 +8,7 @@
 
 #import "ChatListCell.h"
 #import "ChatListViewModel.h"
+#import "UIImageView+WebCache.h"
 
 @interface ChatListCell()
 @property(weak, nonatomic)IBOutlet UIImageView* photoView;
@@ -28,11 +29,17 @@
 -(void)configCell:(ChatListViewModel*)model{
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     //_photoView.image = [UIImage imageWithData:model.photoData];
+    if(model.photoURL){
+         [_photoView sd_setImageWithURL:model.photoURL];
+    }
+    
     _nameLabel.text = model.name;
     _dateLabel.text = model.stringDate;
     _lastMessageLabel.text = model.lastMessage;
     if(model.isReaded){
-        
+        _isReadedView.hidden = NO;
+    }else{
+        _isReadedView.hidden = YES;
     }
     
     if(model.isOnline){
@@ -40,8 +47,10 @@
     }else{
         _isOnlineView.hidden = YES;
     }
+   
     self.photoView.clipsToBounds = YES;
     self.photoView.layer.cornerRadius = 30;
+    
 }
 
 @end

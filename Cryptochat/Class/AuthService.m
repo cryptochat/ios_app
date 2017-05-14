@@ -122,4 +122,10 @@ const NSString* mockIdentifier = @"76c93ee0-20e3-4340-ab7b-ef1c2371dcda";
     }
     return YES;
 }
+
+-(NSString*)getAuthToken{
+    UserAuthModel* currentModel = [_realmDataStore getUser];
+    return currentModel.token;
+}
+
 @end

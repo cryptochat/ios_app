@@ -29,12 +29,9 @@ static float CELL_HEIGHT = 80;
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    dispatch_async(dispatch_get_main_queue(), ^{
        
-        [self.presenter viewInit];
-        [self configTable];
-    });
-   
+    [self.presenter viewInit];
+    [self configTable];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

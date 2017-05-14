@@ -8,28 +8,42 @@
 
 #import "SearchingInteractor.h"
 #import "SearchingModel.h"
+#import "UserService.h"
+#import "AuthService.h"
+#import "InterlocutorModel.h"
 
 @interface SearchingInteractor()
-
+@property(strong, nonatomic)UserService* userService;
+@property(strong, nonatomic)AuthService* authService;
 @end
 
 @implementation SearchingInteractor
 
--(void)getModels{
-    NSMutableArray* buffArray = [NSMutableArray new];
-    for(int i=0;i<6;i++){
-        SearchingModel* model = [SearchingModel new];
-        model.index = i;
-        
-        model.name = @"Евгений Петров";
-        if(i==0){
-            model.name = @"Михаил Андреев";
-        }
-        if(i==3){
-            model.name = @"Андрей Васильев";
-        }
-        [buffArray addObject:model];
+-(instancetype)init{
+    self = [super init];
+    if(self){
+        _userService = [UserService new];
+        _authService = [AuthService new];
     }
-    [self.presenter updateView:buffArray];
+    return self;
+}
+
+-(void)getModels{
+    
+    [_userService getUsersWithToken:[_authService getAuthToken] query:nil complete:^(TransportResponseStatus status, NSArray<InterlocutorModel *> *userArray) {
+        
+        NSMutableArray* buffArray = [NSMutableArray new];
+        
+        for(InterlocutorModel* intModel in userArray){
+            SearchingModel* model = [SearchingModel new];
+            model.name = [NSString stringWithFormat:@"%@ %@", intModel.interlocutorFirstName, intModel.interlocutorLastName];
+            model.photoURL = intModel.interlocutorURLAvatar;
+            [buffArray addObject:model];
+            model.index = intModel.valueID;
+        }
+        [self.presenter updateView:buffArray];
+    }];
+    
+
 }
 @end

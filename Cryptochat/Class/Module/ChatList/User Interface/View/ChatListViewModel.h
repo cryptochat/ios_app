@@ -15,4 +15,6 @@
 @property(assign, nonatomic)BOOL isReaded;
 @property(assign, nonatomic)BOOL isOnline;
 @property(strong, nonatomic)NSString* stringDate;
+@property(strong, nonatomic)NSURL* photoURL;
+@property(assign, nonatomic)int valueID;
 @end
