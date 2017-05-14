@@ -52,5 +52,38 @@
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="96.7016491754123"/>
         </scene>
+        <!--Searching View Controller-->
+        <scene sceneID="Km0-Ne-4Hn">
+            <objects>
+                <viewController storyboardIdentifier="SearchingViewController" id="WLI-1D-SqE" customClass="SearchingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Md-ac-oa6"/>
+                        <viewControllerLayoutGuide type="bottom" id="hVw-1B-yHC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VFV-t9-Gij">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2XL-X9-eeo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2XL-X9-eeo" firstAttribute="leading" secondItem="VFV-t9-Gij" secondAttribute="leading" id="BLQ-0D-5OB"/>
+                            <constraint firstItem="2XL-X9-eeo" firstAttribute="top" secondItem="9Md-ac-oa6" secondAttribute="bottom" constant="-20" id="BQW-F8-KV8"/>
+                            <constraint firstItem="hVw-1B-yHC" firstAttribute="top" secondItem="2XL-X9-eeo" secondAttribute="bottom" id="MEx-Yq-cX0"/>
+                            <constraint firstAttribute="trailing" secondItem="2XL-X9-eeo" secondAttribute="trailing" id="mV0-Q7-bif"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="2XL-X9-eeo" id="Hvc-ZD-rOj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="knl-qE-1gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845.60000000000002" y="92.203898050974516"/>
+        </scene>
     </scenes>
 </document>

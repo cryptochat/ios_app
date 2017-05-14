@@ -18,5 +18,6 @@
                                          delegate:(id<ChatListDelegateInterface>)delegate;
 - (void)presentChatListInterfaceFromWindow:(UIWindow*)window
                                   delegate:(id<ChatListDelegateInterface>)delegate;
+-(void)presentSearching;
 
 @end

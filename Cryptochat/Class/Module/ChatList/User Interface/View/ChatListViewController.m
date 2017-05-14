@@ -17,6 +17,8 @@ static float CELL_HEIGHT = 80;
 
 @interface ChatListViewController()<UITableViewDelegate, UITableViewDataSource>
 @property(weak, nonatomic)IBOutlet UITableView* tableView;
+@property (strong, nonatomic) UISearchController *controller;
+
 @end
 
 @implementation ChatListViewController{
@@ -52,6 +54,25 @@ static float CELL_HEIGHT = 80;
     self.navigationController.navigationBar.barTintColor = [UIColor lightGrayColor];
     self.navigationItem.hidesBackButton = YES;
     self.title = @"Список чатов";
+    
+    //UIBarButtonItem* itemForward = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"ic_menu_close"] style:UIBarButtonItemStylePlain target:self action:@selector(onForward)];
+    UIBarButtonItem* itemForward = [[UIBarButtonItem alloc]initWithTitle:@"Поиск" style:UIBarButtonItemStylePlain target:self action:@selector(onForward)];
+    itemForward.tintColor = [UIColor blackColor];
+    
+    self.navigationItem.rightBarButtonItem = itemForward;
+    
+    
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = 0.5;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    transition.type = kCATransitionFade; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
+//    //transition.subtype = kCATransitionFromTop; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
+//    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+}
+
+-(void)onForward{
+    [self.navigationController setNavigationBarHidden: YES animated:YES];
+    [self.presenter presentSearching];
 }
 
 -(void)configTable{

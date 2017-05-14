@@ -11,9 +11,9 @@
 #import "ChatListInteractorInterfaceIO.h"
 #import "ChatListRouter.h"
 #import "ChatListDelegateInterface.h"
+#import "SearchingDelegateInterface.h"
 
-
-@interface ChatListPresenter : NSObject <ChatListInteractorInterfaceOutput, ChatListViewInterfaceInputPresenter>
+@interface ChatListPresenter : NSObject <ChatListInteractorInterfaceOutput, ChatListViewInterfaceInputPresenter, SearchingDelegateInterface>
 
 @property (nonatomic, weak) id<ChatListViewInterfaceOutputView> userInterface;
 @property (nonatomic, strong) id<ChatListInteractorInterfaceInput> interactor;

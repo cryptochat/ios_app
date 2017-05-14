@@ -42,8 +42,6 @@
     }
     self.photoView.clipsToBounds = YES;
     self.photoView.layer.cornerRadius = 30;
-    
-
 }
 
 @end

@@ -14,6 +14,7 @@
 #import "UiKit/UINavigationController.h"
 #import "UiKit/UIView.h"
 #import "ChatListDelegateInterface.h"
+#import "SearchingRouter.h"
 
 
 static NSString* nameStoryboard = @"ChatList";
@@ -79,6 +80,11 @@ static NSString* identifierViewController = @"ChatListViewController";
 
     self.presenter.interactor = interactor;
     interactor.presenter = presenter;
+}
+
+-(void)presentSearching{
+    SearchingRouter* router = [SearchingRouter new];
+    [router presentSearchingInterfaceFromNavController:self.navController delegate:self.presenter];
 }
 
 -(ChatListViewController*)ChatListViewControllerFromStoryboard{

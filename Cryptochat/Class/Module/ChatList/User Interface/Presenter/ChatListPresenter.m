@@ -18,6 +18,10 @@
     [self.interactor getModels];
 }
 
+-(void)presentSearching{
+    [self.router presentSearching];
+}
+
 
 #pragma mark -  <ChatListInteractorInterfaceOutput
 
