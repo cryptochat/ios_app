@@ -15,5 +15,6 @@
 
 + (CRMediator *)instance;
 -(void)showAuthorization;
+-(void)showChatList;
 
 @end

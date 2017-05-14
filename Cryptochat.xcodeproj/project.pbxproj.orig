@@ -1,0 +1,1416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0ECEDCE5E5D6CCB515B801EF /* SearchingRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B48FD5E5B08662B2F92CD3F /* SearchingRouter.m */; };
+		0F5373F01E7E78790003926E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5373EF1E7E78790003926E /* main.m */; };
+		0F5373F31E7E78790003926E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5373F21E7E78790003926E /* AppDelegate.m */; };
+		0F5373F91E7E78790003926E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5373F71E7E78790003926E /* Main.storyboard */; };
+		0F5373FB1E7E78790003926E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5373FA1E7E78790003926E /* Assets.xcassets */; };
+		0F5373FE1E7E78790003926E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5373FC1E7E78790003926E /* LaunchScreen.storyboard */; };
+		0F5374091E7E787A0003926E /* CryptochatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374081E7E787A0003926E /* CryptochatTests.m */; };
+		0F5374141E7E787A0003926E /* CryptochatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374131E7E787A0003926E /* CryptochatUITests.m */; };
+		158039FC6B9E427724CBA920 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680F2EBB0C9FAD866C9D8794 /* ChatListViewController.m */; };
+		16231CB7E9CCE4F05FA30A47 /* ChatListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6FB7E51344AFFB246FC017 /* ChatListPresenter.m */; };
+		200243111B9802721A364448 /* libPods-Cryptochat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */; };
+<<<<<<< HEAD
+		20AF13483EB91EA064FEED4D /* SearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE81EE3693396B6E83F610C8 /* SearchingViewController.m */; };
+		268C3064C54D5CC30663D159 /* ChatListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 569600909B0F1A9DFCD90333 /* ChatListRouter.m */; };
+=======
+		20290B641EC8652200507479 /* ChatParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B611EC8652200507479 /* ChatParser.m */; };
+		20290B651EC8652200507479 /* ChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B631EC8652200507479 /* ChatService.m */; };
+		20290B6B1EC8657600507479 /* ChatListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B681EC8657600507479 /* ChatListModel.m */; };
+		20290B6C1EC8657600507479 /* InterlocutorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B6A1EC8657600507479 /* InterlocutorModel.m */; };
+		20290B701EC8C8E600507479 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B6F1EC8C8E600507479 /* UserService.m */; };
+		20290B731EC8C8FB00507479 /* UserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B721EC8C8FB00507479 /* UserParser.m */; };
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
+		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
+		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
+		4ACD91F82098D26069DE80E1 /* ChatListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 76240B640B05DA1715421A56 /* ChatListInteractor.m */; };
+		5C31B350538D6ED0C2C00552 /* SearchingPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F254A2FBDA2B869890E977 /* SearchingPresenter.m */; };
+		5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F04FB851EAD09C8007D5EBE /* CryptoService.m */; };
+		5F420B2F1EC0744C00971A18 /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F420B2E1EC0744C00971A18 /* ChatList.storyboard */; };
+		5F420B341EC077F000971A18 /* ChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F420B321EC077F000971A18 /* ChatListCell.m */; };
+		5F420B351EC077F000971A18 /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F420B331EC077F000971A18 /* ChatListCell.xib */; };
+		5F420B391EC0780800971A18 /* ChatListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F420B381EC0780800971A18 /* ChatListViewModel.m */; };
+		5F4C8CBA1EC8D0E400D0291C /* SearchingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4C8CB81EC8D0E400D0291C /* SearchingCell.m */; };
+		5F4C8CBB1EC8D0E400D0291C /* SearchingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F4C8CB91EC8D0E400D0291C /* SearchingCell.xib */; };
+		5F4C8CBF1EC8D0F900D0291C /* SearchingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4C8CBE1EC8D0F900D0291C /* SearchingModel.m */; };
+		5F4ED2641EAB82A30055D605 /* RealmDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2631EAB82A30055D605 /* RealmDataStore.m */; };
+		5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2661EAB83410055D605 /* UserAuthModel.m */; };
+		5F4ED26D1EAB84160055D605 /* UserAuthRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED26A1EAB84160055D605 /* UserAuthRealm.m */; };
+		5F4ED26E1EAB84160055D605 /* UserAuthRealm+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED26C1EAB84160055D605 /* UserAuthRealm+Model.m */; };
+		5F4ED2711EAB842C0055D605 /* UserAuthModel+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED2701EAB842C0055D605 /* UserAuthModel+Realm.m */; };
+		5F5C563C1E7EC298002E62E7 /* ServiceAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C563B1E7EC298002E62E7 /* ServiceAPI.m */; };
+		5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C563E1E7EC2B4002E62E7 /* TransportLayer.m */; };
+		5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56421E7EC6AC002E62E7 /* AuthService.m */; };
+		5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56491E7EC956002E62E7 /* AuthParser.m */; };
+		5F92048B1EC87853005DA781 /* UserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F92048A1EC87853005DA781 /* UserDefaultsManager.m */; };
+		5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD519B1EB752BA007D440E /* KeychainWrapper.m */; };
+		5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD519D1EB752BA007D440E /* Base64Coder.m */; };
+		5FAD51A41EB7536F007D440E /* KeyChainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD51A11EB7536E007D440E /* KeyChainService.m */; };
+		5FAD51A51EB7536F007D440E /* ExchangeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD51A31EB7536F007D440E /* ExchangeService.m */; };
+		5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0D0551E7E9C86004343A6 /* CRMediator.m */; };
+		5FD0D0581E7E9E02004343A6 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD0D0571E7E9E02004343A6 /* Authorization.storyboard */; };
+		5FD0D05F1E7EBE50004343A6 /* AuthViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0D05E1E7EBE50004343A6 /* AuthViewModel.m */; };
+		6C5B21080CA3E52A582B223A /* AuthorizationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF666977B558BC53AF2D084 /* AuthorizationRouter.m */; };
+		732E497B5B26B9CF7D1B47EE /* libPods-CryptochatUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */; };
+		8787C5D61B7D1D4361F299AD /* RegistrationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75292A3237BFDD30A2C49B05 /* RegistrationPresenter.m */; };
+		90E12DED3120639CAAEF6176 /* libPods-CryptochatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5D9B7A4B3668C0BAE94A69 /* libPods-CryptochatTests.a */; };
+		ACE671A7C3E3926F5C678A2D /* SearchingInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AE2ED58440E190F406A61 /* SearchingInteractor.m */; };
+		ADD6A39AFFF766D6D8252C14 /* RegistrationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD805A5042C129EFA59CF0E /* RegistrationInteractor.m */; };
+		BCD77F861FAD8A3447A909C3 /* AuthorizationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012517E9AEE2EF8E62516FFE /* AuthorizationPresenter.m */; };
+		C9FC6DE5D57B0A5C5E382A1B /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A1AF39D881100987CA81AC /* AuthorizationViewController.m */; };
+		F2E8DA58E6E02E7D219B4AA3 /* AuthorizationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A7999ABCC6B5B7CC12389 /* AuthorizationInteractor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F5374051E7E787A0003926E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F5373E31E7E78790003926E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F5373EA1E7E78790003926E;
+			remoteInfo = Cryptochat;
+		};
+		0F5374101E7E787A0003926E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F5373E31E7E78790003926E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F5373EA1E7E78790003926E;
+			remoteInfo = Cryptochat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012517E9AEE2EF8E62516FFE /* AuthorizationPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationPresenter.m; sourceTree = "<group>"; };
+		0369000D83B34685CCDCDE29 /* ChatListInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListInteractorInterfaceIO.h; sourceTree = "<group>"; };
+		07CFCAFF080DDF3527046AC9 /* RegistrationPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationPresenter.h; sourceTree = "<group>"; };
+		0A9E263E8600F5DF95E57672 /* AuthorizationPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationPresenter.h; sourceTree = "<group>"; };
+		0C214BDCD5024A0977E87203 /* SearchingDelegateInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingDelegateInterface.h; sourceTree = "<group>"; };
+		0DA30055277E751236112F0C /* RegistrationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		0F5373EB1E7E78790003926E /* Cryptochat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptochat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5373EF1E7E78790003926E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F5373F11E7E78790003926E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0F5373F21E7E78790003926E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0F5373F81E7E78790003926E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F5373FA1E7E78790003926E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F5373FD1E7E78790003926E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F5373FF1E7E78790003926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F5374041E7E787A0003926E /* CryptochatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptochatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5374081E7E787A0003926E /* CryptochatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptochatTests.m; sourceTree = "<group>"; };
+		0F53740A1E7E787A0003926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F53740F1E7E787A0003926E /* CryptochatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptochatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5374131E7E787A0003926E /* CryptochatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptochatUITests.m; sourceTree = "<group>"; };
+		0F5374151E7E787A0003926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7D018A30715EAD60F5CA10 /* AuthorizationInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractor.h; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		2223F5C4F2D65CF5F7D34E14 /* ChatListPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListPresenter.h; sourceTree = "<group>"; };
+		26BB4E70A932F35B821CE7E2 /* ChatListViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewInterfaceIO.h; sourceTree = "<group>"; };
+		2B48FD5E5B08662B2F92CD3F /* SearchingRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SearchingRouter.m; sourceTree = "<group>"; };
+		2C2BD40868314849C42BAA8D /* SearchingViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingViewInterfaceIO.h; sourceTree = "<group>"; };
+=======
+		20290B601EC8652200507479 /* ChatParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatParser.h; sourceTree = "<group>"; };
+		20290B611EC8652200507479 /* ChatParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatParser.m; sourceTree = "<group>"; };
+		20290B621EC8652200507479 /* ChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatService.h; sourceTree = "<group>"; };
+		20290B631EC8652200507479 /* ChatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatService.m; sourceTree = "<group>"; };
+		20290B671EC8657600507479 /* ChatListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListModel.h; sourceTree = "<group>"; };
+		20290B681EC8657600507479 /* ChatListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListModel.m; sourceTree = "<group>"; };
+		20290B691EC8657600507479 /* InterlocutorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterlocutorModel.h; sourceTree = "<group>"; };
+		20290B6A1EC8657600507479 /* InterlocutorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterlocutorModel.m; sourceTree = "<group>"; };
+		20290B6E1EC8C8E600507479 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		20290B6F1EC8C8E600507479 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		20290B711EC8C8FB00507479 /* UserParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserParser.h; sourceTree = "<group>"; };
+		20290B721EC8C8FB00507479 /* UserParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserParser.m; sourceTree = "<group>"; };
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
+		2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45296E4BBE5E019344D4C35A /* ChatListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		48546AB35EC0414E42612673 /* ChatListInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListInteractor.h; sourceTree = "<group>"; };
+		48CA8268DB24B4A9B3E357E3 /* AuthorizationRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationRouter.h; sourceTree = "<group>"; };
+		494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5374768EE956FBBE0D0B3E /* AuthorizationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
+		4BAF65F5891B9BE4AB0FB9A3 /* RegistrationInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractorInterfaceIO.h; sourceTree = "<group>"; };
+		4D4096922E018FE1AC746E3E /* SearchingInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingInteractor.h; sourceTree = "<group>"; };
+		50A1961D5FFF9225E460CA0D /* Pods-Cryptochat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptochat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptochat/Pods-Cryptochat.release.xcconfig"; sourceTree = "<group>"; };
+		569600909B0F1A9DFCD90333 /* ChatListRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListRouter.m; sourceTree = "<group>"; };
+		5EF843D7506E8027BB67EE8C /* AuthorizationInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractorInterfaceIO.h; sourceTree = "<group>"; };
+		5F04FB841EAD09C8007D5EBE /* CryptoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoService.h; sourceTree = "<group>"; };
+		5F04FB851EAD09C8007D5EBE /* CryptoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoService.m; sourceTree = "<group>"; };
+		5F420B2E1EC0744C00971A18 /* ChatList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
+		5F420B311EC077F000971A18 /* ChatListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListCell.h; sourceTree = "<group>"; };
+		5F420B321EC077F000971A18 /* ChatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListCell.m; sourceTree = "<group>"; };
+		5F420B331EC077F000971A18 /* ChatListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
+		5F420B371EC0780800971A18 /* ChatListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewModel.h; sourceTree = "<group>"; };
+		5F420B381EC0780800971A18 /* ChatListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewModel.m; sourceTree = "<group>"; };
+		5F4C8CB71EC8D0E400D0291C /* SearchingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchingCell.h; sourceTree = "<group>"; };
+		5F4C8CB81EC8D0E400D0291C /* SearchingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchingCell.m; sourceTree = "<group>"; };
+		5F4C8CB91EC8D0E400D0291C /* SearchingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchingCell.xib; sourceTree = "<group>"; };
+		5F4C8CBD1EC8D0F900D0291C /* SearchingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchingModel.h; sourceTree = "<group>"; };
+		5F4C8CBE1EC8D0F900D0291C /* SearchingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchingModel.m; sourceTree = "<group>"; };
+		5F4ED2621EAB82A30055D605 /* RealmDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmDataStore.h; sourceTree = "<group>"; };
+		5F4ED2631EAB82A30055D605 /* RealmDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmDataStore.m; sourceTree = "<group>"; };
+		5F4ED2651EAB83410055D605 /* UserAuthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthModel.h; sourceTree = "<group>"; };
+		5F4ED2661EAB83410055D605 /* UserAuthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthModel.m; sourceTree = "<group>"; };
+		5F4ED2691EAB84160055D605 /* UserAuthRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthRealm.h; sourceTree = "<group>"; };
+		5F4ED26A1EAB84160055D605 /* UserAuthRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthRealm.m; sourceTree = "<group>"; };
+		5F4ED26B1EAB84160055D605 /* UserAuthRealm+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserAuthRealm+Model.h"; sourceTree = "<group>"; };
+		5F4ED26C1EAB84160055D605 /* UserAuthRealm+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserAuthRealm+Model.m"; sourceTree = "<group>"; };
+		5F4ED26F1EAB842C0055D605 /* UserAuthModel+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserAuthModel+Realm.h"; sourceTree = "<group>"; };
+		5F4ED2701EAB842C0055D605 /* UserAuthModel+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserAuthModel+Realm.m"; sourceTree = "<group>"; };
+		5F5C563A1E7EC298002E62E7 /* ServiceAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceAPI.h; sourceTree = "<group>"; };
+		5F5C563B1E7EC298002E62E7 /* ServiceAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceAPI.m; sourceTree = "<group>"; };
+		5F5C563D1E7EC2AC002E62E7 /* TransportLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportLayer.h; sourceTree = "<group>"; };
+		5F5C563E1E7EC2B4002E62E7 /* TransportLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportLayer.m; sourceTree = "<group>"; };
+		5F5C56411E7EC6AC002E62E7 /* AuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
+		5F5C56421E7EC6AC002E62E7 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
+		5F5C56481E7EC956002E62E7 /* AuthParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthParser.h; sourceTree = "<group>"; };
+		5F5C56491E7EC956002E62E7 /* AuthParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthParser.m; sourceTree = "<group>"; };
+		5F9204891EC87853005DA781 /* UserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsManager.h; sourceTree = "<group>"; };
+		5F92048A1EC87853005DA781 /* UserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsManager.m; sourceTree = "<group>"; };
+		5FAD519A1EB752BA007D440E /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		5FAD519B1EB752BA007D440E /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		5FAD519C1EB752BA007D440E /* Base64Coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Coder.h; sourceTree = "<group>"; };
+		5FAD519D1EB752BA007D440E /* Base64Coder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Coder.m; sourceTree = "<group>"; };
+		5FAD51A01EB7536E007D440E /* KeyChainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainService.h; sourceTree = "<group>"; };
+		5FAD51A11EB7536E007D440E /* KeyChainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainService.m; sourceTree = "<group>"; };
+		5FAD51A21EB7536E007D440E /* ExchangeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeService.h; sourceTree = "<group>"; };
+		5FAD51A31EB7536F007D440E /* ExchangeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeService.m; sourceTree = "<group>"; };
+		5FD0D0541E7E9C86004343A6 /* CRMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRMediator.h; sourceTree = "<group>"; };
+		5FD0D0551E7E9C86004343A6 /* CRMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMediator.m; sourceTree = "<group>"; };
+		5FD0D0571E7E9E02004343A6 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		5FD0D0591E7EB629004343A6 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5FD0D05D1E7EBE50004343A6 /* AuthViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewModel.h; sourceTree = "<group>"; };
+		5FD0D05E1E7EBE50004343A6 /* AuthViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewModel.m; sourceTree = "<group>"; };
+		617B63A943FE942E7182DB5C /* Pods-CryptochatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptochatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptochatTests/Pods-CryptochatTests.release.xcconfig"; sourceTree = "<group>"; };
+		62A1AF39D881100987CA81AC /* AuthorizationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
+		6661A66E42963A2C3B328638 /* RegistrationInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractor.h; sourceTree = "<group>"; };
+		680F2EBB0C9FAD866C9D8794 /* ChatListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
+		6CF98C4562E20421072DE733 /* SearchingRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingRouter.h; sourceTree = "<group>"; };
+		6E5D9B7A4B3668C0BAE94A69 /* libPods-CryptochatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F4957895E77CA9C114F4CC3 /* RegistrationDelegateInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationDelegateInterface.h; sourceTree = "<group>"; };
+		70F254A2FBDA2B869890E977 /* SearchingPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SearchingPresenter.m; sourceTree = "<group>"; };
+		75292A3237BFDD30A2C49B05 /* RegistrationPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegistrationPresenter.m; sourceTree = "<group>"; };
+		75CF26AB3B394232DED11D3E /* AuthorizationViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewInterfaceIO.h; sourceTree = "<group>"; };
+		76240B640B05DA1715421A56 /* ChatListInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListInteractor.m; sourceTree = "<group>"; };
+		7CF073E88F7819C0D104FB26 /* RegistrationRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationRouter.h; sourceTree = "<group>"; };
+		9AD805A5042C129EFA59CF0E /* RegistrationInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegistrationInteractor.m; sourceTree = "<group>"; };
+		9AF666977B558BC53AF2D084 /* AuthorizationRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationRouter.m; sourceTree = "<group>"; };
+		AACDDDBA82D97A4E7AA63AAA /* SearchingPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingPresenter.h; sourceTree = "<group>"; };
+		AD6FB7E51344AFFB246FC017 /* ChatListPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatListPresenter.m; sourceTree = "<group>"; };
+		B67B58E4BD1A78B938F80235 /* SearchingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingViewController.h; sourceTree = "<group>"; };
+		BA06C3619CC2786ECFBCA4B8 /* RegistrationViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegistrationViewInterfaceIO.h; sourceTree = "<group>"; };
+		BC30390CE0770E03D50B87B8 /* SearchingInteractorInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchingInteractorInterfaceIO.h; sourceTree = "<group>"; };
+		C3CF3B20E4C2EC9E1EC38744 /* ChatListDelegateInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListDelegateInterface.h; sourceTree = "<group>"; };
+		CACDFB1F4559ADA248BF746F /* Pods-CryptochatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptochatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptochatUITests/Pods-CryptochatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegistrationRouter.m; sourceTree = "<group>"; };
+		CE6F43E24DDDB59170C928B0 /* ChatListRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListRouter.h; sourceTree = "<group>"; };
+		D45FB9643C6C173B77537AFB /* Pods-Cryptochat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptochat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptochat/Pods-Cryptochat.debug.xcconfig"; sourceTree = "<group>"; };
+		D75390540659B5BA99F1BF57 /* Pods-CryptochatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptochatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptochatTests/Pods-CryptochatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D81AE2ED58440E190F406A61 /* SearchingInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SearchingInteractor.m; sourceTree = "<group>"; };
+		E06A7999ABCC6B5B7CC12389 /* AuthorizationInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AuthorizationInteractor.m; sourceTree = "<group>"; };
+		ED1792AD59CF99821F775214 /* Pods-CryptochatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptochatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptochatUITests/Pods-CryptochatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9DA65D2C7944C7276F0720A /* AuthorizationDelegateInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationDelegateInterface.h; sourceTree = "<group>"; };
+		FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		FE81EE3693396B6E83F610C8 /* SearchingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SearchingViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F5373E81E7E78790003926E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				200243111B9802721A364448 /* libPods-Cryptochat.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F5374011E7E787A0003926E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E12DED3120639CAAEF6176 /* libPods-CryptochatTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F53740C1E7E787A0003926E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				732E497B5B26B9CF7D1B47EE /* libPods-CryptochatUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CA1B2CC8E3D4B14455484D3 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				9A90BAEEC90D8720BFAD5749 /* Application Logic */,
+				7C5911EAA082B0B7D7788464 /* User Interface */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		0F5373E21E7E78790003926E = {
+			isa = PBXGroup;
+			children = (
+				0F5373ED1E7E78790003926E /* Cryptochat */,
+				0F5374071E7E787A0003926E /* CryptochatTests */,
+				0F5374121E7E787A0003926E /* CryptochatUITests */,
+				0F5373EC1E7E78790003926E /* Products */,
+				3F6FF7C786E04CD1EA490A39 /* Pods */,
+				987C1FA7237B4A97A808AD10 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0F5373EC1E7E78790003926E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F5373EB1E7E78790003926E /* Cryptochat.app */,
+				0F5374041E7E787A0003926E /* CryptochatTests.xctest */,
+				0F53740F1E7E787A0003926E /* CryptochatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F5373ED1E7E78790003926E /* Cryptochat */ = {
+			isa = PBXGroup;
+			children = (
+				5F4ED25D1EAA57600055D605 /* Libs */,
+				5F4ED2611EAB82820055D605 /* Realm */,
+				5FD0D04E1E7E99DA004343A6 /* Common */,
+				A3DD76720BE00B65D2099355 /* Class */,
+				5FD0D04F1E7E99E4004343A6 /* Resources */,
+				0F5373EE1E7E78790003926E /* Supporting Files */,
+			);
+			path = Cryptochat;
+			sourceTree = "<group>";
+		};
+		0F5373EE1E7E78790003926E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F5373FF1E7E78790003926E /* Info.plist */,
+				0F5373EF1E7E78790003926E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F5374071E7E787A0003926E /* CryptochatTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F5374081E7E787A0003926E /* CryptochatTests.m */,
+				0F53740A1E7E787A0003926E /* Info.plist */,
+			);
+			path = CryptochatTests;
+			sourceTree = "<group>";
+		};
+		0F5374121E7E787A0003926E /* CryptochatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F5374131E7E787A0003926E /* CryptochatUITests.m */,
+				0F5374151E7E787A0003926E /* Info.plist */,
+			);
+			path = CryptochatUITests;
+			sourceTree = "<group>";
+		};
+		1D8FCFA9B1B015505C50BB76 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DC642F8EFA776A72320451F0 /* Authorization */,
+				0CA1B2CC8E3D4B14455484D3 /* Registration */,
+				219ACA21FAC88871A486E447 /* ChatList */,
+				647DE0056542F1D18667C636 /* Searching */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+<<<<<<< HEAD
+		219ACA21FAC88871A486E447 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				7599538FAF327688AEC29276 /* Application Logic */,
+				463798C2C9DA7CAD2FD3CCAA /* User Interface */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		2B85B46EEBB6F340C7BD9042 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BC30390CE0770E03D50B87B8 /* SearchingInteractorInterfaceIO.h */,
+				4D4096922E018FE1AC746E3E /* SearchingInteractor.h */,
+				D81AE2ED58440E190F406A61 /* SearchingInteractor.m */,
+			);
+			path = "Application Logic";
+=======
+		20290B661EC8655C00507479 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20290B671EC8657600507479 /* ChatListModel.h */,
+				20290B681EC8657600507479 /* ChatListModel.m */,
+				20290B691EC8657600507479 /* InterlocutorModel.h */,
+				20290B6A1EC8657600507479 /* InterlocutorModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		20290B6D1EC8C8C900507479 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				20290B6E1EC8C8E600507479 /* UserService.h */,
+				20290B6F1EC8C8E600507479 /* UserService.m */,
+				20290B711EC8C8FB00507479 /* UserParser.h */,
+				20290B721EC8C8FB00507479 /* UserParser.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		208909EC1EC8643E00D286AF /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				20290B661EC8655C00507479 /* Models */,
+				20290B621EC8652200507479 /* ChatService.h */,
+				20290B631EC8652200507479 /* ChatService.m */,
+				20290B601EC8652200507479 /* ChatParser.h */,
+				20290B611EC8652200507479 /* ChatParser.m */,
+			);
+			name = Chat;
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
+			sourceTree = "<group>";
+		};
+		2FCB3D0AE2A92608A16905F5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				07CFCAFF080DDF3527046AC9 /* RegistrationPresenter.h */,
+				75292A3237BFDD30A2C49B05 /* RegistrationPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		372AF3CD9B9201D31A90387F /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				D0B8D8EE087B40AD3719252E /* Router */,
+				AC0A08DB5380FCF19361314D /* Presenter */,
+				7A49C9A9196E6AC87716D09D /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		3F6FF7C786E04CD1EA490A39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D45FB9643C6C173B77537AFB /* Pods-Cryptochat.debug.xcconfig */,
+				50A1961D5FFF9225E460CA0D /* Pods-Cryptochat.release.xcconfig */,
+				D75390540659B5BA99F1BF57 /* Pods-CryptochatTests.debug.xcconfig */,
+				617B63A943FE942E7182DB5C /* Pods-CryptochatTests.release.xcconfig */,
+				ED1792AD59CF99821F775214 /* Pods-CryptochatUITests.debug.xcconfig */,
+				CACDFB1F4559ADA248BF746F /* Pods-CryptochatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		463798C2C9DA7CAD2FD3CCAA /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				46DCBAFE492699B5126836EE /* Router */,
+				E74C66E5B205788A5C74B1F2 /* Presenter */,
+				6909F63DB25C06A436AF3C5B /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		46DCBAFE492699B5126836EE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C3CF3B20E4C2EC9E1EC38744 /* ChatListDelegateInterface.h */,
+				CE6F43E24DDDB59170C928B0 /* ChatListRouter.h */,
+				569600909B0F1A9DFCD90333 /* ChatListRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5F04FB821EAD0989007D5EBE /* Auth Service */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C56441E7EC90F002E62E7 /* Model */,
+				5F5C56411E7EC6AC002E62E7 /* AuthService.h */,
+				5F5C56421E7EC6AC002E62E7 /* AuthService.m */,
+				5F5C56481E7EC956002E62E7 /* AuthParser.h */,
+				5F5C56491E7EC956002E62E7 /* AuthParser.m */,
+			);
+			name = "Auth Service";
+			sourceTree = "<group>";
+		};
+		5F04FB831EAD0998007D5EBE /* Crypto Service */ = {
+			isa = PBXGroup;
+			children = (
+				5F04FB841EAD09C8007D5EBE /* CryptoService.h */,
+				5F04FB851EAD09C8007D5EBE /* CryptoService.m */,
+			);
+			name = "Crypto Service";
+			sourceTree = "<group>";
+		};
+		5F420B301EC077C600971A18 /* ChatListCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F420B311EC077F000971A18 /* ChatListCell.h */,
+				5F420B321EC077F000971A18 /* ChatListCell.m */,
+				5F420B331EC077F000971A18 /* ChatListCell.xib */,
+			);
+			name = ChatListCell;
+			sourceTree = "<group>";
+		};
+		5F420B361EC077F500971A18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F420B371EC0780800971A18 /* ChatListViewModel.h */,
+				5F420B381EC0780800971A18 /* ChatListViewModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5F4C8CB61EC8D0D200D0291C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5F4C8CB71EC8D0E400D0291C /* SearchingCell.h */,
+				5F4C8CB81EC8D0E400D0291C /* SearchingCell.m */,
+				5F4C8CB91EC8D0E400D0291C /* SearchingCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		5F4C8CBC1EC8D0E800D0291C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F4C8CBD1EC8D0F900D0291C /* SearchingModel.h */,
+				5F4C8CBE1EC8D0F900D0291C /* SearchingModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5F4ED25D1EAA57600055D605 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD51991EB752AF007D440E /* Helpers */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		5F4ED2611EAB82820055D605 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				5F4ED2681EAB84010055D605 /* UserAuthRealm */,
+				5F4ED2621EAB82A30055D605 /* RealmDataStore.h */,
+				5F4ED2631EAB82A30055D605 /* RealmDataStore.m */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		5F4ED2681EAB84010055D605 /* UserAuthRealm */ = {
+			isa = PBXGroup;
+			children = (
+				5F4ED2691EAB84160055D605 /* UserAuthRealm.h */,
+				5F4ED26A1EAB84160055D605 /* UserAuthRealm.m */,
+				5F4ED26B1EAB84160055D605 /* UserAuthRealm+Model.h */,
+				5F4ED26C1EAB84160055D605 /* UserAuthRealm+Model.m */,
+			);
+			name = UserAuthRealm;
+			sourceTree = "<group>";
+		};
+		5F5C56391E7EC26F002E62E7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C563D1E7EC2AC002E62E7 /* TransportLayer.h */,
+				5F5C563E1E7EC2B4002E62E7 /* TransportLayer.m */,
+				5F5C563A1E7EC298002E62E7 /* ServiceAPI.h */,
+				5F5C563B1E7EC298002E62E7 /* ServiceAPI.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		5F5C56401E7EC56D002E62E7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				20290B6D1EC8C8C900507479 /* User */,
+				208909EC1EC8643E00D286AF /* Chat */,
+				5FAD51A61EB75417007D440E /* Exchange&KeyChain Service */,
+				5F04FB831EAD0998007D5EBE /* Crypto Service */,
+				5F04FB821EAD0989007D5EBE /* Auth Service */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		5F5C56441E7EC90F002E62E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F4ED2651EAB83410055D605 /* UserAuthModel.h */,
+				5F4ED2661EAB83410055D605 /* UserAuthModel.m */,
+				5F4ED26F1EAB842C0055D605 /* UserAuthModel+Realm.h */,
+				5F4ED2701EAB842C0055D605 /* UserAuthModel+Realm.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5FAD51991EB752AF007D440E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD519A1EB752BA007D440E /* KeychainWrapper.h */,
+				5FAD519B1EB752BA007D440E /* KeychainWrapper.m */,
+				5FAD519C1EB752BA007D440E /* Base64Coder.h */,
+				5FAD519D1EB752BA007D440E /* Base64Coder.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		5FAD51A61EB75417007D440E /* Exchange&KeyChain Service */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD51A01EB7536E007D440E /* KeyChainService.h */,
+				5FAD51A11EB7536E007D440E /* KeyChainService.m */,
+				5FAD51A21EB7536E007D440E /* ExchangeService.h */,
+				5FAD51A31EB7536F007D440E /* ExchangeService.m */,
+			);
+			name = "Exchange&KeyChain Service";
+			sourceTree = "<group>";
+		};
+		5FD0D04E1E7E99DA004343A6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C56391E7EC26F002E62E7 /* Network */,
+				0F5373F11E7E78790003926E /* AppDelegate.h */,
+				0F5373F21E7E78790003926E /* AppDelegate.m */,
+				5FD0D0541E7E9C86004343A6 /* CRMediator.h */,
+				5FD0D0551E7E9C86004343A6 /* CRMediator.m */,
+				5F9204891EC87853005DA781 /* UserDefaultsManager.h */,
+				5F92048A1EC87853005DA781 /* UserDefaultsManager.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		5FD0D04F1E7E99E4004343A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5FD0D0501E7E9A9F004343A6 /* Storyboards */,
+				0F5373FA1E7E78790003926E /* Assets.xcassets */,
+				5FD0D0591E7EB629004343A6 /* Constants.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5FD0D0501E7E9A9F004343A6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5FD0D0571E7E9E02004343A6 /* Authorization.storyboard */,
+				0F5373F71E7E78790003926E /* Main.storyboard */,
+				0F5373FC1E7E78790003926E /* LaunchScreen.storyboard */,
+				5F420B2E1EC0744C00971A18 /* ChatList.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		5FD0D05C1E7EBE34004343A6 /* AuthViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FD0D05D1E7EBE50004343A6 /* AuthViewModel.h */,
+				5FD0D05E1E7EBE50004343A6 /* AuthViewModel.m */,
+			);
+			name = AuthViewModel;
+			sourceTree = "<group>";
+		};
+		647DE0056542F1D18667C636 /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				2B85B46EEBB6F340C7BD9042 /* Application Logic */,
+				372AF3CD9B9201D31A90387F /* User Interface */,
+			);
+			path = Searching;
+			sourceTree = "<group>";
+		};
+		6909F63DB25C06A436AF3C5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F420B361EC077F500971A18 /* Model */,
+				5F420B301EC077C600971A18 /* ChatListCell */,
+				26BB4E70A932F35B821CE7E2 /* ChatListViewInterfaceIO.h */,
+				45296E4BBE5E019344D4C35A /* ChatListViewController.h */,
+				680F2EBB0C9FAD866C9D8794 /* ChatListViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7599538FAF327688AEC29276 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				0369000D83B34685CCDCDE29 /* ChatListInteractorInterfaceIO.h */,
+				48546AB35EC0414E42612673 /* ChatListInteractor.h */,
+				76240B640B05DA1715421A56 /* ChatListInteractor.m */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		7A49C9A9196E6AC87716D09D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F4C8CBC1EC8D0E800D0291C /* Model */,
+				5F4C8CB61EC8D0D200D0291C /* Cell */,
+				2C2BD40868314849C42BAA8D /* SearchingViewInterfaceIO.h */,
+				B67B58E4BD1A78B938F80235 /* SearchingViewController.h */,
+				FE81EE3693396B6E83F610C8 /* SearchingViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C5911EAA082B0B7D7788464 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				B3250851CAE781AC527D042A /* Router */,
+				2FCB3D0AE2A92608A16905F5 /* Presenter */,
+				A1F9EA563EFB86A3D54C2C44 /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		92F40464B3141320F160257E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F9DA65D2C7944C7276F0720A /* AuthorizationDelegateInterface.h */,
+				48CA8268DB24B4A9B3E357E3 /* AuthorizationRouter.h */,
+				9AF666977B558BC53AF2D084 /* AuthorizationRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		93C4802B46A9AA3C72AF7379 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5EF843D7506E8027BB67EE8C /* AuthorizationInteractorInterfaceIO.h */,
+				0F7D018A30715EAD60F5CA10 /* AuthorizationInteractor.h */,
+				E06A7999ABCC6B5B7CC12389 /* AuthorizationInteractor.m */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		987C1FA7237B4A97A808AD10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */,
+				6E5D9B7A4B3668C0BAE94A69 /* libPods-CryptochatTests.a */,
+				2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A90BAEEC90D8720BFAD5749 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				4BAF65F5891B9BE4AB0FB9A3 /* RegistrationInteractorInterfaceIO.h */,
+				6661A66E42963A2C3B328638 /* RegistrationInteractor.h */,
+				9AD805A5042C129EFA59CF0E /* RegistrationInteractor.m */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		A1F9EA563EFB86A3D54C2C44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA06C3619CC2786ECFBCA4B8 /* RegistrationViewInterfaceIO.h */,
+				0DA30055277E751236112F0C /* RegistrationViewController.h */,
+				FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A3DD76720BE00B65D2099355 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C56401E7EC56D002E62E7 /* Service */,
+				1D8FCFA9B1B015505C50BB76 /* Module */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		AC0A08DB5380FCF19361314D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AACDDDBA82D97A4E7AA63AAA /* SearchingPresenter.h */,
+				70F254A2FBDA2B869890E977 /* SearchingPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B3250851CAE781AC527D042A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6F4957895E77CA9C114F4CC3 /* RegistrationDelegateInterface.h */,
+				7CF073E88F7819C0D104FB26 /* RegistrationRouter.h */,
+				CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B468B66A40C48C6A2DDF79ED /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				92F40464B3141320F160257E /* Router */,
+				BEEAA8D6C6F5F157326E20ED /* Presenter */,
+				C83AD83170BB234CF471E95E /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		BEEAA8D6C6F5F157326E20ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E263E8600F5DF95E57672 /* AuthorizationPresenter.h */,
+				012517E9AEE2EF8E62516FFE /* AuthorizationPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C83AD83170BB234CF471E95E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FD0D05C1E7EBE34004343A6 /* AuthViewModel */,
+				75CF26AB3B394232DED11D3E /* AuthorizationViewInterfaceIO.h */,
+				4B5374768EE956FBBE0D0B3E /* AuthorizationViewController.h */,
+				62A1AF39D881100987CA81AC /* AuthorizationViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0B8D8EE087B40AD3719252E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0C214BDCD5024A0977E87203 /* SearchingDelegateInterface.h */,
+				6CF98C4562E20421072DE733 /* SearchingRouter.h */,
+				2B48FD5E5B08662B2F92CD3F /* SearchingRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DC642F8EFA776A72320451F0 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				93C4802B46A9AA3C72AF7379 /* Application Logic */,
+				B468B66A40C48C6A2DDF79ED /* User Interface */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		E74C66E5B205788A5C74B1F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2223F5C4F2D65CF5F7D34E14 /* ChatListPresenter.h */,
+				AD6FB7E51344AFFB246FC017 /* ChatListPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F5373EA1E7E78790003926E /* Cryptochat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F5374181E7E787A0003926E /* Build configuration list for PBXNativeTarget "Cryptochat" */;
+			buildPhases = (
+				962DD72E3333FC0370B73DB6 /* [CP] Check Pods Manifest.lock */,
+				0F5373E71E7E78790003926E /* Sources */,
+				0F5373E81E7E78790003926E /* Frameworks */,
+				0F5373E91E7E78790003926E /* Resources */,
+				97A248CEBE8AD4B7FD9C867F /* [CP] Embed Pods Frameworks */,
+				08DB03F1B971FBB293B3BA7B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cryptochat;
+			productName = Cryptochat;
+			productReference = 0F5373EB1E7E78790003926E /* Cryptochat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F5374031E7E787A0003926E /* CryptochatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F53741B1E7E787A0003926E /* Build configuration list for PBXNativeTarget "CryptochatTests" */;
+			buildPhases = (
+				5546BE6BD4E348D31F58C185 /* [CP] Check Pods Manifest.lock */,
+				0F5374001E7E787A0003926E /* Sources */,
+				0F5374011E7E787A0003926E /* Frameworks */,
+				0F5374021E7E787A0003926E /* Resources */,
+				6D5F9A0FDB765D6C18F69ED8 /* [CP] Embed Pods Frameworks */,
+				4E31FB2810B368D6B7C4C74A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F5374061E7E787A0003926E /* PBXTargetDependency */,
+			);
+			name = CryptochatTests;
+			productName = CryptochatTests;
+			productReference = 0F5374041E7E787A0003926E /* CryptochatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0F53740E1E7E787A0003926E /* CryptochatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F53741E1E7E787A0003926E /* Build configuration list for PBXNativeTarget "CryptochatUITests" */;
+			buildPhases = (
+				E3A6754E76428C78F026813B /* [CP] Check Pods Manifest.lock */,
+				0F53740B1E7E787A0003926E /* Sources */,
+				0F53740C1E7E787A0003926E /* Frameworks */,
+				0F53740D1E7E787A0003926E /* Resources */,
+				FE803AD026D07FF95C2027D9 /* [CP] Embed Pods Frameworks */,
+				E87169C006883DFBEC2306E5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F5374111E7E787A0003926E /* PBXTargetDependency */,
+			);
+			name = CryptochatUITests;
+			productName = CryptochatUITests;
+			productReference = 0F53740F1E7E787A0003926E /* CryptochatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F5373E31E7E78790003926E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Сергей Романков";
+				TargetAttributes = {
+					0F5373EA1E7E78790003926E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PPDS96G2C4;
+						ProvisioningStyle = Automatic;
+					};
+					0F5374031E7E787A0003926E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PPDS96G2C4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0F5373EA1E7E78790003926E;
+					};
+					0F53740E1E7E787A0003926E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PPDS96G2C4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0F5373EA1E7E78790003926E;
+					};
+				};
+			};
+			buildConfigurationList = 0F5373E61E7E78790003926E /* Build configuration list for PBXProject "Cryptochat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F5373E21E7E78790003926E;
+			productRefGroup = 0F5373EC1E7E78790003926E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F5373EA1E7E78790003926E /* Cryptochat */,
+				0F5374031E7E787A0003926E /* CryptochatTests */,
+				0F53740E1E7E787A0003926E /* CryptochatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F5373E91E7E78790003926E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FD0D0581E7E9E02004343A6 /* Authorization.storyboard in Resources */,
+				0F5373FE1E7E78790003926E /* LaunchScreen.storyboard in Resources */,
+				0F5373FB1E7E78790003926E /* Assets.xcassets in Resources */,
+				5F420B2F1EC0744C00971A18 /* ChatList.storyboard in Resources */,
+				5F4C8CBB1EC8D0E400D0291C /* SearchingCell.xib in Resources */,
+				0F5373F91E7E78790003926E /* Main.storyboard in Resources */,
+				5F420B351EC077F000971A18 /* ChatListCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F5374021E7E787A0003926E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F53740D1E7E787A0003926E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08DB03F1B971FBB293B3BA7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cryptochat/Pods-Cryptochat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E31FB2810B368D6B7C4C74A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptochatTests/Pods-CryptochatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5546BE6BD4E348D31F58C185 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D5F9A0FDB765D6C18F69ED8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptochatTests/Pods-CryptochatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		962DD72E3333FC0370B73DB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97A248CEBE8AD4B7FD9C867F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cryptochat/Pods-Cryptochat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3A6754E76428C78F026813B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E87169C006883DFBEC2306E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptochatUITests/Pods-CryptochatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE803AD026D07FF95C2027D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptochatUITests/Pods-CryptochatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F5373E71E7E78790003926E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAD51A51EB7536F007D440E /* ExchangeService.m in Sources */,
+				20290B6B1EC8657600507479 /* ChatListModel.m in Sources */,
+				5FD0D05F1E7EBE50004343A6 /* AuthViewModel.m in Sources */,
+				0F5373F31E7E78790003926E /* AppDelegate.m in Sources */,
+				0F5373F01E7E78790003926E /* main.m in Sources */,
+				5FAD51A41EB7536F007D440E /* KeyChainService.m in Sources */,
+				5F420B341EC077F000971A18 /* ChatListCell.m in Sources */,
+				5FD0D0561E7E9C86004343A6 /* CRMediator.m in Sources */,
+				5F4ED2641EAB82A30055D605 /* RealmDataStore.m in Sources */,
+				5F4C8CBA1EC8D0E400D0291C /* SearchingCell.m in Sources */,
+				5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */,
+				F2E8DA58E6E02E7D219B4AA3 /* AuthorizationInteractor.m in Sources */,
+				6C5B21080CA3E52A582B223A /* AuthorizationRouter.m in Sources */,
+				5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */,
+				5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */,
+				20290B651EC8652200507479 /* ChatService.m in Sources */,
+				20290B6C1EC8657600507479 /* InterlocutorModel.m in Sources */,
+				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
+				5F92048B1EC87853005DA781 /* UserDefaultsManager.m in Sources */,
+				5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */,
+				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,
+				5F420B391EC0780800971A18 /* ChatListViewModel.m in Sources */,
+				5F4ED26D1EAB84160055D605 /* UserAuthRealm.m in Sources */,
+				BCD77F861FAD8A3447A909C3 /* AuthorizationPresenter.m in Sources */,
+				5F4ED2711EAB842C0055D605 /* UserAuthModel+Realm.m in Sources */,
+				C9FC6DE5D57B0A5C5E382A1B /* AuthorizationViewController.m in Sources */,
+				ADD6A39AFFF766D6D8252C14 /* RegistrationInteractor.m in Sources */,
+				20290B641EC8652200507479 /* ChatParser.m in Sources */,
+				20290B701EC8C8E600507479 /* UserService.m in Sources */,
+				2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */,
+				8787C5D61B7D1D4361F299AD /* RegistrationPresenter.m in Sources */,
+				5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */,
+<<<<<<< HEAD
+=======
+				5F4ED2601EAA577D0055D605 /* RSProgress.m in Sources */,
+				20290B731EC8C8FB00507479 /* UserParser.m in Sources */,
+>>>>>>> 0fccbde5f1286c98448d1cc41d04d02251d89b60
+				5F5C563C1E7EC298002E62E7 /* ServiceAPI.m in Sources */,
+				5F4ED26E1EAB84160055D605 /* UserAuthRealm+Model.m in Sources */,
+				31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */,
+				4ACD91F82098D26069DE80E1 /* ChatListInteractor.m in Sources */,
+				5F4C8CBF1EC8D0F900D0291C /* SearchingModel.m in Sources */,
+				268C3064C54D5CC30663D159 /* ChatListRouter.m in Sources */,
+				16231CB7E9CCE4F05FA30A47 /* ChatListPresenter.m in Sources */,
+				158039FC6B9E427724CBA920 /* ChatListViewController.m in Sources */,
+				ACE671A7C3E3926F5C678A2D /* SearchingInteractor.m in Sources */,
+				0ECEDCE5E5D6CCB515B801EF /* SearchingRouter.m in Sources */,
+				5C31B350538D6ED0C2C00552 /* SearchingPresenter.m in Sources */,
+				20AF13483EB91EA064FEED4D /* SearchingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F5374001E7E787A0003926E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F5374091E7E787A0003926E /* CryptochatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F53740B1E7E787A0003926E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F5374141E7E787A0003926E /* CryptochatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F5374061E7E787A0003926E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F5373EA1E7E78790003926E /* Cryptochat */;
+			targetProxy = 0F5374051E7E787A0003926E /* PBXContainerItemProxy */;
+		};
+		0F5374111E7E787A0003926E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F5373EA1E7E78790003926E /* Cryptochat */;
+			targetProxy = 0F5374101E7E787A0003926E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F5373F71E7E78790003926E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F5373F81E7E78790003926E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F5373FC1E7E78790003926E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F5373FD1E7E78790003926E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F5374161E7E787A0003926E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F5374171E7E787A0003926E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F5374191E7E787A0003926E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D45FB9643C6C173B77537AFB /* Pods-Cryptochat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PPDS96G2C4;
+				INFOPLIST_FILE = Cryptochat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.Cryptochat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F53741A1E7E787A0003926E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A1961D5FFF9225E460CA0D /* Pods-Cryptochat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PPDS96G2C4;
+				INFOPLIST_FILE = Cryptochat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.Cryptochat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0F53741C1E7E787A0003926E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75390540659B5BA99F1BF57 /* Pods-CryptochatTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PPDS96G2C4;
+				INFOPLIST_FILE = CryptochatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.CryptochatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cryptochat.app/Cryptochat";
+			};
+			name = Debug;
+		};
+		0F53741D1E7E787A0003926E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 617B63A943FE942E7182DB5C /* Pods-CryptochatTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PPDS96G2C4;
+				INFOPLIST_FILE = CryptochatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.CryptochatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cryptochat.app/Cryptochat";
+			};
+			name = Release;
+		};
+		0F53741F1E7E787A0003926E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1792AD59CF99821F775214 /* Pods-CryptochatUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = PPDS96G2C4;
+				INFOPLIST_FILE = CryptochatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.CryptochatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cryptochat;
+			};
+			name = Debug;
+		};
+		0F5374201E7E787A0003926E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CACDFB1F4559ADA248BF746F /* Pods-CryptochatUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = PPDS96G2C4;
+				INFOPLIST_FILE = CryptochatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "IT-Machine.CryptochatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cryptochat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F5373E61E7E78790003926E /* Build configuration list for PBXProject "Cryptochat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F5374161E7E787A0003926E /* Debug */,
+				0F5374171E7E787A0003926E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F5374181E7E787A0003926E /* Build configuration list for PBXNativeTarget "Cryptochat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F5374191E7E787A0003926E /* Debug */,
+				0F53741A1E7E787A0003926E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F53741B1E7E787A0003926E /* Build configuration list for PBXNativeTarget "CryptochatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F53741C1E7E787A0003926E /* Debug */,
+				0F53741D1E7E787A0003926E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F53741E1E7E787A0003926E /* Build configuration list for PBXNativeTarget "CryptochatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F53741F1E7E787A0003926E /* Debug */,
+				0F5374201E7E787A0003926E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F5373E31E7E78790003926E /* Project object */;
+}

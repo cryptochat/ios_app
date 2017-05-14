@@ -14,5 +14,5 @@
 @property (strong, nonatomic) NSString* lastMessage;
 @property (assign, nonatomic) BOOL isRead;
 @property (assign, nonatomic) BOOL isMy;
-
+@property(strong, nonatomic)NSNumber* valueID;
 @end

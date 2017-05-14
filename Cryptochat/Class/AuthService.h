@@ -17,4 +17,5 @@
 - (void)getPublicKeyFromServerWithComplete:(void (^)(TransportResponseStatus status, NSData *publicKey))completeResponse;
 - (void)sendMyPublicKeyToServerWithComplete:(void (^)(TransportResponseStatus status))completeResponse;
 -(BOOL)isAuthorized;
+-(NSString*)getAuthToken;
 @end

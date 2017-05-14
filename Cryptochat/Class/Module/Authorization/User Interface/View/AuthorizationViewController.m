@@ -9,7 +9,7 @@
 #import "AuthorizationViewController.h"
 #import "AuthViewModel.h"
 #import "Constants.h"
-#import "RSProgress.h"
+#import "MBProgressHUD.h"
 
 @interface AuthorizationViewController()<UITextFieldDelegate>
 @property(weak, nonatomic)IBOutlet UIView* containView;
@@ -37,7 +37,6 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
 	[self.presenter viewInit];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -48,9 +47,9 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 
     [self configTextField:_emailTextField];
     [self configTextField:_passTextField];
-    
    
 }
+
 
 -(void)configTextField:(UITextField*)textField{
     textField.delegate = self;
@@ -136,16 +135,20 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    dispatch_async(dispatch_get_main_queue(), ^{
+    
 
         if([textField isEqual:self.emailTextField]){
+            dispatch_async(dispatch_get_main_queue(), ^{
             _emailLabel.hidden = YES;
+                });
         }
     
         if([textField isEqual:self.passTextField]){
+            dispatch_async(dispatch_get_main_queue(), ^{
             _passLabel.hidden = YES;
+                });
         }
-    });
+    
     return YES;
 
 }
@@ -186,11 +189,13 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 }
 
 -(void)showProgress{
-    [[RSProgress instance]showProgress];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 -(void)hideProgress{
-    [[RSProgress instance]hideProgress];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
 

@@ -8,6 +8,7 @@
 
 #import "CRMediator.h"
 #import "AuthorizationRouter.h"
+#import "ChatListRouter.h"
 
 @implementation CRMediator
 
@@ -26,6 +27,11 @@
 -(void)showAuthorization{
     AuthorizationRouter* router = [AuthorizationRouter new];
     [router presentAuthorizationInterfaceFromWindow:self.window delegate:(id)self];
+}
+
+-(void)showChatList{
+    ChatListRouter* router = [ChatListRouter new];
+    [router presentChatListInterfaceFromWindow:self.window delegate:(id)self];
 }
 
 

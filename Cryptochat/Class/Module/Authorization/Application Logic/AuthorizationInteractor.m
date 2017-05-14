@@ -26,10 +26,10 @@
 
 -(void)authUserWithModel:(AuthViewModel*)model{
     [_authService authUserWithAuthViewModel:model WithCompleteResponse:^(TransportResponseStatus status, UserAuthModel *model) {
-        
         [self.presenter hideProgress];
         if(status == TransportResponseStatusSuccess){
             //TODO:
+            [self.presenter presentChatList];
         }else{
             [self.presenter showMessage:status];
         }

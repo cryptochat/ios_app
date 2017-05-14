@@ -29,7 +29,7 @@
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwQ-DL-FtP">
                                                 <rect key="frame" x="37" y="96" width="340" height="47"/>
-                                                <color key="backgroundColor" red="0.80028051137924194" green="0.80760806798934937" blue="0.14424630999565125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="TdW-Ah-Kd2"/>
                                                 </constraints>
@@ -39,7 +39,7 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOp-Lb-c80">
                                                 <rect key="frame" x="37" y="165" width="340" height="47"/>
-                                                <color key="backgroundColor" red="0.77761334179999997" green="0.94322293999999995" blue="0.7705078125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="qE7-ck-KFe"/>
                                                 </constraints>
@@ -49,11 +49,13 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-Mh-1sn">
                                                 <rect key="frame" x="28" y="391" width="362" height="39"/>
-                                                <color key="backgroundColor" red="0.43665027618408203" green="0.78101974725723267" blue="0.079450778663158417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="19e-ix-3lT"/>
                                                 </constraints>
-                                                <state key="normal" title="Войти"/>
+                                                <state key="normal" title="Войти">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onLogin:" destination="r8A-8p-lgk" eventType="touchUpInside" id="gGW-cD-WCc"/>
                                                 </connections>

@@ -16,5 +16,6 @@
 @interface AuthorizationRouter : NSObject
 - (void)presentAuthorizationInterfaceFromWindow:(UIWindow*)window
                                        delegate:(id<AuthorizationDelegateInterface>)delegate;
+-(void)presentChatList;
 
 @end

@@ -23,6 +23,7 @@
         InterlocutorModel *model = [InterlocutorModel new];
         
         model.interlocutorID = bufDic[@"id"];
+        model.valueID = bufDic[@"id"];
         model.interlocutorUsername = bufDic[@"username"];
         model.interlocutorFirstName = bufDic[@"first_name"];
         model.interlocutorLastName = bufDic[@"last_name"];

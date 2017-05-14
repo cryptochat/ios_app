@@ -19,5 +19,5 @@
 @property (strong, nonatomic) NSURL* interlocutorURLAvatarMedium;
 @property (strong, nonatomic) NSURL* interlocutorURLAvatarSmall;
 @property (assign, nonatomic) BOOL isOnline;
-
+@property (strong, nonatomic) NSNumber* valueID;
 @end

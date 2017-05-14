@@ -6,8 +6,8 @@ target 'Cryptochat' do
   # use_frameworks!
 pod '25519'
 pod 'Realm'
-
-   pod '25519', '~> 1.2'
+pod 'SDWebImage'
+pod 'MBProgressHUD', '~> 1.0.0'
 
 
   target 'CryptochatTests' do
