@@ -18,7 +18,7 @@
 		20290B641EC8652200507479 /* ChatParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B611EC8652200507479 /* ChatParser.m */; };
 		20290B651EC8652200507479 /* ChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B631EC8652200507479 /* ChatService.m */; };
 		20290B6B1EC8657600507479 /* ChatListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B681EC8657600507479 /* ChatListModel.m */; };
-		20290B6C1EC8657600507479 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B6A1EC8657600507479 /* UserModel.m */; };
+		20290B6C1EC8657600507479 /* InterlocutorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B6A1EC8657600507479 /* InterlocutorModel.m */; };
 		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
 		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
 		5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F04FB851EAD09C8007D5EBE /* CryptoService.m */; };
@@ -92,8 +92,8 @@
 		20290B631EC8652200507479 /* ChatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatService.m; sourceTree = "<group>"; };
 		20290B671EC8657600507479 /* ChatListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListModel.h; sourceTree = "<group>"; };
 		20290B681EC8657600507479 /* ChatListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListModel.m; sourceTree = "<group>"; };
-		20290B691EC8657600507479 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		20290B6A1EC8657600507479 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		20290B691EC8657600507479 /* InterlocutorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterlocutorModel.h; sourceTree = "<group>"; };
+		20290B6A1EC8657600507479 /* InterlocutorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterlocutorModel.m; sourceTree = "<group>"; };
 		2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CA8268DB24B4A9B3E357E3 /* AuthorizationRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationRouter.h; sourceTree = "<group>"; };
 		494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,8 +271,8 @@
 			children = (
 				20290B671EC8657600507479 /* ChatListModel.h */,
 				20290B681EC8657600507479 /* ChatListModel.m */,
-				20290B691EC8657600507479 /* UserModel.h */,
-				20290B6A1EC8657600507479 /* UserModel.m */,
+				20290B691EC8657600507479 /* InterlocutorModel.h */,
+				20290B6A1EC8657600507479 /* InterlocutorModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -883,7 +883,7 @@
 				5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */,
 				5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */,
 				20290B651EC8652200507479 /* ChatService.m in Sources */,
-				20290B6C1EC8657600507479 /* UserModel.m in Sources */,
+				20290B6C1EC8657600507479 /* InterlocutorModel.m in Sources */,
 				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
 				5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */,
 				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,

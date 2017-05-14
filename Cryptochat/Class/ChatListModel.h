@@ -10,6 +10,7 @@
 
 @interface ChatListModel : NSObject
 
+@property (strong, nonatomic) NSDate* createdDate;
 @property (strong, nonatomic) NSString* lastMessage;
 @property (assign, nonatomic) BOOL isRead;
 @property (assign, nonatomic) BOOL isMy;
