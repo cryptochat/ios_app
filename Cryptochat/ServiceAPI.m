@@ -96,6 +96,28 @@ static NSString* BASE_API_URL = @"http://wishbyte.org/api/v1";
     
 }
 
+#pragma mark - Chat
+- (void)getChatListWithIdentifier:(NSString *)idetnitfier data:(NSString *)data complete:(APIServiceResponse)completeResponse {
+    NSString* url = @"http://wishbyte.org/api/v1/chat_messages/chat_list";
+    
+    NSURLComponents* components = [[NSURLComponents alloc] initWithString:url];
+    
+    NSMutableURLRequest* request = [NSMutableURLRequest new];
+    request.URL = components.URL;
+    request.HTTPMethod = @"GET";
+    
+    NSURLQueryItem *itemIdentifier = [NSURLQueryItem queryItemWithName:@"identifier" value:[NSString stringWithFormat:@"%@",idetnitfier]];
+    NSURLQueryItem *itemData = [NSURLQueryItem queryItemWithName:@"data" value:[NSString stringWithFormat:@"%@",data]];
+    components.queryItems = @[itemIdentifier, itemData];
+    
+    [self addRequestContentType:request];
+    
+    [TransportLayer fetchRequest:request complete:^(NSDictionary *dicReponse, TransportResponseStatus status, NSData* data) {
+        NSLog(@"%@", url);
+        completeResponse(dicReponse, status);
+    }];
+    
+}
 
 
 @end
