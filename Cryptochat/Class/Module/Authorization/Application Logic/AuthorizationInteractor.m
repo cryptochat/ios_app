@@ -33,7 +33,7 @@
         if(status == TransportResponseStatusSuccess){
             //TODO:
             ChatService *chat = [ChatService new];
-            [chat getChatListWithToken:model.token complete:^(TransportResponseStatus status, NSArray<UserModel *> *userArray, NSArray<ChatListModel *> *chatLustArray) {
+            [chat getChatListWithToken:model.token complete:^(TransportResponseStatus status, NSArray<InterlocutorModel *> *userArray, NSArray<ChatListModel *> *chatLustArray) {
                 
             }];
         }else{

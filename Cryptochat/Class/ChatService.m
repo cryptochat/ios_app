@@ -12,12 +12,14 @@
 #import "KeyChainService.h"
 #import "RealmDataStore.h"
 #import "UserAuthModel.h"
+#import "ChatParser.h"
 
 @interface ChatService()
 @property (strong, nonatomic) ServiceAPI* serviceAPI;
 @property (strong, nonatomic) Base64Coder* base64Coder;
 @property (strong, nonatomic) KeyChainService* keyChainService;
 @property (strong, nonatomic) RealmDataStore* realmDataStore;
+@property (strong, nonatomic) ChatParser* chatParser;
 @end
 
 
@@ -30,12 +32,13 @@
         self.base64Coder = [Base64Coder new];
         self.keyChainService = [KeyChainService new];
         self.realmDataStore = [RealmDataStore new];
+        self.chatParser = [ChatParser new];
     }
     return self;
 }
 
 - (void)getChatListWithToken:(NSString *)token
-                    complete:(void (^)(TransportResponseStatus status, NSArray<UserModel *> *userArray, NSArray<ChatListModel *> *chatLustArray))completeResponse {
+                    complete:(void (^)(TransportResponseStatus status, NSArray<InterlocutorModel *> *userArray, NSArray<ChatListModel *> *chatLustArray))completeResponse {
     
     NSString *identidier = [self.keyChainService getIdentifier];
     
@@ -54,7 +57,7 @@
         if (status != TransportResponseStatusSuccess) {
             completeResponse (status, nil, nil);
         } else {
-            
+            NSArray *interlocutorModelsArray = [self.chatParser createInterlocutorModelsArrayFromDictionary:dicReponse];
         }
         
     }];

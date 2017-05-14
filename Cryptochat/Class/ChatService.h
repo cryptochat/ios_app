@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "ServiceAPI.h"
 
-@class UserModel;
+@class InterlocutorModel;
 @class ChatListModel;
 
 @interface ChatService : NSObject
 
 - (void)getChatListWithToken:(NSString *)token
-                    complete:(void (^)(TransportResponseStatus status, NSArray<UserModel *> *userArray, NSArray<ChatListModel *> *chatLustArray))completeResponse;
+                    complete:(void (^)(TransportResponseStatus status, NSArray<InterlocutorModel *> *userArray, NSArray<ChatListModel *> *chatLustArray))completeResponse;
 
 @end
