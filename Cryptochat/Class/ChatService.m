@@ -7,7 +7,6 @@
 //
 
 #import "ChatService.h"
-#import "ServiceAPI.h"
 #import "Base64Coder.h"
 #import "KeyChainService.h"
 #import "RealmDataStore.h"

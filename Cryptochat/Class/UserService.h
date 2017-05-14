@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ServiceAPI.h"
+
+@class InterlocutorModel;
 
 @interface UserService : NSObject
+
+- (void)getUsersWithToken:(NSString *)token
+                    query:(NSString *)query
+                 complete:(void (^)(TransportResponseStatus status, NSArray<InterlocutorModel *> *userArray))completeResponse;
 
 @end

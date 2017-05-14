@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class InterlocutorModel;
+
 @interface UserParser : NSObject
+
+- (NSArray<InterlocutorModel *> *) createInterlocutorModelsArrayFromDictionary:(NSDictionary *)dictionary;
 
 @end
