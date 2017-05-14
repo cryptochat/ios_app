@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="371" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3S9-Hy-qwb">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_test" translatesAutoresizingMaskIntoConstraints="NO" id="3S9-Hy-qwb">
                         <rect key="frame" x="8" y="8" width="59" height="63.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="59" id="Ox1-Ug-oUy"/>
@@ -68,6 +69,13 @@
                             <constraint firstAttribute="height" constant="1" id="2LZ-BH-5ab"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="is_online" translatesAutoresizingMaskIntoConstraints="NO" id="Awn-hr-aZ4">
+                        <rect key="frame" x="347" y="57" width="13" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="XeE-mB-zOh"/>
+                            <constraint firstAttribute="height" constant="14" id="eKl-Vx-vMb"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="nw1-bd-wMB" secondAttribute="bottom" constant="8" id="7Kg-Vz-5JP"/>
@@ -79,6 +87,8 @@
                     <constraint firstItem="nw1-bd-wMB" firstAttribute="leading" secondItem="3S9-Hy-qwb" secondAttribute="trailing" constant="8" id="RI9-7p-JM4"/>
                     <constraint firstItem="6bF-t9-FBn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="UVK-oH-cRi"/>
                     <constraint firstAttribute="trailing" secondItem="6bF-t9-FBn" secondAttribute="trailing" constant="8" id="Ukb-u4-9IM"/>
+                    <constraint firstItem="Awn-hr-aZ4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-3" id="XC6-UI-OML"/>
+                    <constraint firstItem="6bF-t9-FBn" firstAttribute="top" secondItem="Awn-hr-aZ4" secondAttribute="bottom" constant="7.5" id="Y4l-YZ-EE7"/>
                     <constraint firstItem="3S9-Hy-qwb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ZSK-hg-udf"/>
                     <constraint firstItem="g7w-cj-Ca8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ZXh-VO-DYH"/>
                     <constraint firstAttribute="bottom" secondItem="3S9-Hy-qwb" secondAttribute="bottom" constant="8" id="g2n-a4-kpq"/>
@@ -88,6 +98,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="g7w-cj-Ca8" id="D71-j9-H76"/>
+                <outlet property="isOnlineView" destination="Awn-hr-aZ4" id="bNR-ho-SSi"/>
                 <outlet property="isReadedView" destination="vbA-qg-8tg" id="PfO-8Q-T7A"/>
                 <outlet property="lastMessageLabel" destination="nw1-bd-wMB" id="kpv-6W-Qp0"/>
                 <outlet property="nameLabel" destination="kDF-yf-ayb" id="kSU-iG-R45"/>
@@ -96,4 +107,8 @@
             <point key="canvasLocation" x="14.5" y="59"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="is_online" width="64" height="64"/>
+        <image name="photo_test" width="360" height="360"/>
+    </resources>
 </document>

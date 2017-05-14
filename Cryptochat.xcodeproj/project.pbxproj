@@ -35,6 +35,7 @@
 		5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C563E1E7EC2B4002E62E7 /* TransportLayer.m */; };
 		5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56421E7EC6AC002E62E7 /* AuthService.m */; };
 		5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C56491E7EC956002E62E7 /* AuthParser.m */; };
+		5F92048B1EC87853005DA781 /* UserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F92048A1EC87853005DA781 /* UserDefaultsManager.m */; };
 		5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD519B1EB752BA007D440E /* KeychainWrapper.m */; };
 		5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD519D1EB752BA007D440E /* Base64Coder.m */; };
 		5FAD51A41EB7536F007D440E /* KeyChainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD51A11EB7536E007D440E /* KeyChainService.m */; };
@@ -128,6 +129,8 @@
 		5F5C56421E7EC6AC002E62E7 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
 		5F5C56481E7EC956002E62E7 /* AuthParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthParser.h; sourceTree = "<group>"; };
 		5F5C56491E7EC956002E62E7 /* AuthParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthParser.m; sourceTree = "<group>"; };
+		5F9204891EC87853005DA781 /* UserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsManager.h; sourceTree = "<group>"; };
+		5F92048A1EC87853005DA781 /* UserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsManager.m; sourceTree = "<group>"; };
 		5FAD519A1EB752BA007D440E /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		5FAD519B1EB752BA007D440E /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		5FAD519C1EB752BA007D440E /* Base64Coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Coder.h; sourceTree = "<group>"; };
@@ -459,6 +462,8 @@
 				0F5373F21E7E78790003926E /* AppDelegate.m */,
 				5FD0D0541E7E9C86004343A6 /* CRMediator.h */,
 				5FD0D0551E7E9C86004343A6 /* CRMediator.m */,
+				5F9204891EC87853005DA781 /* UserDefaultsManager.h */,
+				5F92048A1EC87853005DA781 /* UserDefaultsManager.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -942,6 +947,7 @@
 				5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */,
 				5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */,
 				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
+				5F92048B1EC87853005DA781 /* UserDefaultsManager.m in Sources */,
 				5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */,
 				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,
 				5F420B391EC0780800971A18 /* ChatListViewModel.m in Sources */,

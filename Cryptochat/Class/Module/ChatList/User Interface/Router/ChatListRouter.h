@@ -9,11 +9,14 @@
 #import "ChatListDelegateInterface.h"
 @class UIView;
 @class UIViewController;
+@class UIWindow;
 
 
 @interface ChatListRouter : NSObject
 -(void)presentChatListInterfaceFromViewController:(UIViewController*)viewController
                                         container:(UIView*)container
                                          delegate:(id<ChatListDelegateInterface>)delegate;
+- (void)presentChatListInterfaceFromWindow:(UIWindow*)window
+                                  delegate:(id<ChatListDelegateInterface>)delegate;
 
 @end

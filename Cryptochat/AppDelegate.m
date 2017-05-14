@@ -8,15 +8,24 @@
 
 #import "AppDelegate.h"
 #import "CRMediator.h"
+#import "AuthService.h"
 
 #import "ExchangeService.h"
 
 
 @interface AppDelegate ()
-
+@property(strong, nonatomic)AuthService* authService;
 @end
 
 @implementation AppDelegate
+
+-(instancetype)init{
+    self = [super init];
+    if(self){
+        _authService = [AuthService new];
+    }
+    return self;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -24,8 +33,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [CRMediator instance].window = self.window;
     
-    [[CRMediator instance]showAuthorization];
-    
+
+    if([_authService isAuthorized]){
+        [[CRMediator instance]showChatList];
+    }else{
+        [[CRMediator instance]showAuthorization];
+    }
     ExchangeService *service = [ExchangeService new];
     [service keyExchangeWithCompleteStatus:^(TransportResponseStatus status) {
         NSLog(@"Status: %ld", (long)status);

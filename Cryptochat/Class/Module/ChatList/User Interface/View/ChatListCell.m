@@ -15,6 +15,7 @@
 @property(weak, nonatomic)IBOutlet UILabel* nameLabel;
 @property(weak, nonatomic)IBOutlet UILabel* lastMessageLabel;
 @property(weak, nonatomic)IBOutlet UILabel* dateLabel;
+@property(weak, nonatomic)IBOutlet UIImageView* isOnlineView;
 
 @end
 
@@ -26,13 +27,22 @@
 
 -(void)configCell:(ChatListViewModel*)model{
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    _photoView.image = [UIImage imageWithData:model.photoData];
+    //_photoView.image = [UIImage imageWithData:model.photoData];
     _nameLabel.text = model.name;
     _dateLabel.text = model.stringDate;
     _lastMessageLabel.text = model.lastMessage;
     if(model.isReaded){
         
     }
+    
+    if(model.isOnline){
+        _isOnlineView.hidden = NO;
+    }else{
+        _isOnlineView.hidden = YES;
+    }
+    self.photoView.clipsToBounds = YES;
+    self.photoView.layer.cornerRadius = 30;
+    
 
 }
 

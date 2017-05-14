@@ -15,6 +15,7 @@
 #import "CryptoService.h"
 #import "Base64Coder.h"
 #import "KeyChainService.h"
+#import "UserDefaultsManager.h"
 
 const NSString* mockIdentifier = @"76c93ee0-20e3-4340-ab7b-ef1c2371dcda";
 
@@ -25,6 +26,8 @@ const NSString* mockIdentifier = @"76c93ee0-20e3-4340-ab7b-ef1c2371dcda";
 @property(strong, nonatomic)CryptoService* cryptService;
 @property (strong, nonatomic) Base64Coder* base64Coder;
 @property (strong, nonatomic) KeyChainService* keyChainService;
+@property(strong, nonatomic)UserDefaultsManager* managerUD;
+
 @end
 
 @implementation AuthService
@@ -37,6 +40,7 @@ const NSString* mockIdentifier = @"76c93ee0-20e3-4340-ab7b-ef1c2371dcda";
         self.cryptService = [CryptoService new];
         self.base64Coder = [Base64Coder new];
         self.keyChainService = [KeyChainService new];
+        self.managerUD = [UserDefaultsManager new];
     }
     return self;
 }
@@ -100,7 +104,6 @@ const NSString* mockIdentifier = @"76c93ee0-20e3-4340-ab7b-ef1c2371dcda";
                     completeResponse(status, authModel );
                 }];
             
-                
             }else{
                 completeResponse(status, nil);
             }

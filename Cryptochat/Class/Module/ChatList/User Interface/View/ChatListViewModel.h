@@ -13,5 +13,6 @@
 @property(strong, nonatomic)NSData* photoData;
 @property(strong, nonatomic)NSString* lastMessage;
 @property(assign, nonatomic)BOOL isReaded;
+@property(assign, nonatomic)BOOL isOnline;
 @property(strong, nonatomic)NSString* stringDate;
 @end

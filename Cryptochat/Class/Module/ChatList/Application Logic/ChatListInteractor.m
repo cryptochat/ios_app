@@ -24,6 +24,7 @@
         model.name = @"Евгений Петров";
         model.lastMessage = @"Тестовое сообщение, проверка сообщения";
         model.stringDate = @"20.02.15";
+        model.isOnline = YES;
         [buffArray addObject:model];
     }
     [self.presenter updateView:buffArray];
