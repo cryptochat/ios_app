@@ -30,7 +30,6 @@
         [self.presenter hideProgress];
         if(status == TransportResponseStatusSuccess){
             //TODO:
-            
         }else{
             [self.presenter showMessage:status];
         }

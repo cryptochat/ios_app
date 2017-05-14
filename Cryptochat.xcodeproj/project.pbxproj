@@ -15,6 +15,10 @@
 		0F5374091E7E787A0003926E /* CryptochatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374081E7E787A0003926E /* CryptochatTests.m */; };
 		0F5374141E7E787A0003926E /* CryptochatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5374131E7E787A0003926E /* CryptochatUITests.m */; };
 		200243111B9802721A364448 /* libPods-Cryptochat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */; };
+		20290B641EC8652200507479 /* ChatParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B611EC8652200507479 /* ChatParser.m */; };
+		20290B651EC8652200507479 /* ChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B631EC8652200507479 /* ChatService.m */; };
+		20290B6B1EC8657600507479 /* ChatListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B681EC8657600507479 /* ChatListModel.m */; };
+		20290B6C1EC8657600507479 /* InterlocutorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20290B6A1EC8657600507479 /* InterlocutorModel.m */; };
 		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
 		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
 		5F04FB861EAD09C8007D5EBE /* CryptoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F04FB851EAD09C8007D5EBE /* CryptoService.m */; };
@@ -82,6 +86,14 @@
 		0F5374131E7E787A0003926E /* CryptochatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptochatUITests.m; sourceTree = "<group>"; };
 		0F5374151E7E787A0003926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7D018A30715EAD60F5CA10 /* AuthorizationInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationInteractor.h; sourceTree = "<group>"; };
+		20290B601EC8652200507479 /* ChatParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatParser.h; sourceTree = "<group>"; };
+		20290B611EC8652200507479 /* ChatParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatParser.m; sourceTree = "<group>"; };
+		20290B621EC8652200507479 /* ChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatService.h; sourceTree = "<group>"; };
+		20290B631EC8652200507479 /* ChatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatService.m; sourceTree = "<group>"; };
+		20290B671EC8657600507479 /* ChatListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListModel.h; sourceTree = "<group>"; };
+		20290B681EC8657600507479 /* ChatListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListModel.m; sourceTree = "<group>"; };
+		20290B691EC8657600507479 /* InterlocutorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterlocutorModel.h; sourceTree = "<group>"; };
+		20290B6A1EC8657600507479 /* InterlocutorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterlocutorModel.m; sourceTree = "<group>"; };
 		2D1B973D76D4C21265F5E6EB /* libPods-CryptochatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptochatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CA8268DB24B4A9B3E357E3 /* AuthorizationRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AuthorizationRouter.h; sourceTree = "<group>"; };
 		494E4FB38B5740F03EC819A7 /* libPods-Cryptochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cryptochat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +266,29 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		20290B661EC8655C00507479 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20290B671EC8657600507479 /* ChatListModel.h */,
+				20290B681EC8657600507479 /* ChatListModel.m */,
+				20290B691EC8657600507479 /* InterlocutorModel.h */,
+				20290B6A1EC8657600507479 /* InterlocutorModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		208909EC1EC8643E00D286AF /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				20290B661EC8655C00507479 /* Models */,
+				20290B621EC8652200507479 /* ChatService.h */,
+				20290B631EC8652200507479 /* ChatService.m */,
+				20290B601EC8652200507479 /* ChatParser.h */,
+				20290B611EC8652200507479 /* ChatParser.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 		2FCB3D0AE2A92608A16905F5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +376,7 @@
 		5F5C56401E7EC56D002E62E7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				208909EC1EC8643E00D286AF /* Chat */,
 				5FAD51A61EB75417007D440E /* Exchange&KeyChain Service */,
 				5F04FB831EAD0998007D5EBE /* Crypto Service */,
 				5F04FB821EAD0989007D5EBE /* Auth Service */,
@@ -834,6 +870,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FAD51A51EB7536F007D440E /* ExchangeService.m in Sources */,
+				20290B6B1EC8657600507479 /* ChatListModel.m in Sources */,
 				5FD0D05F1E7EBE50004343A6 /* AuthViewModel.m in Sources */,
 				0F5373F31E7E78790003926E /* AppDelegate.m in Sources */,
 				0F5373F01E7E78790003926E /* main.m in Sources */,
@@ -845,6 +882,8 @@
 				6C5B21080CA3E52A582B223A /* AuthorizationRouter.m in Sources */,
 				5F4ED2671EAB83410055D605 /* UserAuthModel.m in Sources */,
 				5FAD519E1EB752BA007D440E /* KeychainWrapper.m in Sources */,
+				20290B651EC8652200507479 /* ChatService.m in Sources */,
+				20290B6C1EC8657600507479 /* InterlocutorModel.m in Sources */,
 				5F5C56431E7EC6AC002E62E7 /* AuthService.m in Sources */,
 				5FAD519F1EB752BA007D440E /* Base64Coder.m in Sources */,
 				5F5C564A1E7EC956002E62E7 /* AuthParser.m in Sources */,
@@ -853,6 +892,7 @@
 				5F4ED2711EAB842C0055D605 /* UserAuthModel+Realm.m in Sources */,
 				C9FC6DE5D57B0A5C5E382A1B /* AuthorizationViewController.m in Sources */,
 				ADD6A39AFFF766D6D8252C14 /* RegistrationInteractor.m in Sources */,
+				20290B641EC8652200507479 /* ChatParser.m in Sources */,
 				2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */,
 				8787C5D61B7D1D4361F299AD /* RegistrationPresenter.m in Sources */,
 				5F5C563F1E7EC2B4002E62E7 /* TransportLayer.m in Sources */,
