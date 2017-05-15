@@ -171,12 +171,6 @@
     if([_delegate respondsToSelector:@selector(chatServiceChangeStatus::)]){
         [_delegate chatServiceChangeStatus:ChatServiceStatusConnected];
     }
-
-#warning MOCK DATA
-    ChatMessageModel* model = [ChatMessageModel new];
-    model.message = @"Привет!";
-    model.valueID = @(32);
-    [self sendMessage:model];
 }
 
 @end
