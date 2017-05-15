@@ -22,6 +22,10 @@
     [self.router presentSearching];
 }
 
+- (void)viewClickChat:(NSNumber *)userID {
+    [self.router pushToChatWithUser:userID];
+}
+
 
 #pragma mark -  <ChatListInteractorInterfaceOutput
 

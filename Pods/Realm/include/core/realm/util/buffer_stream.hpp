@@ -40,7 +40,6 @@ public:
     /// (std::basic_streambuf::pbase()). Note that this will change as the
     /// buffer is reallocated.
     char_type* data() noexcept;
-    const char_type* data() const noexcept;
 
     /// Get the number of bytes written to the output buffer since the creation
     /// of the stream buffer, or since the last invocation of reset()
@@ -61,7 +60,6 @@ public:
 
     /// Calls BasicResettableExpandableOutputStreambuf::data().
     char_type* data() noexcept;
-    const char_type* data() const noexcept;
 
     /// Calls BasicResettableExpandableOutputStreambuf::size().
     std::streamsize size() const noexcept;
@@ -94,13 +92,6 @@ BasicResettableExpandableOutputStreambuf<C,T,A>::data() noexcept
 }
 
 template<class C, class T, class A>
-inline const typename BasicResettableExpandableOutputStreambuf<C,T,A>::char_type*
-BasicResettableExpandableOutputStreambuf<C,T,A>::data() const noexcept
-{
-    return this->pbase();
-}
-
-template<class C, class T, class A>
 inline std::streamsize BasicResettableExpandableOutputStreambuf<C,T,A>::size() const noexcept
 {
     std::streamsize s = std::streamsize(this->pptr() - this->pbase());
@@ -123,13 +114,6 @@ inline void BasicResettableExpandableBufferOutputStream<C,T,A>::reset() noexcept
 template<class C, class T, class A>
 inline typename BasicResettableExpandableBufferOutputStream<C,T,A>::char_type*
 BasicResettableExpandableBufferOutputStream<C,T,A>::data() noexcept
-{
-    return m_streambuf.data();
-}
-
-template<class C, class T, class A>
-inline const typename BasicResettableExpandableBufferOutputStream<C,T,A>::char_type*
-BasicResettableExpandableBufferOutputStream<C,T,A>::data() const noexcept
 {
     return m_streambuf.data();
 }

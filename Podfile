@@ -4,12 +4,12 @@
 target 'Cryptochat' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
-pod '25519'
-pod 'Realm'
-pod 'SDWebImage'
-pod 'MBProgressHUD', '~> 1.0.0'
-pod 'SocketRocket'
-
+  pod '25519'
+  pod 'Realm'
+  pod 'SDWebImage'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'SocketRocket'
+  pod 'UIScrollView-InfiniteScroll'
 
   target 'CryptochatTests' do
     inherit! :search_paths

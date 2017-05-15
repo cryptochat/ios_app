@@ -22,7 +22,6 @@
 static const NSString *const kRLMSyncTokenDataKey       = @"token_data";
 static const NSString *const kRLMSyncTokenKey           = @"token";
 static const NSString *const kRLMSyncExpiresKey         = @"expires";
-static const NSString *const kRLMSyncIsAdminKey         = @"is_admin";
 
 @interface RLMTokenDataModel ()
 
@@ -30,7 +29,6 @@ static const NSString *const kRLMSyncIsAdminKey         = @"is_admin";
 @property (nonatomic, readwrite) NSString *appID;
 @property (nonatomic, readwrite) NSString *path;
 @property (nonatomic, readwrite) NSTimeInterval expires;
-@property (nonatomic, readwrite) BOOL isAdmin;
 //@property (nonatomic, readwrite) NSArray *access;
 
 @end
@@ -39,11 +37,9 @@ static const NSString *const kRLMSyncIsAdminKey         = @"is_admin";
 
 - (instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
     if (self = [super init]) {
-        self.isAdmin = NO;
         RLM_SYNC_PARSE_STRING_OR_ABORT(jsonDictionary, kRLMSyncIdentityKey, identity);
         RLM_SYNC_PARSE_OPTIONAL_STRING(jsonDictionary, kRLMSyncAppIDKey, appID);
         RLM_SYNC_PARSE_OPTIONAL_STRING(jsonDictionary, kRLMSyncPathKey, path);
-        RLM_SYNC_PARSE_OPTIONAL_BOOL(jsonDictionary, kRLMSyncIsAdminKey, isAdmin);
         RLM_SYNC_PARSE_DOUBLE_OR_ABORT(jsonDictionary, kRLMSyncExpiresKey, expires);
         return self;
     }

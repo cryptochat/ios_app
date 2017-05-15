@@ -23,6 +23,7 @@ static float CELL_HEIGHT = 80;
 
 @implementation ChatListViewController{
     NSArray<ChatListViewModel*>* _arrModels;
+    NSNumber *itemIndexInArray;
 }
 
 #pragma mark - Методы жизненного цикла
@@ -95,6 +96,21 @@ static float CELL_HEIGHT = 80;
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    itemIndexInArray = [NSNumber numberWithInteger:indexPath.row];
+    ChatListViewModel *model = [self chatListItemModelFromArray];
+    [self.presenter viewClickChat:@(model.valueID)];
+}
+
+
+-(ChatListViewModel*)chatListItemModelFromArray{
+    if (_arrModels.count >= [itemIndexInArray integerValue] && _arrModels.count > 0){
+        return [_arrModels objectAtIndex:[itemIndexInArray integerValue]];
+    }
+    return nil;
+}
 
 
 #pragma mark - ChatListViewInterfaceOutputView <NSObject>

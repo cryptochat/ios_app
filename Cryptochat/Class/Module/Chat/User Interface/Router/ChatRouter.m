@@ -15,76 +15,40 @@
 #import "UiKit/UIView.h"
 
 
-
-
-#warning Заполните данные ниже
-static NSString* nameStoryboard = @"";
-static NSString* identifierViewController = @"";
+static NSString* nameStoryboard = @"Chat";
+static NSString* identifierViewController = @"ChatViewController";
 
 @interface ChatRouter()
 
 @property(weak, nonatomic)ChatViewController *userInterface;
 @property(weak, nonatomic)ChatPresenter *presenter;
-
+@property(weak, nonatomic)UINavigationController* currentNavigationController;
 @end
 
 
 @implementation ChatRouter
 
-// NavigationController
-/*
--(void)presentChatInterfaceFromViewController:(UIViewController*)viewController{
-
-     ChatViewController* userInterface = [self ChatViewControllerFromStoryboard];
-
-     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:userInterface];
-
-     self.userInterface = userInterface;
-     [self configureDependencies];
-
-     [viewController.view addSubview:navController.view];
-     [viewController addChildViewController:navController];
-     [navController didMoveToParentViewController:viewController];
-}
-*/
-
-//ViewController
-/*
--(void)presentChatInterfaceFromViewController:(UIViewController*)viewController{
-
-     ChatViewController* userInterface = [self ChatViewControllerFromStoryboard];
-
-     self.userInterface = userInterface;
-     [self configureDependencies];
-
-     [viewController.view addSubview:userInterface.view];
-     [viewController addChildViewController:userInterface];
-     [userInterface didMoveToParentViewController:viewController];
-}
-*/
-
-//View Piece
-/*
--(void)presentChatInterfaceFromViewController:(UIViewController*)viewController container:(UIView*)container{
-
+- (void)pushChatInterfaceFromNavigationwController:(UINavigationController*)navigationController
+                                            userID:(NSNumber*)ID
+                                          delegate:(id<ChatDelegateInterface>)delegate{
+    
     ChatViewController* userInterface = [self ChatViewControllerFromStoryboard];
+    
     self.userInterface = userInterface;
-    [self configureDependencies];
-
-    [container addSubview:userInterface.view];
-    [viewController addChildViewController:userInterface];
-    [userInterface didMoveToParentViewController:viewController];
-    [userInterface.view setFrame:container.bounds];
+    self.currentNavigationController = navigationController;
+    
+    [self configureDependenciesWithUserID:ID];
+    //[userInterface setBackType:ChatViewControllerNavigationController];
+    [navigationController pushViewController:userInterface animated:YES];
 }
 
-*/
-
--(void)configureDependencies{
+-(void)configureDependenciesWithUserID:(NSNumber *)userID{
     ChatInteractor * interactor = [ChatInteractor new];
     ChatPresenter * presenter = [ChatPresenter new];
 
     presenter.router = self;
     self.presenter = presenter;
+    self.presenter.userID = userID;
 
     self.userInterface.presenter = presenter;
     self.presenter.userInterface = self.userInterface;

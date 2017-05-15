@@ -34,10 +34,6 @@ public:
     {
     }
 
-    // Disable copying, this is not allowed.
-    ArrayStringLong& operator=(const ArrayStringLong&) = delete;
-    ArrayStringLong(const ArrayStringLong&) = delete;
-
     /// Create a new empty long string array and attach this accessor to
     /// it. This does not modify the parent reference information of
     /// this accessor.

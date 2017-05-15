@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, MessageType){
-    MessageTypeConformation,
-    MessageTypeIncoming,
+typedef NS_ENUM(NSInteger, MethodType){
+    MethodTypeConformation,
+    MethodTypeIncoming,
 };
 
 
@@ -25,5 +25,5 @@ typedef NS_ENUM(NSInteger, MessageType){
 @property(assign, nonatomic)BOOL fromMe;
 @property(assign, nonatomic)BOOL isOnline;
 
-@property(assign, nonatomic)MessageType messageType;
+@property(assign, nonatomic)MethodType methodType;
 @end

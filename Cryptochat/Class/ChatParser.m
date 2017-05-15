@@ -125,11 +125,11 @@ static NSString *NullString = @"null";
     
     NSString* methodName = jsonDict[@"header"][@"method_name"];
     if([methodName isEqualToString:@"confirmation_message"]){
-        model.messageType = MessageTypeConformation;
+        model.methodType = MethodTypeConformation;
     }
     
     if([methodName isEqualToString:@"incoming_message"]){
-        model.messageType = MessageTypeIncoming;
+        model.methodType = MethodTypeIncoming;
     }
     
     return model;

@@ -98,12 +98,12 @@ bool DeepChangeChecker::check_outgoing_links(size_t table_ndx,
         return false;
     };
 
-    auto linked_object_changed = [&](OutgoingLink const& link) {
+    for (auto const& link : it->links) {
         if (already_checking(link.col_ndx))
-            return false;
+            continue;
         if (!link.is_list) {
             if (table.is_null_link(link.col_ndx, row_ndx))
-                return false;
+                continue;
             auto dst = table.get_link(link.col_ndx, row_ndx);
             return check_row(*table.get_link_target(link.col_ndx), dst, depth + 1);
         }
@@ -115,10 +115,9 @@ bool DeepChangeChecker::check_outgoing_links(size_t table_ndx,
             if (check_row(target, dst, depth + 1))
                 return true;
         }
-        return false;
-    };
+    }
 
-    return std::any_of(begin(it->links), end(it->links), linked_object_changed);
+    return false;
 }
 
 bool DeepChangeChecker::check_row(Table const& table, size_t idx, size_t depth)
@@ -142,7 +141,7 @@ bool DeepChangeChecker::check_row(Table const& table, size_t idx, size_t depth)
         return false;
 
     bool ret = check_outgoing_links(table_ndx, table, idx, depth);
-    if (!ret && (depth == 0 || !m_current_path[depth - 1].depth_exceeded))
+    if (!ret && !m_current_path[depth].depth_exceeded)
         m_not_modified[table_ndx].add(idx);
     return ret;
 }
@@ -156,7 +155,7 @@ bool DeepChangeChecker::operator()(size_t ndx)
 
 CollectionNotifier::CollectionNotifier(std::shared_ptr<Realm> realm)
 : m_realm(std::move(realm))
-, m_sg_version(Realm::Internal::get_shared_group(*m_realm)->get_version_of_current_transaction())
+, m_sg_version(Realm::Internal::get_shared_group(*m_realm).get_version_of_current_transaction())
 {
 }
 
@@ -267,7 +266,7 @@ void CollectionNotifier::set_table(Table const& table)
 
 void CollectionNotifier::add_required_change_info(TransactionChangeInfo& info)
 {
-    if (!do_add_required_change_info(info) || m_related_tables.empty()) {
+    if (!do_add_required_change_info(info)) {
         return;
     }
 
@@ -287,12 +286,6 @@ void CollectionNotifier::prepare_handover()
     m_sg_version = m_sg->get_version_of_current_transaction();
     do_prepare_handover(*m_sg);
     m_has_run = true;
-
-#ifdef REALM_DEBUG
-    std::lock_guard<std::mutex> lock(m_callback_mutex);
-    for (auto& callback : m_callbacks)
-        REALM_ASSERT(!callback.skip_next);
-#endif
 }
 
 void CollectionNotifier::before_advance()
@@ -473,10 +466,4 @@ void NotifierPackage::after_advance()
         return;
     for (auto& notifier : m_notifiers)
         notifier->after_advance();
-}
-
-void NotifierPackage::add_notifier(std::shared_ptr<CollectionNotifier> notifier)
-{
-    m_notifiers.push_back(notifier);
-    m_coordinator->register_notifier(notifier);
 }

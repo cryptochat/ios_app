@@ -32,7 +32,7 @@ namespace sync {
 class Metrics {
 public:
     /// Increment the counter identified by the specified key.
-    virtual void increment(const char* key, int value = 1) = 0;
+    virtual void increment(const char* key) = 0;
 
     /// Set value of the guage identified by the specified key.
     virtual void gauge(const char* key, double value) = 0;
@@ -40,10 +40,6 @@ public:
     /// Add the specified value to the guage identified by the specified
     /// key. The value is allowed to be negative.
     virtual void gauge_relative(const char* key, double value) = 0;
-
-    /// Allow the dogless library to send each metric to multiple endpoints, as
-    /// required
-    virtual void add_endpoint(const std::string& endpoint) = 0;
 
     virtual ~Metrics() {}
 };
@@ -53,15 +49,18 @@ public:
 class DoglessMetrics: public sync::Metrics {
 public:
     DoglessMetrics():
-        m_dogless(dogless::hostname_prefix("realm")) // Throws
+        m_dogless("realm") // Throws
     {
+#if !REALM_PLATFORM_APPLE
+        m_dogless.mtu(dogless::MTU_Jumbo);
+#endif
         m_dogless.loop_interval(1);
     }
 
-    void increment(const char* key, int value = 1) override
+    void increment(const char* key) override
     {
         const char* metric = key;
-        m_dogless.increment(metric, value); // Throws
+        m_dogless.increment(metric); // Throws
     }
 
     void gauge(const char* key, double value) override
@@ -75,11 +74,6 @@ public:
         const char* metric = key;
         double amount = value;
         m_dogless.gauge_relative(metric, amount); // Throws
-    }
-
-    void add_endpoint(const std::string& endpoint) override
-    {
-        m_dogless.add_endpoint(endpoint);
     }
 
 private:

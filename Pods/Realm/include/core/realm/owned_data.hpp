@@ -19,8 +19,6 @@
 #ifndef REALM_OWNED_DATA_HPP
 #define REALM_OWNED_DATA_HPP
 
-#include <realm/util/assert.hpp>
-
 #include <cstring>
 #include <memory>
 

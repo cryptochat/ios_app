@@ -145,14 +145,14 @@
 }
 -(void)chatServiceInComingMessage:(NSDictionary*)message{
     ChatMessageModel* model = [_chatParser createChatMessageFromDict:message];
-    switch (model.messageType) {
-        case MessageTypeIncoming:
+    switch (model.methodType) {
+        case MethodTypeIncoming:
             if([_delegate respondsToSelector:@selector(chatSerivceReceivedMessage:)]){
                 [_delegate chatSerivceReceivedMessage:model];
             }
             break;
             
-        case MessageTypeConformation:
+        case MethodTypeConformation:
             if([_delegate respondsToSelector:@selector(chatSerivceReceivedMessage:)]){
                 [_delegate chatServiceMessageConfirmed:model];
             }
