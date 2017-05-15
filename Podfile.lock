@@ -1,13 +1,14 @@
 PODS:
   - 25519 (2.0.2)
   - MBProgressHUD (1.0.0)
-  - Realm (2.6.1):
-    - Realm/Headers (= 2.6.1)
-  - Realm/Headers (2.6.1)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
+  - Realm (2.1.2):
+    - Realm/Headers (= 2.1.2)
+  - Realm/Headers (2.1.2)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SocketRocket (0.5.1)
+  - UIScrollView-InfiniteScroll (1.0.0)
 
 DEPENDENCIES:
   - '25519'
@@ -15,14 +16,16 @@ DEPENDENCIES:
   - Realm
   - SDWebImage
   - SocketRocket
+  - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
   '25519': dc4bad7e2dbcbf1efa121068a705a44cd98c80fc
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  Realm: 9abfd4f87519376daa5ae3a4603155de408bf8b3
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
 
-PODFILE CHECKSUM: 2d381eeea76131188d24703f43d6a8116ef660f6
+PODFILE CHECKSUM: c38a34970b2e08d1c6ed111a10377cce49e62ef6
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.beta.1

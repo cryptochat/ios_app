@@ -77,7 +77,6 @@ public:
     void dump();
 #endif
 
-    size_t get_free_space();
 private:
     class MapWindow;
     Group& m_group;
@@ -95,7 +94,7 @@ private:
     // needed, the least recently used is sync'ed and closed to make room
     // for a new one. The windows are kept in MRU (most recently used) order.
     const static int num_map_windows = 16;
-    std::vector<std::unique_ptr<MapWindow>> m_map_windows;
+    std::vector<MapWindow*> m_map_windows;
 
     // Get a suitable memory mapping for later access:
     // potentially adding it to the cache, potentially closing

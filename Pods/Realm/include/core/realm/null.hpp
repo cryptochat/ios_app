@@ -20,7 +20,6 @@
 #define REALM_NULL_HPP
 
 #include <cmath>
-#include <cstring>
 
 #include <realm/util/features.h>
 #include <realm/util/optional.hpp>

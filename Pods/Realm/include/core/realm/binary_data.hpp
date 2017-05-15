@@ -19,14 +19,14 @@
 #ifndef REALM_BINARY_DATA_HPP
 #define REALM_BINARY_DATA_HPP
 
-#include <realm/owned_data.hpp>
+#include <cstddef>
+#include <algorithm>
+#include <string>
+#include <ostream>
+
 #include <realm/util/features.h>
 #include <realm/utilities.hpp>
-
-#include <algorithm>
-#include <cstddef>
-#include <ostream>
-#include <string>
+#include <realm/owned_data.hpp>
 
 namespace realm {
 
@@ -56,10 +56,6 @@ public:
     }
     template <class T, class A>
     explicit BinaryData(const std::basic_string<char, T, A>&);
-
-    // BinaryData does not store data, callers must manage their own strings.
-    template <class T, class A>
-    BinaryData(const std::basic_string<char, T, A>&&) = delete;
 
     template <class T, class A>
     explicit operator std::basic_string<char, T, A>() const;

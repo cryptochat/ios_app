@@ -151,15 +151,14 @@ using namespace realm;
             @throw RLMException(@"Primary key property '%@' does not exist on object '%@'", primaryKey, className);
         }
         if (schema.primaryKeyProperty.type != RLMPropertyTypeInt && schema.primaryKeyProperty.type != RLMPropertyTypeString) {
-            @throw RLMException(@"Property '%@' cannot be made the primary key of '%@' because it is not a 'string' or 'int' property.",
-                                primaryKey, className);
+            @throw RLMException(@"Only 'string' and 'int' properties can be designated the primary key");
         }
     }
 
     for (RLMProperty *prop in schema.properties) {
         if (prop.optional && !RLMPropertyTypeIsNullable(prop.type)) {
-            @throw RLMException(@"Property '%@.%@' cannot be made optional because optional '%@' properties are not supported.",
-                                className, prop.name, RLMTypeToString(prop.type));
+            @throw RLMException(@"Only 'string', 'binary', and 'object' properties can be made optional, and property '%@' is of type '%@'.",
+                                prop.name, RLMTypeToString(prop.type));
         }
     }
 

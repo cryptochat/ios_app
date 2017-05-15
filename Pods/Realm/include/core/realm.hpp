@@ -20,10 +20,8 @@
 #define REALM_HPP
 
 #include <realm/group_shared.hpp>
+#include <realm/table_macros.hpp>
 #include <realm/descriptor.hpp>
 #include <realm/link_view.hpp>
-#include <realm/table_view.hpp>
-#include <realm/query.hpp>
-#include <realm/query_engine.hpp>
 
 #endif // REALM_HPP

@@ -18,9 +18,8 @@
 
 #import <Realm/RLMSyncUtil.h>
 
-#import <Realm/RLMProperty.h>
-#import <Realm/RLMRealmConfiguration.h>
 #import <Realm/RLMSyncCredentials.h>
+#import <Realm/RLMRealmConfiguration.h>
 
 @class RLMSyncUser;
 
@@ -33,7 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RLMRealmConfiguration (RealmSync)
 + (instancetype)managementConfigurationForUser:(RLMSyncUser *)user;
-+ (instancetype)permissionConfigurationForUser:(RLMSyncUser *)user;
 @end
 
 extern RLMIdentityProvider const RLMIdentityProviderAccessToken;
@@ -49,10 +47,6 @@ extern NSString *const kRLMSyncPathKey;
 extern NSString *const kRLMSyncProviderKey;
 extern NSString *const kRLMSyncRegisterKey;
 extern NSString *const kRLMSyncUnderlyingErrorKey;
-
-/// Convert sync management object status code (nil, 0 and others) to
-/// RLMSyncManagementObjectStatus enum
-FOUNDATION_EXTERN RLMSyncManagementObjectStatus RLMMakeSyncManagementObjectStatus(NSNumber<RLMInt> * _Nullable statusCode);
 
 #define RLM_SYNC_UNINITIALIZABLE \
 - (instancetype)init __attribute__((unavailable("This type cannot be created directly"))); \
@@ -73,13 +67,6 @@ self.prop_macro_val = data; \
 id data = json_macro_val[key_macro_val]; \
 if (![data isKindOfClass:[NSString class]]) { data = nil; } \
 self.prop_macro_val = data; \
-} \
-
-#define RLM_SYNC_PARSE_OPTIONAL_BOOL(json_macro_val, key_macro_val, prop_macro_val) \
-{ \
-id data = json_macro_val[key_macro_val]; \
-if (![data isKindOfClass:[NSNumber class]]) { data = @NO; } \
-self.prop_macro_val = [data boolValue]; \
 } \
 
 /// A macro to parse a double out of a JSON dictionary, or return nil.

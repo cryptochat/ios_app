@@ -20,21 +20,19 @@
 
 #import "RLMAnalytics.hpp"
 #import "RLMArray_Private.hpp"
+#import "RLMRealmConfiguration_Private.hpp"
 #import "RLMMigration_Private.h"
+#import "RLMObjectSchema_Private.hpp"
+#import "RLMProperty_Private.h"
+#import "RLMObjectStore.h"
 #import "RLMObject_Private.h"
 #import "RLMObject_Private.hpp"
-#import "RLMObjectSchema_Private.hpp"
-#import "RLMObjectStore.h"
 #import "RLMObservation.hpp"
 #import "RLMProperty.h"
-#import "RLMProperty_Private.h"
 #import "RLMQueryUtil.hpp"
-#import "RLMRealmConfiguration_Private.hpp"
 #import "RLMRealmUtil.hpp"
 #import "RLMSchema_Private.hpp"
 #import "RLMSyncManager_Private.h"
-#import "RLMSyncUtil_Private.hpp"
-#import "RLMThreadSafeReference_Private.hpp"
 #import "RLMUpdateChecker.hpp"
 #import "RLMUtil.hpp"
 
@@ -46,8 +44,6 @@
 #include <realm/disable_sync_to_disk.hpp>
 #include <realm/util/scope_exit.hpp>
 #include <realm/version.hpp>
-
-#import "sync/sync_session.hpp"
 
 using namespace realm;
 using util::File;
@@ -140,22 +136,12 @@ NSData *RLMRealmValidatedEncryptionKey(NSData *key) {
     RLMSendAnalytics();
 }
 
-- (instancetype)initPrivate {
-    self = [super init];
-    return self;
-}
-
 - (BOOL)isEmpty {
     return realm::ObjectStore::is_empty(self.group);
 }
 
 - (void)verifyThread {
-    try {
-        _realm->verify_thread();
-    }
-    catch (std::exception const& e) {
-        @throw RLMException(e);
-    }
+    _realm->verify_thread();
 }
 
 - (BOOL)inWriteTransaction {
@@ -183,84 +169,24 @@ NSData *RLMRealmValidatedEncryptionKey(NSData *key) {
     configuration.fileURL = fileURL;
     return [RLMRealm realmWithConfiguration:configuration error:nil];
 }
-
-+ (void)asyncOpenWithConfiguration:(RLMRealmConfiguration *)configuration
-                     callbackQueue:(dispatch_queue_t)callbackQueue
-                          callback:(RLMAsyncOpenRealmCallback)callback {
-    __block NSError *error = nil;
-    RLMRealm *realmStrongRef = nil;
-    bool hasSyncConfig = (configuration.config.sync_config != nullptr);
-    if (hasSyncConfig) {
-        realmStrongRef = [RLMRealm uncachedSchemalessRealmWithConfiguration:configuration error:&error];
-        if (error) {
-            dispatch_async(callbackQueue, ^{
-                callback(nil, error);
-            });
-            return;
-        }
-    }
-    static dispatch_queue_t queue = dispatch_queue_create("io.realm.asyncOpenDispatchQueue", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_async(queue, ^{
-        (void)realmStrongRef;
-        @autoreleasepool {
-            RLMRealm *realm = [RLMRealm realmWithConfiguration:configuration error:&error];
-            if (!realm || error) {
-                dispatch_async(callbackQueue, ^{
-                    callback(nil, error);
-                });
-                return;
-            }
-            auto session = sync_session_for_realm(realm);
-            if (!hasSyncConfig || !session) {
-                // Default behavior: just dispatch onto the destination queue and open the Realm.
-                dispatch_async(callbackQueue, ^{
-                    @autoreleasepool {
-                        NSError *error = nil;
-                        RLMRealm *localRealm = [RLMRealm realmWithConfiguration:configuration error:&error];
-                        callback(localRealm, error);
-                    }
-                });
-                return;
-            }
-            session->wait_for_download_completion([=](std::error_code error) {
-                dispatch_async(callbackQueue, ^{
-                    NSError *err = nil;
-                    if (error == std::error_code{}) {
-                        // Success
-                        @autoreleasepool {
-                            // Try opening the Realm on the destination queue.
-                            RLMRealm *localRealm = [RLMRealm realmWithConfiguration:configuration error:&err];
-                            callback(localRealm, err);
-                        }
-                    } else {
-                        // Failure
-                        // FIXME: we need a less ad-hoc way to turn error codes into NSErrors.
-                        err = [NSError errorWithDomain:RLMSyncErrorDomain
-                                                  code:RLMSyncErrorClientInternalError
-                                              userInfo:@{@"underlying": @(error.value()),
-                                                         @"message": @(error.message().c_str())}];
-                        callback(nil, err);
-                    }
-                });
-            });
-        }
-    });
-}
-
 // ARC tries to eliminate calls to autorelease when the value is then immediately
 // returned, but this results in significantly different semantics between debug
 // and release builds for RLMRealm, so force it to always autorelease.
-static id RLMAutorelease(__unsafe_unretained id value) {
+static id RLMAutorelease(id value) {
     // +1 __bridge_retained, -1 CFAutorelease
     return value ? (__bridge id)CFAutorelease((__bridge_retained CFTypeRef)value) : nil;
 }
 
+static void RLMRealmSetSchemaAndAlign(RLMRealm *realm, RLMSchema *targetSchema) {
+    realm.schema = targetSchema;
+    realm->_info = RLMSchemaInfo(realm, targetSchema, realm->_realm->schema());
+}
+
 + (instancetype)realmWithSharedRealm:(SharedRealm)sharedRealm schema:(RLMSchema *)schema {
-    RLMRealm *realm = [[RLMRealm alloc] initPrivate];
+    RLMRealm *realm = [RLMRealm new];
     realm->_realm = sharedRealm;
     realm->_dynamic = YES;
-    realm->_schema = schema;
-    realm->_info = RLMSchemaInfo(realm);
+    RLMRealmSetSchemaAndAlign(realm, schema);
     return RLMAutorelease(realm);
 }
 
@@ -327,14 +253,13 @@ REALM_NOINLINE void RLMRealmTranslateException(NSError **error) {
 
 + (instancetype)realmWithConfiguration:(RLMRealmConfiguration *)configuration error:(NSError **)error {
     bool dynamic = configuration.dynamic;
-    bool cache = configuration.cache;
     bool readOnly = configuration.readOnly;
 
     {
         Realm::Config& config = configuration.config;
 
         // try to reuse existing realm first
-        if (cache || dynamic) {
+        if (config.cache || dynamic) {
             if (RLMRealm *realm = RLMGetThreadLocalCachedRealmForPath(config.path)) {
                 auto const& old_config = realm->_realm->config();
                 if (old_config.read_only() != config.read_only()) {
@@ -357,11 +282,11 @@ REALM_NOINLINE void RLMRealmTranslateException(NSError **error) {
     configuration = [configuration copy];
     Realm::Config& config = configuration.config;
 
-    RLMRealm *realm = [[RLMRealm alloc] initPrivate];
+    RLMRealm *realm = [RLMRealm new];
     realm->_dynamic = dynamic;
 
     // protects the realm cache and accessors cache
-    static std::mutex& initLock = *new std::mutex();
+    static std::mutex initLock;
     std::lock_guard<std::mutex> lock(initLock);
 
     try {
@@ -372,21 +297,12 @@ REALM_NOINLINE void RLMRealmTranslateException(NSError **error) {
         return nil;
     }
 
-    // if we have a cached realm on another thread we can skip a few steps and
-    // just grab its schema
-    @autoreleasepool {
-        // ensure that cachedRealm doesn't end up in this thread's autorelease pool
-        if (auto cachedRealm = RLMGetAnyCachedRealmForPath(config.path)) {
-            realm->_realm->set_schema_subset(cachedRealm->_realm->schema());
-            realm->_schema = cachedRealm.schema;
-            realm->_info = cachedRealm->_info.clone(cachedRealm->_realm->schema(), realm);
-        }
+    // if we have a cached realm on another thread, copy without a transaction
+    if (RLMRealm *cachedRealm = RLMGetAnyCachedRealmForPath(config.path)) {
+        RLMRealmSetSchemaAndAlign(realm, cachedRealm.schema);
     }
-
-    if (realm->_schema) { }
     else if (dynamic) {
-        realm->_schema = [RLMSchema dynamicSchemaFromObjectStoreSchema:realm->_realm->schema()];
-        realm->_info = RLMSchemaInfo(realm);
+        RLMRealmSetSchemaAndAlign(realm, [RLMSchema dynamicSchemaFromObjectStoreSchema:realm->_realm->schema()]);
     }
     else {
         // set/align schema or perform migration if needed
@@ -421,8 +337,7 @@ REALM_NOINLINE void RLMRealmTranslateException(NSError **error) {
             return nil;
         }
 
-        realm->_schema = schema;
-        realm->_info = RLMSchemaInfo(realm);
+        RLMRealmSetSchemaAndAlign(realm, schema);
         RLMRealmCreateAccessors(realm.schema);
 
         if (!readOnly) {
@@ -431,28 +346,15 @@ REALM_NOINLINE void RLMRealmTranslateException(NSError **error) {
         }
     }
 
-    if (cache) {
+    if (config.cache) {
         RLMCacheRealm(config.path, realm);
     }
 
     if (!readOnly) {
         realm->_realm->m_binding_context = RLMCreateBindingContext(realm);
-        realm->_realm->m_binding_context->realm = realm->_realm;
     }
 
     return RLMAutorelease(realm);
-}
-
-+ (instancetype)uncachedSchemalessRealmWithConfiguration:(RLMRealmConfiguration *)configuration error:(NSError **)error {
-    RLMRealm *realm = [[RLMRealm alloc] initPrivate];
-    try {
-        realm->_realm = Realm::get_shared_realm(configuration.config);
-    }
-    catch (...) {
-        RLMRealmTranslateException(error);
-        return nil;
-    }
-    return realm;
 }
 
 + (void)resetRealmState {
@@ -614,10 +516,6 @@ REALM_NOINLINE void RLMRealmTranslateException(NSError **error) {
         }
         objectInfo.second.releaseTable();
     }
-}
-
-- (nullable id)resolveThreadSafeReference:(RLMThreadSafeReference *)reference {
-    return [reference resolveReferenceInRealm:self];
 }
 
 /**
@@ -822,6 +720,7 @@ REALM_NOINLINE void RLMRealmTranslateException(NSError **error) {
         _collectionEnumerators = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory];
     }
     [_collectionEnumerators addObject:enumerator];
+
 }
 
 - (void)unregisterEnumerator:(RLMFastEnumerator *)enumerator {

@@ -36,17 +36,17 @@
 #import <unistd.h>
 
 // Global realm state
-static std::mutex& s_realmCacheMutex = *new std::mutex();
-static std::map<std::string, NSMapTable *>& s_realmsPerPath = *new std::map<std::string, NSMapTable *>();
+static std::mutex s_realmCacheMutex;
+static std::map<std::string, NSMapTable *> s_realmsPerPath;
 
-void RLMCacheRealm(std::string const& path, __unsafe_unretained RLMRealm *const realm) {
+void RLMCacheRealm(std::string const& path, RLMRealm *realm) {
     std::lock_guard<std::mutex> lock(s_realmCacheMutex);
     NSMapTable *realms = s_realmsPerPath[path];
     if (!realms) {
-        s_realmsPerPath[path] = realms = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsOpaquePersonality|NSPointerFunctionsOpaqueMemory
+        s_realmsPerPath[path] = realms = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsObjectPersonality
                                                                valueOptions:NSPointerFunctionsWeakMemory];
     }
-    [realms setObject:realm forKey:(__bridge id)pthread_self()];
+    [realms setObject:realm forKey:@(pthread_mach_thread_np(pthread_self()))];
 }
 
 RLMRealm *RLMGetAnyCachedRealmForPath(std::string const& path) {
@@ -55,8 +55,9 @@ RLMRealm *RLMGetAnyCachedRealmForPath(std::string const& path) {
 }
 
 RLMRealm *RLMGetThreadLocalCachedRealmForPath(std::string const& path) {
+    mach_port_t threadID = pthread_mach_thread_np(pthread_self());
     std::lock_guard<std::mutex> lock(s_realmCacheMutex);
-    return [s_realmsPerPath[path] objectForKey:(__bridge id)pthread_self()];
+    return [s_realmsPerPath[path] objectForKey:@(threadID)];
 }
 
 void RLMClearRealmCache() {
@@ -138,6 +139,6 @@ private:
 } // anonymous namespace
 
 
-std::unique_ptr<realm::BindingContext> RLMCreateBindingContext(__unsafe_unretained RLMRealm *const realm) {
+std::unique_ptr<realm::BindingContext> RLMCreateBindingContext(RLMRealm *realm) {
     return std::unique_ptr<realm::BindingContext>(new RLMNotificationHelper(realm));
 }

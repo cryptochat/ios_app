@@ -23,10 +23,6 @@
 #pragma warning(disable : 4800) // Visual Studio int->bool performance warnings
 #endif
 
-#ifdef _WIN32
-#define NOMINMAX
-#endif
-
 #ifdef REALM_HAVE_CONFIG
 #include <realm/util/config.h>
 #else
@@ -114,10 +110,6 @@
 
 #define REALM_DIAG_PUSH() REALM_DIAG(push)
 #define REALM_DIAG_POP() REALM_DIAG(pop)
-
-#ifdef _MSC_VER
-#define REALM_VS_WARNING_DISABLE #pragma warning (default: 4297)
-#endif
 
 #if REALM_HAVE_CLANG_WARNING("-Wtautological-compare") || REALM_HAVE_AT_LEAST_GCC(6, 0)
 #define REALM_DIAG_IGNORE_TAUTOLOGICAL_COMPARE() REALM_DIAG(ignored "-Wtautological-compare")
@@ -213,10 +205,6 @@
 #define REALM_ANDROID 0
 #endif
 
-#ifndef REALM_UWP
-#define REALM_UWP 0
-#endif
-
 // Some documentation of the defines provided by Apple:
 // http://developer.apple.com/library/mac/documentation/Porting/Conceptual/PortingUnix/compiling/compiling.html#//apple_ref/doc/uid/TP40002850-SW13
 #if defined __APPLE__ && defined __MACH__
@@ -254,8 +242,6 @@
 
 #if REALM_ANDROID || REALM_IOS || REALM_WATCHOS
 #define REALM_MOBILE 1
-#else
-#define REALM_MOBILE 0
 #endif
 
 

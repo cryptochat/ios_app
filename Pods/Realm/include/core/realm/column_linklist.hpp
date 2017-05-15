@@ -45,7 +45,6 @@ class TransactLogConvenientEncoder;
 class LinkListColumn : public LinkColumnBase, public ArrayParent {
 public:
     using LinkColumnBase::LinkColumnBase;
-    using value_type = ConstLinkViewRef;
     LinkListColumn(Allocator& alloc, ref_type ref, Table* table, size_t column_ndx);
     ~LinkListColumn() noexcept override;
 

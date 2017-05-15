@@ -77,8 +77,7 @@ public:
     NSUInteger tableColumn(NSString *propertyName) const;
     NSUInteger tableColumn(RLMProperty *property) const;
 
-    // Get the info for the target of the link at the given property index.
-    RLMClassInfo &linkTargetType(size_t propertyIndex);
+    RLMClassInfo &linkTargetType(size_t index);
 
     void releaseTable() { m_table = nullptr; }
 
@@ -92,9 +91,7 @@ class RLMSchemaInfo {
     using impl = std::unordered_map<NSString *, RLMClassInfo>;
 public:
     RLMSchemaInfo() = default;
-    RLMSchemaInfo(RLMRealm *realm);
-
-    RLMSchemaInfo clone(realm::Schema const& source_schema, RLMRealm *target_realm);
+    RLMSchemaInfo(RLMRealm *realm, RLMSchema *rlmSchema, realm::Schema const& schema);
 
     // Look up by name, throwing if it's not present
     RLMClassInfo& operator[](NSString *name);

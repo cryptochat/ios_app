@@ -17,7 +17,11 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #import "RLMSyncPermissionChange_Private.h"
-#import "RLMSyncUtil_Private.h"
+
+#import "RLMRealm.h"
+#import "RLMRealmConfiguration+Sync.h"
+#import "RLMSyncConfiguration.h"
+#import "RLMSyncUser.h"
 
 @implementation RLMSyncPermissionChange
 
@@ -50,16 +54,18 @@
     };
 }
 
-+ (nullable NSString *)primaryKey {
-    return @"id";
-}
-
 + (BOOL)shouldIncludeInDefaultSchema {
     return NO;
 }
 
 - (RLMSyncManagementObjectStatus)status {
-    return RLMMakeSyncManagementObjectStatus(self.statusCode);
+    if (!self.statusCode) {
+        return RLMSyncManagementObjectStatusNotProcessed;
+    }
+    if (self.statusCode.integerValue == 0) {
+        return RLMSyncManagementObjectStatusSuccess;
+    }
+    return RLMSyncManagementObjectStatusError;
 }
 
 + (NSString *)_realmObjectName {

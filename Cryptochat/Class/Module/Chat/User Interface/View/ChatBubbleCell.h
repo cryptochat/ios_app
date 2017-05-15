@@ -12,11 +12,6 @@
 
 @protocol BubbleViewCellDataSource, BubbleViewCellDelegate;
 
-extern const CGFloat BubbleWidthOffsetText;
-extern const CGFloat BubbleImageSizeText;
-extern const CGFloat AvatarImageOffsetXText;
-extern const CGFloat AvatarImageOffsetYText;
-
 extern const CGFloat BubbleWidthOffset;
 extern const CGFloat BubbleImageSize;
 extern const CGFloat AvatarImageOffsetX;

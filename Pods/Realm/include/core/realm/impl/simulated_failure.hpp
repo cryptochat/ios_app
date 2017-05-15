@@ -88,8 +88,7 @@ private:
 #endif
 };
 
-std::error_code make_error_code(SimulatedFailure::FailureType) noexcept;
-    
+
 class SimulatedFailure::OneShotPrimeGuard {
 public:
     OneShotPrimeGuard(FailureType);
@@ -109,6 +108,7 @@ private:
     const FailureType m_type;
 };
 
+
 std::error_code make_error_code(SimulatedFailure::FailureType) noexcept;
 
 } // namespace _impl
@@ -124,6 +124,7 @@ template<> struct is_error_code_enum<realm::_impl::SimulatedFailure::FailureType
 
 namespace realm {
 namespace _impl {
+
 
 
 // Implementation

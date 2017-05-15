@@ -9,10 +9,10 @@
 #import "BubbleTextCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-const CGFloat BubbleWidthOffsetText = 30.0f;
-const CGFloat BubbleImageSizeText = 40.0f;
-const CGFloat AvatarImageOffsetXText = 10.0f;
-const CGFloat AvatarImageOffsetYText = 10.0f;
+const CGFloat BubbleWidthOffset = 30.0f;
+const CGFloat BubbleImageSize = 40.0f;
+const CGFloat AvatarImageOffsetX = 10.0f;
+const CGFloat AvatarImageOffsetY = 10.0f;
 
 @implementation BubbleTextCell
 
