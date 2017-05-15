@@ -12,6 +12,7 @@
 #import "ChatService.h"
 
 #import "ExchangeService.h"
+#import "ChatMessageModel.h"
 
 
 @interface AppDelegate ()
@@ -48,12 +49,11 @@
         NSLog(@"Status: %ld", (long)status);
     }];
     
-//    [_chatService getChatHistoryWithID:@"32" limit:20 offset:0 complete:^(TransportResponseStatus status, NSArray<ChatMessageModel *> *arrHistory) {
-//    
-//    }];
-    [_chatService startConfigChat];
-
+    [_chatService getChatHistoryWithID:@"32" limit:20 offset:0 complete:^(TransportResponseStatus status, NSArray<ChatMessageModel *> *arrHistory) {
     
+    }];
+ //   [_chatService startConfigChat];
+
 
     return YES;
 }
