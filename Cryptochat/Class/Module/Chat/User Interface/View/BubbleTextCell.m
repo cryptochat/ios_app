@@ -46,14 +46,14 @@ const CGFloat AvatarImageOffsetY = 10.0f;
         [self.contentView addSubview:self.avatarImageView];
         
         self.dateLabel = [UILabel new];
-        self.dateLabel.textColor = [UIColor lightGrayColor];
+        self.dateLabel.textColor = [UIColor grayColor];
         self.dateLabel.font = [UIFont systemFontOfSize:9.f];
         [self.contentView addSubview:self.dateLabel];
         
-        self.nameLabel = [UILabel new];
+        /*self.nameLabel = [UILabel new];
         self.nameLabel.textColor = [UIColor lightGrayColor];
         self.nameLabel.font = [UIFont systemFontOfSize:9.f];
-        [self.contentView addSubview:self.nameLabel];
+        [self.contentView addSubview:self.nameLabel];*/
         
         UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
         [self.bubbleView addGestureRecognizer:longPressRecognizer];
@@ -108,35 +108,44 @@ const CGFloat AvatarImageOffsetY = 10.0f;
     if(type == AuthorTypeMy){
         self.textLabel.textColor = [UIColor whiteColor];
         
-        [self.avatarImageView setHidden:YES];
+        [self.avatarImageView setFrame:CGRectMake(self.contentView.frame.size.width - AvatarImageOffsetX - BubbleImageSize, 2*AvatarImageOffsetY, BubbleImageSize, BubbleImageSize)];
         
         self.bubbleView.image = [[UIImage imageNamed:@"bubble_blue"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 10.0f, 10.0f, 10.0f)];
-        self.bubbleView.frame = CGRectMake(self.frame.size.width - (size.width) - BubbleImageSize - 8.0f, 2*AvatarImageOffsetY, size.width + BubbleWidthOffset, size.height + 15.0f);
-        
-        self.textLabel.frame = CGRectMake(self.frame.size.width - (size.width + BubbleWidthOffset - 5.0f) - BubbleImageSize - 8.0f, self.frame.size.height - (size.height + 15.0f) + 6.0f, size.width + BubbleWidthOffset - 23.0f, size.height);
+        self.bubbleView.frame = CGRectMake(self.frame.size.width - (size.width + BubbleWidthOffset + AvatarImageOffsetX) - BubbleImageSize - 8.0f,
+                                           self.frame.size.height - (size.height + 15.0f),
+                                           size.width + BubbleWidthOffset, size.height + 15.0f);
+        self.textLabel.frame = CGRectMake(self.frame.size.width - (size.width + BubbleWidthOffset - 5.0f) - BubbleImageSize - 8.0f,
+                                          self.frame.size.height - (size.height + 15.0f) + 6.0f,
+                                          size.width + BubbleWidthOffset - 23.0f, size.height);
         self.textLabel.center = self.bubbleView.center;
         
         self.bubbleView.transform = CGAffineTransformIdentity;
         
-        [self.dateLabel setFrame:CGRectMake(0, self.bubbleView.frame.size.height/2 + 10, self.frame.size.width - self.bubbleView.frame.size.width - 25, 20)];
+        [self.dateLabel setFrame:CGRectMake(self.frame.size.width - (size.width + BubbleWidthOffset + AvatarImageOffsetX) - BubbleImageSize - 8.0f,
+                                            2*AvatarImageOffsetY + self.bubbleView.frame.size.height,
+                                            self.bubbleView.frame.size.width, 20)];
         self.dateLabel.textAlignment = NSTextAlignmentRight;
         
         return;
     }
     
     if(type == AuthorTypeNotMy){
-        self.textLabel.textColor = [UIColor whiteColor];
+        self.textLabel.textColor = [UIColor blackColor];
         
         self.bubbleView.image = [[UIImage imageNamed:@"bubble_gray"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 10.0f, 10.0f, 10.0f)];
-        self.bubbleView.frame = CGRectMake(BubbleWidthOffset + 3*AvatarImageOffsetX, 2*AvatarImageOffsetY, size.width + BubbleWidthOffset, size.height + 15.0f);
-        self.textLabel.frame = CGRectMake(BubbleWidthOffset + 4*AvatarImageOffsetX, 3*AvatarImageOffsetY, size.width + BubbleWidthOffset - 23.0f, size.height);
+        self.bubbleView.frame = CGRectMake(BubbleWidthOffset + 3*AvatarImageOffsetX,
+                                           2*AvatarImageOffsetY, size.width + BubbleWidthOffset, size.height + 15.0f);
+        self.textLabel.frame = CGRectMake(BubbleWidthOffset + 4*AvatarImageOffsetX,
+                                          3*AvatarImageOffsetY, size.width + BubbleWidthOffset - 23.0f, size.height);
         self.textLabel.center = self.bubbleView.center;
         
         self.bubbleView.transform = CGAffineTransformIdentity;
         
-        [self.avatarImageView setFrame:CGRectMake(AvatarImageOffsetX, self.bubbleView.frame.size.height - BubbleImageSize/2, BubbleImageSize, BubbleImageSize)];
+        [self.avatarImageView setFrame:CGRectMake(AvatarImageOffsetX, 2*AvatarImageOffsetY, BubbleImageSize, BubbleImageSize)];
         
-        [self.dateLabel setFrame:CGRectMake(self.bubbleView.frame.origin.x + self.bubbleView.frame.size.width + 5, self.bubbleView.frame.size.height/2 + 10, 50, 20)];
+        [self.dateLabel setFrame:CGRectMake(BubbleWidthOffset + 3*AvatarImageOffsetX,
+                                            2*AvatarImageOffsetY + self.bubbleView.frame.size.height,
+                                            self.bubbleView.frame.size.width, 20)];
         self.dateLabel.textAlignment = NSTextAlignmentLeft;
         
         [self.nameLabel setFrame:CGRectMake(AvatarImageOffsetX, self.bubbleView.frame.size.height + 20.0f, self.bubbleView.frame.size.width, 20)];

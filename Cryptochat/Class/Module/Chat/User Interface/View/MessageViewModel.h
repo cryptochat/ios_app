@@ -34,4 +34,5 @@ typedef NS_ENUM(NSUInteger, AuthorType){
 @property BOOL isOnline;
 @property BOOL isSeccussSent;
 
+- (BOOL)isEqualToMessage:(MessageViewModel *)message;
 @end

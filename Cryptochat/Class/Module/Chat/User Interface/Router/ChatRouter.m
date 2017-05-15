@@ -37,17 +37,18 @@ static NSString* identifierViewController = @"ChatViewController";
     self.userInterface = userInterface;
     self.currentNavigationController = navigationController;
     
-    //[self configureDependenciesWithUSerModel:userModel];
+    [self configureDependenciesWithUserID:ID];
     //[userInterface setBackType:ChatViewControllerNavigationController];
     [navigationController pushViewController:userInterface animated:YES];
 }
 
--(void)configureDependencies{
+-(void)configureDependenciesWithUserID:(NSNumber *)userID{
     ChatInteractor * interactor = [ChatInteractor new];
     ChatPresenter * presenter = [ChatPresenter new];
 
     presenter.router = self;
     self.presenter = presenter;
+    self.presenter.userID = userID;
 
     self.userInterface.presenter = presenter;
     self.presenter.userInterface = self.userInterface;

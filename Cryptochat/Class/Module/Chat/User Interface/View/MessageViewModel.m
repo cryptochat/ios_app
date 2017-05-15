@@ -10,4 +10,15 @@
 
 @implementation MessageViewModel
 
+- (BOOL)isEqualToMessage:(MessageViewModel *)message{
+    if (!message) {
+        return NO;
+    }
+    
+    BOOL isEqualAuthorType = (!self.authorType && !message.authorType) || (self.authorType == message.authorType);
+    BOOL isEqualMessageText = (!self.messageText && !message.messageText) || [self.messageText isEqualToString:message.messageText];
+    
+    return isEqualAuthorType && isEqualMessageText;
+}
+
 @end

@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class ChatMessageModel;
+
 @protocol ChatInteractorInterfaceInput <NSObject>
+
+-(void)findChatWithID:(NSNumber*)chatID offset:(NSNumber*)offset limit:(NSNumber*)limit;
 
 @end
 
 @protocol ChatInteractorInterfaceOutput <NSObject>
+
+-(void)foundChat:(NSArray<ChatMessageModel*>*)message;
 
 @end

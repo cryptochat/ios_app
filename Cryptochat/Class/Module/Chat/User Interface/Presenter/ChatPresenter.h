@@ -19,4 +19,6 @@
 @property (nonatomic, strong) id<ChatInteractorInterfaceInput> interactor;
 @property (nonatomic, strong) ChatRouter* router;
 
+@property (strong, nonatomic) NSNumber *userID;
+
 @end
