@@ -8,8 +8,6 @@
 
 #import "ChatBubbleCell.h"
 #import "BubbleTextCell.h"
-#import "ChatTypingCell.h"
-#import "BubbleImageCell.h"
 
 @implementation ChatBubbleCell
 
@@ -24,17 +22,14 @@
                 self = [[BubbleTextCell alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
                 break;
             case MessageTypeImage:
-                self = [[BubbleImageCell alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
+                
                 break;
             case MessageTypeTyping:
-                self = [[ChatTypingCell alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
+                
                 break;
                 
         }
     }
-    
-    return self;
-
     
     return self;
 }

@@ -29,6 +29,7 @@
 		20F60D971ECA089F00959C77 /* BubbleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F60D941ECA089F00959C77 /* BubbleTextCell.m */; };
 		20F60D981ECA089F00959C77 /* ChatBubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F60D961ECA089F00959C77 /* ChatBubbleCell.m */; };
 		20F60D9C1ECA08F300959C77 /* MessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F60D9B1ECA08F300959C77 /* MessageViewModel.m */; };
+		20F60D9E1ECA0E8400959C77 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F60D9D1ECA0E8400959C77 /* Chat.storyboard */; };
 		268C3064C54D5CC30663D159 /* ChatListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 569600909B0F1A9DFCD90333 /* ChatListRouter.m */; };
 		2F19BB296E7007D75003C162 /* RegistrationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37D26C384A7DC650BCB699 /* RegistrationRouter.m */; };
 		31DF2A30594A720CCBC4B6CB /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA698A6CCE3574F62FBCF3E3 /* RegistrationViewController.m */; };
@@ -135,6 +136,7 @@
 		20F60D961ECA089F00959C77 /* ChatBubbleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBubbleCell.m; sourceTree = "<group>"; };
 		20F60D9A1ECA08F300959C77 /* MessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewModel.h; sourceTree = "<group>"; };
 		20F60D9B1ECA08F300959C77 /* MessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewModel.m; sourceTree = "<group>"; };
+		20F60D9D1ECA0E8400959C77 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		2223F5C4F2D65CF5F7D34E14 /* ChatListPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListPresenter.h; sourceTree = "<group>"; };
 		26BB4E70A932F35B821CE7E2 /* ChatListViewInterfaceIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatListViewInterfaceIO.h; sourceTree = "<group>"; };
 		27E7268700F602810986106D /* ChatRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatRouter.h; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 				0F5373F71E7E78790003926E /* Main.storyboard */,
 				0F5373FC1E7E78790003926E /* LaunchScreen.storyboard */,
 				5F420B2E1EC0744C00971A18 /* ChatList.storyboard */,
+				20F60D9D1ECA0E8400959C77 /* Chat.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -1075,6 +1078,7 @@
 				5F420B2F1EC0744C00971A18 /* ChatList.storyboard in Resources */,
 				5F4C8CBB1EC8D0E400D0291C /* SearchingCell.xib in Resources */,
 				0F5373F91E7E78790003926E /* Main.storyboard in Resources */,
+				20F60D9E1ECA0E8400959C77 /* Chat.storyboard in Resources */,
 				5F420B351EC077F000971A18 /* ChatListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

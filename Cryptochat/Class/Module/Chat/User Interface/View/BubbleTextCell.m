@@ -34,25 +34,25 @@ const CGFloat AvatarImageOffsetYText = 10.0f;
         self.textLabel.backgroundColor = [UIColor clearColor];
         self.textLabel.numberOfLines = 0;
         self.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        self.textLabel.font = [UIFont fontWithName:@"SFUIDisplay-Regular" size:15.0];
+        self.textLabel.font = [UIFont systemFontOfSize:15.f];
         
         self.avatarImageView = [UIImageView new];
         [self.avatarImageView setFrame:CGRectMake(AvatarImageOffsetX, 2*AvatarImageOffsetY, BubbleImageSize, BubbleImageSize)];
         self.avatarImageView.layer.cornerRadius = CGRectGetWidth(self.avatarImageView.frame)/2;
         self.avatarImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.avatarImageView.clipsToBounds = YES;
-        self.avatarImageView.image = [UIImage imageNamed:@"user"];
+        self.avatarImageView.image = [UIImage imageNamed:@"photo_test"];
         self.avatarImageView.userInteractionEnabled = YES;
         [self.contentView addSubview:self.avatarImageView];
         
         self.dateLabel = [UILabel new];
         self.dateLabel.textColor = [UIColor lightGrayColor];
-        self.dateLabel.font = [UIFont fontWithName:@"SFUIDisplay-Regular" size:9];
+        self.dateLabel.font = [UIFont systemFontOfSize:9.f];
         [self.contentView addSubview:self.dateLabel];
         
         self.nameLabel = [UILabel new];
         self.nameLabel.textColor = [UIColor lightGrayColor];
-        self.nameLabel.font = [UIFont fontWithName:@"SFUIDisplay-Regular" size:9];
+        self.nameLabel.font = [UIFont systemFontOfSize:9.f];
         [self.contentView addSubview:self.nameLabel];
         
         UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
@@ -79,9 +79,9 @@ const CGFloat AvatarImageOffsetYText = 10.0f;
     self.dateLabel.text = message.date;
     self.nameLabel.text = message.userFirstName;
     __weak BubbleTextCell *weakself = self;
-    [self.avatarImageView sd_setImageWithURL:message.userURLAvatar placeholderImage:[UIImage imageNamed:@"user"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [self.avatarImageView sd_setImageWithURL:message.userURLAvatar placeholderImage:[UIImage imageNamed:@"photo_test"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if(error){
-            weakself.avatarImageView.image = [UIImage imageNamed:@"user"];
+            weakself.avatarImageView.image = [UIImage imageNamed:@"photo_test"];
         }else{
             weakself.avatarImageView.image = image;
         }
@@ -102,7 +102,7 @@ const CGFloat AvatarImageOffsetYText = 10.0f;
     
     size = [self.textLabel.text boundingRectWithSize:CGSizeMake(self.frame.size.width - minInset - BubbleWidthOffset, CGFLOAT_MAX)
                                              options:NSStringDrawingUsesLineFragmentOrigin
-                                          attributes:@{NSFontAttributeName:[UIFont fontWithName:@"SFUIDisplay-Regular" size:15.0]}
+                                          attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.f]}
                                              context:nil].size;
     
     if(type == AuthorTypeMy){
@@ -110,7 +110,7 @@ const CGFloat AvatarImageOffsetYText = 10.0f;
         
         [self.avatarImageView setHidden:YES];
         
-        self.bubbleView.image = [[UIImage imageNamed:@"bubble_out"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 10.0f, 10.0f, 10.0f)];
+        self.bubbleView.image = [[UIImage imageNamed:@"bubble_blue"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 10.0f, 10.0f, 10.0f)];
         self.bubbleView.frame = CGRectMake(self.frame.size.width - (size.width) - BubbleImageSize - 8.0f, 2*AvatarImageOffsetY, size.width + BubbleWidthOffset, size.height + 15.0f);
         
         self.textLabel.frame = CGRectMake(self.frame.size.width - (size.width + BubbleWidthOffset - 5.0f) - BubbleImageSize - 8.0f, self.frame.size.height - (size.height + 15.0f) + 6.0f, size.width + BubbleWidthOffset - 23.0f, size.height);
@@ -127,7 +127,7 @@ const CGFloat AvatarImageOffsetYText = 10.0f;
     if(type == AuthorTypeNotMy){
         self.textLabel.textColor = [UIColor whiteColor];
         
-        self.bubbleView.image = [[UIImage imageNamed:@"bubble_in"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 10.0f, 10.0f, 10.0f)];
+        self.bubbleView.image = [[UIImage imageNamed:@"bubble_gray"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 10.0f, 10.0f, 10.0f)];
         self.bubbleView.frame = CGRectMake(BubbleWidthOffset + 3*AvatarImageOffsetX, 2*AvatarImageOffsetY, size.width + BubbleWidthOffset, size.height + 15.0f);
         self.textLabel.frame = CGRectMake(BubbleWidthOffset + 4*AvatarImageOffsetX, 3*AvatarImageOffsetY, size.width + BubbleWidthOffset - 23.0f, size.height);
         self.textLabel.center = self.bubbleView.center;

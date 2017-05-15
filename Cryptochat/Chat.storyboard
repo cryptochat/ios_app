@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E154a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="gEF-K4-th9">
+            <objects>
+                <viewController id="NzG-x3-EzT" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NbF-vC-HcH"/>
+                        <viewControllerLayoutGuide type="bottom" id="DtU-kz-GZn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kYv-dq-MGc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iD2-lu-KuR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет ни одного сообщения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VO-0F-pCO">
+                                        <rect key="frame" x="82.5" y="299.5" width="210" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4VO-0F-pCO" firstAttribute="centerX" secondItem="iD2-lu-KuR" secondAttribute="centerX" id="vFd-XY-Z2s"/>
+                                    <constraint firstItem="4VO-0F-pCO" firstAttribute="centerY" secondItem="iD2-lu-KuR" secondAttribute="centerY" id="y2h-I2-hYp"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="No8-IR-UFW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZk-bt-UIs">
+                                <rect key="frame" x="5" y="623" width="365" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MJ-Jl-gTZ">
+                                        <rect key="frame" x="325" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4gQ-U7-1aV"/>
+                                            <constraint firstAttribute="width" constant="40" id="dSi-wc-nt7"/>
+                                        </constraints>
+                                        <state key="normal" image="send"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите текст сообщения..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9O-pf-GuW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1rN-NU-sTw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="X9O-pf-GuW" firstAttribute="leading" secondItem="FZk-bt-UIs" secondAttribute="leading" id="8Vy-1M-ErS"/>
+                                    <constraint firstAttribute="trailing" secondItem="0MJ-Jl-gTZ" secondAttribute="trailing" id="JxM-22-INO"/>
+                                    <constraint firstItem="X9O-pf-GuW" firstAttribute="centerY" secondItem="FZk-bt-UIs" secondAttribute="centerY" id="Myv-dn-KSA"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZmU-cB-zGI"/>
+                                    <constraint firstItem="0MJ-Jl-gTZ" firstAttribute="leading" secondItem="X9O-pf-GuW" secondAttribute="trailing" constant="5" id="rZJ-Ji-zcf"/>
+                                    <constraint firstItem="0MJ-Jl-gTZ" firstAttribute="centerY" secondItem="FZk-bt-UIs" secondAttribute="centerY" id="zmB-WM-SHQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FZk-bt-UIs" firstAttribute="leading" secondItem="kYv-dq-MGc" secondAttribute="leading" constant="5" id="2zx-AN-es2"/>
+                            <constraint firstItem="iD2-lu-KuR" firstAttribute="width" secondItem="No8-IR-UFW" secondAttribute="width" id="3VR-TH-nJw"/>
+                            <constraint firstItem="DtU-kz-GZn" firstAttribute="top" secondItem="FZk-bt-UIs" secondAttribute="bottom" constant="4" id="3nZ-3t-OeP"/>
+                            <constraint firstItem="iD2-lu-KuR" firstAttribute="centerX" secondItem="No8-IR-UFW" secondAttribute="centerX" id="5E4-bA-eLd"/>
+                            <constraint firstAttribute="trailing" secondItem="FZk-bt-UIs" secondAttribute="trailing" constant="5" id="6HI-Zy-cew"/>
+                            <constraint firstItem="No8-IR-UFW" firstAttribute="leading" secondItem="kYv-dq-MGc" secondAttribute="leading" id="AVC-RM-hrA"/>
+                            <constraint firstAttribute="trailing" secondItem="No8-IR-UFW" secondAttribute="trailing" id="E9C-9H-US6"/>
+                            <constraint firstItem="iD2-lu-KuR" firstAttribute="centerY" secondItem="No8-IR-UFW" secondAttribute="centerY" id="hRb-e1-z9F"/>
+                            <constraint firstItem="No8-IR-UFW" firstAttribute="top" secondItem="kYv-dq-MGc" secondAttribute="top" id="qg7-uv-gxN"/>
+                            <constraint firstItem="iD2-lu-KuR" firstAttribute="height" secondItem="No8-IR-UFW" secondAttribute="height" id="s2f-td-ytL"/>
+                            <constraint firstItem="FZk-bt-UIs" firstAttribute="top" secondItem="No8-IR-UFW" secondAttribute="bottom" constant="4" id="xQW-dU-eQk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="No8-IR-UFW" id="0ZA-8d-HEn"/>
+                        <outlet property="messageTextField" destination="X9O-pf-GuW" id="sAB-TV-RJo"/>
+                        <outlet property="messageView" destination="FZk-bt-UIs" id="5dl-Be-cxk"/>
+                        <outlet property="messageViewConstraintBottom" destination="3nZ-3t-OeP" id="Osh-zk-3Ry"/>
+                        <outlet property="sendButton" destination="0MJ-Jl-gTZ" id="XVt-2u-bK0"/>
+                        <outlet property="viewNotItems" destination="iD2-lu-KuR" id="xNH-rZ-1QH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqy-JY-sdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="send" width="21" height="21"/>
+    </resources>
+</document>
