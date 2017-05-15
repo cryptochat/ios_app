@@ -15,12 +15,13 @@
 -(void)chatServiceSocketCloseSocket;
 -(void)chatServiceInComingMessage:(NSDictionary*)message;
 -(void)chatServiceInComingError:(NSError*)error;
+-(void)isSuccessSubscribed;
 
 @end
 
 
 @interface SocketService : NSObject
--(instancetype)initWithURL:(NSURL*)URL delegate:(id <SocketServiceDelegate>)delegate;
+-(instancetype)initWithURL:(NSURL*)URL delegate:(id <SocketServiceDelegate>)delegate identifier:(NSString*)identifier;
 
 -(void)sendMessage:(id)message;
 -(void)openSocket;

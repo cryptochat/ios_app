@@ -14,7 +14,7 @@
 #import "ChatParser.h"
 #import "ChatMessageModel.h"
 #import "SocketService.h"
-
+#import "ChatMessageModel.h"
 
 @interface ChatService()<SocketServiceDelegate>
 @property (strong, nonatomic) ServiceAPI* serviceAPI;
@@ -23,6 +23,7 @@
 @property (strong, nonatomic) RealmDataStore* realmDataStore;
 @property (strong, nonatomic) ChatParser* chatParser;
 @property(strong, nonatomic)SocketService* socketService;
+@property(weak, nonatomic)id<ChatServiceDelegate>delegate;
 @end
 
 
@@ -98,7 +99,18 @@
 }
 
 
+
+
+
 #pragma mark - Socket
+
+-(void)setDelegate:(id<ChatServiceDelegate>)delegate{
+    _delegate = delegate;
+}
+
+-(void)closeChat{
+    [_socketService closeSocket];
+}
 
 -(void)startConfigChat{
     UserAuthModel* user = [_realmDataStore getUser];
@@ -106,21 +118,59 @@
     
     NSString* stringURL = [NSString stringWithFormat:@"ws://wishbyte.org/cable?identifier=%@&token=%@",identidier, user.token];
     NSURL* socketURL = [[NSURL alloc]initWithString:stringURL];
-    _socketService = [[SocketService alloc]initWithURL:socketURL delegate:self];
+    _socketService = [[SocketService alloc]initWithURL:socketURL delegate:self identifier:identidier];
     [_socketService openSocket];
+    
+
+}
+
+-(void)sendMessage:(ChatMessageModel*)message{
+    NSDictionary *jsonDictionary = @{@"command" : @"message",
+                                     @"identifier":@"{\"channel\":\"WsChatChannel\"}",
+                                     @"data": [NSString stringWithFormat:@"{\"cipher_message\":{\"data\":{\"recipient_id\":%@,\"message\":\"%@\"},\"action\":\"send_message\"}}", [message.valueID stringValue], message.message]
+                                     };
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDictionary options:NSJSONWritingPrettyPrinted error:nil];
+    NSString* dataString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    [_socketService sendMessage:dataString];
 }
 
 -(void)chatServiceSocketOpenSocket{
-    
+   
 }
 -(void)chatServiceSocketCloseSocket{
-    
+    if([_delegate respondsToSelector:@selector(chatServiceChangeStatus:)]){
+        [_delegate chatServiceChangeStatus:ChatServiceStatusNotConnected];
+    }
 }
 -(void)chatServiceInComingMessage:(NSDictionary*)message{
+    ChatMessageModel* model = [_chatParser createChatMessageFromDict:message];
+    switch (model.methodType) {
+        case MethodTypeIncoming:
+            if([_delegate respondsToSelector:@selector(chatSerivceReceivedMessage:)]){
+                [_delegate chatSerivceReceivedMessage:model];
+            }
+            break;
+            
+        case MethodTypeConformation:
+            if([_delegate respondsToSelector:@selector(chatSerivceReceivedMessage:)]){
+                [_delegate chatServiceMessageConfirmed:model];
+            }
+
+            break;
+    }
     
 }
 -(void)chatServiceInComingError:(NSError*)error{
-    
+    if([_delegate respondsToSelector:@selector(chatServiceChangeStatus:)]){
+        [_delegate chatServiceChangeStatus:ChatServiceStatusNotConnected];
+    }
+}
+
+-(void)isSuccessSubscribed{
+    if([_delegate respondsToSelector:@selector(chatServiceChangeStatus::)]){
+        [_delegate chatServiceChangeStatus:ChatServiceStatusConnected];
+    }
 }
 
 @end

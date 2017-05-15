@@ -24,7 +24,7 @@ typedef NS_ENUM(NSUInteger, ChatServiceStatus){
 
 -(void)chatServiceChangeStatus:(ChatServiceStatus)status;
 -(void)chatSerivceReceivedMessage:(ChatMessageModel*)message;
--(void)chatServiceSendSuccessMessage:(ChatMessageModel*)message;
+-(void)chatServiceMessageConfirmed:(ChatMessageModel*)message;
 
 @end
 
@@ -41,5 +41,8 @@ typedef NS_ENUM(NSUInteger, ChatServiceStatus){
                    complete:(void(^)(TransportResponseStatus status, NSArray<ChatMessageModel*>* arrHistory))complete;
 
 -(void)startConfigChat;
+-(void)closeChat;
+-(void)sendMessage:(ChatMessageModel*)message;
+-(void)setDelegate:(id<ChatServiceDelegate>)delegate;
 
 @end

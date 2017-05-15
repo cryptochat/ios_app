@@ -17,4 +17,5 @@
 - (NSArray<InterlocutorModel *> *) createInterlocutorModelsArrayFromDictionary:(NSDictionary *)dictionary;
 - (NSArray<ChatListModel *> *) createChatListModelsArrayFromDictionary:(NSDictionary *)dictionary;
 -(NSArray<ChatMessageModel*>*)createChatHistoryFromDict:(NSDictionary*)dicResponse;
+-(ChatMessageModel*)createChatMessageFromDict:(NSDictionary*)dicResponse;
 @end
