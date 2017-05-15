@@ -7,6 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import "ChatListDelegateInterface.h"
+
 @class UIView;
 @class UIViewController;
 @class UIWindow;
@@ -19,5 +20,6 @@
 - (void)presentChatListInterfaceFromWindow:(UIWindow*)window
                                   delegate:(id<ChatListDelegateInterface>)delegate;
 -(void)presentSearching;
+-(void)pushToChatWithUser:(NSNumber *)userID;
 
 @end

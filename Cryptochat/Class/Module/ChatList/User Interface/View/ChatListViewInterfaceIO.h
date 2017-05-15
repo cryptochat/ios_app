@@ -18,5 +18,5 @@
 @protocol ChatListViewInterfaceInputPresenter <NSObject>
 -(void)viewInit;
 -(void)presentSearching;
-
+-(void)viewClickChat:(NSNumber*)userID;
 @end
