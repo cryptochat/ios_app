@@ -10,10 +10,11 @@
 
 @class ChatListModel;
 @class InterlocutorModel;
+@class ChatMessageModel;
 
 @interface ChatParser : NSObject
 
 - (NSArray<InterlocutorModel *> *) createInterlocutorModelsArrayFromDictionary:(NSDictionary *)dictionary;
 - (NSArray<ChatListModel *> *) createChatListModelsArrayFromDictionary:(NSDictionary *)dictionary;
-
+-(NSArray<ChatMessageModel*>*)createChatHistoryFromDict:(NSDictionary*)dicResponse;
 @end

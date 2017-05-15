@@ -8,6 +8,7 @@ pod '25519'
 pod 'Realm'
 pod 'SDWebImage'
 pod 'MBProgressHUD', '~> 1.0.0'
+pod 'SocketRocket'
 
 
   target 'CryptochatTests' do

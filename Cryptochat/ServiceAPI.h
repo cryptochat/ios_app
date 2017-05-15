@@ -23,4 +23,8 @@ typedef void(^APIServiceResponse)(NSDictionary*dicReponse, TransportResponseStat
 //Chat
 - (void)getChatListWithIdentifier:(NSString *)idetnitfier data:(NSString *)data complete:(APIServiceResponse)completeResponse;
 
+-(void)getChatHistoryWithIdentifier:(NSString*)identifier
+                 data:(NSString*)data
+             complete:(APIServiceResponse)completeResponse;
+
 @end

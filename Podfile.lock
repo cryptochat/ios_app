@@ -7,19 +7,22 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SocketRocket (0.5.1)
 
 DEPENDENCIES:
   - '25519'
   - MBProgressHUD (~> 1.0.0)
   - Realm
   - SDWebImage
+  - SocketRocket
 
 SPEC CHECKSUMS:
   '25519': dc4bad7e2dbcbf1efa121068a705a44cd98c80fc
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Realm: 9abfd4f87519376daa5ae3a4603155de408bf8b3
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 
-PODFILE CHECKSUM: cd154a490ca3e4fda043b04f8e7a00d791354493
+PODFILE CHECKSUM: 2d381eeea76131188d24703f43d6a8116ef660f6
 
 COCOAPODS: 1.1.1

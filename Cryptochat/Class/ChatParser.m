@@ -9,6 +9,7 @@
 #import "ChatParser.h"
 #import "InterlocutorModel.h"
 #import "ChatListModel.h"
+#import "ChatMessageModel.h"
 
 static NSString *NullString = @"null";
 
@@ -69,6 +70,22 @@ static NSString *NullString = @"null";
     }
     
     return [NSArray arrayWithArray:bufArray];
+}
+
+-(NSArray<ChatMessageModel*>*)createChatHistoryFromDict:(NSDictionary*)dicResponse{
+    if(dicResponse == nil){
+        return nil;
+    }
+    NSMutableArray *bufArray = [NSMutableArray new];
+    for(NSDictionary* dict in dicResponse[@"cipher_message"][@"messages"]){
+        ChatMessageModel* model = [ChatMessageModel new];
+        model.message = dict[@"message"][@"text"];
+        NSString* takeOffTime = dict[@"message"][@"created_at"];
+        double miliSec = takeOffTime.doubleValue;
+        model.createdDate = [NSDate dateWithTimeIntervalSince1970:miliSec];
+        [bufArray addObject:model];
+    }
+    return bufArray;
 }
 
 @end

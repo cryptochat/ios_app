@@ -9,12 +9,15 @@
 #import "AppDelegate.h"
 #import "CRMediator.h"
 #import "AuthService.h"
+#import "ChatService.h"
 
 #import "ExchangeService.h"
 
 
 @interface AppDelegate ()
 @property(strong, nonatomic)AuthService* authService;
+@property(strong, nonatomic)ChatService* chatService;
+
 @end
 
 @implementation AppDelegate
@@ -23,6 +26,7 @@
     self = [super init];
     if(self){
         _authService = [AuthService new];
+        _chatService = [ChatService new];
     }
     return self;
 }
@@ -42,8 +46,14 @@
     ExchangeService *service = [ExchangeService new];
     [service keyExchangeWithCompleteStatus:^(TransportResponseStatus status) {
         NSLog(@"Status: %ld", (long)status);
-    
     }];
+    
+//    [_chatService getChatHistoryWithID:@"32" limit:20 offset:0 complete:^(TransportResponseStatus status, NSArray<ChatMessageModel *> *arrHistory) {
+//    
+//    }];
+    [_chatService startConfigChat];
+
+    
 
     return YES;
 }
