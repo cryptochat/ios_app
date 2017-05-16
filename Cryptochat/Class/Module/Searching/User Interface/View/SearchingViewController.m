@@ -86,7 +86,7 @@ static CGFloat cell_height = 63;
     NSMutableArray<SearchingModel*>* buffArray = [NSMutableArray new];
     for(SearchingModel* model in _arrModels){
         
-        if([model.name hasPrefix:searchText] || [model.name hasPrefix:lowerSearchString] || [model.name hasPrefix:uperSearchString] ){
+        if([model.name hasPrefix:searchText] || [model.name hasPrefix:lowerSearchString] || [model.name hasPrefix:uperSearchString] || [[model.name lowercaseString] hasPrefix:lowerSearchString] ){
             [buffArray addObject:model];
         }
     }
