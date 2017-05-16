@@ -21,4 +21,5 @@
 
 -(void)foundChat:(NSArray<ChatMessageModel*>*)message;
 -(void)successSendMessage:(ChatMessageModel*)message;
+-(void)newSendOrIncomingMessage:(ChatMessageModel *)message;
 @end

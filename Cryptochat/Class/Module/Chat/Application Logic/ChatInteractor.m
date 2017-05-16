@@ -49,7 +49,9 @@
 }
 
 -(void)chatSerivceReceivedMessage:(ChatMessageModel*)message {
-    
+    if (message.methodType == MethodTypeIncoming) {
+        [self.presenter newSendOrIncomingMessage:message];
+    }
 }
 
 -(void)chatServiceMessageConfirmed:(ChatMessageModel*)message {

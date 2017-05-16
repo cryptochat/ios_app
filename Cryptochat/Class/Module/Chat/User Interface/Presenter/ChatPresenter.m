@@ -81,6 +81,28 @@ static NSInteger defaultOffset = 0;
     });
 }
 
+-(void)newSendOrIncomingMessage:(ChatMessageModel *)message{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MessageViewModel *viewModel = [MessageViewModel new];
+        
+        viewModel.userID = message.valueID;
+        viewModel.messageText = message.message;
+        viewModel.messageType = MessageTypeText;
+        viewModel.authorType = AuthorTypeNotMy;
+        viewModel.userName = message.userName;
+        viewModel.userFirstName = message.firstName;
+        viewModel.userLastName = message.lastName;
+        viewModel.userURLAvatar = message.avatarURL;
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"hh:mm dd.MM.yy"];
+        
+        viewModel.date = [formatter stringFromDate:message.createdDate];
+
+        [self.userInterface showDisplayNewMessages:@[viewModel]];
+    });
+}
+
 #pragma mark - Private
 -(void)createMyNewMessageWithText:(NSString*)text{
     MessageViewModel *myMessage = [MessageViewModel new];
