@@ -31,12 +31,13 @@ static float CELL_HEIGHT = 80;
 - (void)viewDidLoad {
 	[super viewDidLoad];
        
-    [self.presenter viewInit];
     [self configTable];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [self configNavigationBar];
+    
+    [self.presenter viewInit];
 }
 
 -(void)configNavigationBar{
