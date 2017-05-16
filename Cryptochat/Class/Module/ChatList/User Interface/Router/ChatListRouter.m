@@ -42,14 +42,24 @@ static NSString* identifierViewController = @"ChatListViewController";
     
     self.userInterface = userInterface;
     [self configureDependencies];
-    [userInterface.view setFrame:viewController.view.frame];
     self.presenter.delegate = delegate;
     
-    [viewController.view addSubview:navController.view];
-    [viewController addChildViewController:navController];
-    [navController didMoveToParentViewController:viewController];
+    [container addSubview:userInterface.view];
+    [viewController addChildViewController:userInterface];
+    [userInterface didMoveToParentViewController:viewController];
+}
+
+- (void)pushChatListFromNavigationwController:(UINavigationController*)navigationController
+                                          delegate:(id<ChatListDelegateInterface>)delegate{
     
-    [navController.view setFrame:container.bounds];
+    ChatListViewController* userInterface = [self ChatListViewControllerFromStoryboard];
+    
+    self.userInterface = userInterface;
+    self.navController = navigationController;
+    
+    [self configureDependencies];
+    //[userInterface setBackType:ChatViewControllerNavigationController];
+    [navigationController pushViewController:userInterface animated:YES];
 }
 
 - (void)presentChatListInterfaceFromWindow:(UIWindow*)window

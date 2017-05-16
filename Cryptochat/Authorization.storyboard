@@ -27,7 +27,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTI-Oy-RnS">
                                         <rect key="frame" x="0.0" y="66" width="414" height="670"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwQ-DL-FtP">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwQ-DL-FtP">
                                                 <rect key="frame" x="37" y="96" width="340" height="47"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -37,7 +37,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOp-Lb-c80">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOp-Lb-c80">
                                                 <rect key="frame" x="37" y="165" width="340" height="47"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -48,8 +48,8 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-Mh-1sn">
-                                                <rect key="frame" x="28" y="391" width="362" height="39"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="frame" x="28" y="406" width="362" height="39"/>
+                                                <color key="backgroundColor" red="0.10729115456342697" green="0.2834295928478241" blue="0.96687060594558716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="19e-ix-3lT"/>
                                                 </constraints>
@@ -87,7 +87,7 @@
                                             <constraint firstItem="SgZ-oL-0KN" firstAttribute="centerY" secondItem="KwQ-DL-FtP" secondAttribute="centerY" id="7mm-yD-qCB"/>
                                             <constraint firstItem="KwQ-DL-FtP" firstAttribute="top" secondItem="kTI-Oy-RnS" secondAttribute="top" constant="96" id="BDG-dF-7O4"/>
                                             <constraint firstItem="mS7-Mh-1sn" firstAttribute="leading" secondItem="TOp-Lb-c80" secondAttribute="leading" constant="-9" id="BfD-Hj-nWM"/>
-                                            <constraint firstItem="mS7-Mh-1sn" firstAttribute="top" secondItem="TOp-Lb-c80" secondAttribute="bottom" constant="179" id="QjK-8r-4af"/>
+                                            <constraint firstItem="mS7-Mh-1sn" firstAttribute="top" secondItem="TOp-Lb-c80" secondAttribute="bottom" constant="194" id="QjK-8r-4af"/>
                                             <constraint firstItem="KwQ-DL-FtP" firstAttribute="leading" secondItem="kTI-Oy-RnS" secondAttribute="leading" constant="37" id="Qjj-cG-4wT"/>
                                             <constraint firstItem="TOp-Lb-c80" firstAttribute="width" secondItem="KwQ-DL-FtP" secondAttribute="width" id="R4D-v1-XJG"/>
                                             <constraint firstItem="wbZ-BB-agJ" firstAttribute="centerY" secondItem="TOp-Lb-c80" secondAttribute="centerY" id="hZf-Nh-zV7"/>

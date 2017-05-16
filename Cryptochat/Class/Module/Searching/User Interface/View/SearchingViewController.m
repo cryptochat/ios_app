@@ -61,7 +61,7 @@ static CGFloat cell_height = 63;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     itemIndexInArray = [NSNumber numberWithInteger:indexPath.row];
     SearchingModel *model = [self searchItemModelFromArray];
-    //[self.presenter viewClickChat:@(model.index)];
+    [self.presenter viewClickChat:@(model.index)];
 }
 
 -(SearchingModel*)searchItemModelFromArray{
@@ -86,7 +86,7 @@ static CGFloat cell_height = 63;
     NSMutableArray<SearchingModel*>* buffArray = [NSMutableArray new];
     for(SearchingModel* model in _arrModels){
         
-        if([model.name hasPrefix:searchText] || [model.name hasPrefix:lowerSearchString] || [model.name hasPrefix:uperSearchString]){
+        if([model.name hasPrefix:searchText] || [model.name hasPrefix:lowerSearchString] || [model.name hasPrefix:uperSearchString] ){
             [buffArray addObject:model];
         }
     }

@@ -11,7 +11,7 @@
 @class UIView;
 @class UIViewController;
 @class UIWindow;
-
+@class UINavigationController;
 
 @interface ChatListRouter : NSObject
 -(void)presentChatListInterfaceFromViewController:(UIViewController*)viewController
@@ -19,6 +19,8 @@
                                          delegate:(id<ChatListDelegateInterface>)delegate;
 - (void)presentChatListInterfaceFromWindow:(UIWindow*)window
                                   delegate:(id<ChatListDelegateInterface>)delegate;
+- (void)pushChatListFromNavigationwController:(UINavigationController*)navigationController
+                                     delegate:(id<ChatListDelegateInterface>)delegate;
 -(void)presentSearching;
 -(void)pushToChatWithUser:(NSNumber *)userID;
 

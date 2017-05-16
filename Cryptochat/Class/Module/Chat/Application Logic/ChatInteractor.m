@@ -30,7 +30,9 @@
 
 -(void)findChatWithID:(NSNumber*)chatID offset:(NSNumber*)offset limit:(NSNumber*)limit {
     
-    [self.chatService getChatHistoryWithID:[NSString stringWithFormat:@"%@",chatID] limit:limit.intValue offset:offset.intValue complete:^(TransportResponseStatus status, NSArray<ChatMessageModel *> *arrHistory) {
+#warning MOCK OFFEST 
+    //ставлю нулевой оффсет, чтобы не съезжал чат, когда тянем вниз таблицу
+    [self.chatService getChatHistoryWithID:[NSString stringWithFormat:@"%@",chatID] limit:limit.intValue offset:0 complete:^(TransportResponseStatus status, NSArray<ChatMessageModel *> *arrHistory) {
         [self.presenter foundChat:arrHistory];
     }];
     

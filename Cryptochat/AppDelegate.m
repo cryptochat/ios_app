@@ -37,7 +37,6 @@
    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [CRMediator instance].window = self.window;
-    
 
     if([_authService isAuthorized]){
         [[CRMediator instance]showChatList];

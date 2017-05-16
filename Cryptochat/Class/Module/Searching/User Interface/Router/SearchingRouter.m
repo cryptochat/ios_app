@@ -109,8 +109,10 @@ static NSString* identifierViewController = @"SearchingViewController";
 }
 
 -(void)pushToChatWithUser:(NSNumber *)userID{
-    [self willDismissSearchController:_searchController];
+    [self.userInterface dismissViewControllerAnimated:YES completion:nil];
+    [self.navController setNavigationBarHidden: NO animated:YES];
     ChatRouter *router = [ChatRouter new];
+    
     [router pushChatInterfaceFromNavigationwController:self.navController userID:userID delegate:self.presenter];
 }
 

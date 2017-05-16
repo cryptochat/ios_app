@@ -24,7 +24,7 @@ static NSString* identifierViewController = @"AuthorizationViewController";
 
 @property(weak, nonatomic)AuthorizationViewController *userInterface;
 @property(weak, nonatomic)AuthorizationPresenter *presenter;
-
+@property(strong, nonatomic)UINavigationController* navController;
 @end
 
 
@@ -35,10 +35,13 @@ static NSString* identifierViewController = @"AuthorizationViewController";
     
     AuthorizationViewController *regViewController = [self AuthorizationViewControllerFromStoryboard];
     self.userInterface = regViewController;
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:regViewController];
+    self.navController = navController;
     [self configureDependencies];
     self.presenter.delegate = delegate;
   
-    window.rootViewController = regViewController;
+    window.rootViewController = self.navController;
     [window makeKeyAndVisible];
 }
 
@@ -58,7 +61,7 @@ static NSString* identifierViewController = @"AuthorizationViewController";
 
 -(void)presentChatList{
     ChatListRouter* router = [ChatListRouter new];
-    [router presentChatListInterfaceFromViewController:self.userInterface container:self.userInterface.view delegate:self.presenter];
+    [router pushChatListFromNavigationwController:self.navController delegate:self.presenter];
     
 }
 

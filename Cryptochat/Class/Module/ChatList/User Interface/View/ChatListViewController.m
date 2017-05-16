@@ -30,7 +30,7 @@ static float CELL_HEIGHT = 80;
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-       
+    [self.navigationController setNavigationBarHidden: NO animated:YES];
     [self configTable];
 }
 
@@ -39,6 +39,7 @@ static float CELL_HEIGHT = 80;
     
     [self.presenter viewInit];
 }
+
 
 -(void)configNavigationBar{
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]

@@ -47,6 +47,9 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 
     [self configTextField:_emailTextField];
     [self configTextField:_passTextField];
+    
+    _loginButton.clipsToBounds = YES;
+    _loginButton.layer.cornerRadius = 20;
    
 }
 
@@ -68,6 +71,7 @@ static NSString* PLACEHOLDER_EMAIL = @"ВВЕДИТЕ EMAIL";
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden: YES animated:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardDidHideNotification object:nil];
 }
