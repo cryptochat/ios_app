@@ -14,11 +14,15 @@
 #pragma mark - SearchingViewInterfaceInputPresenter
 
 -(void)viewInit{
-    [self.interactor getModels];
+    [self.interactor getModelsWithQuery:nil];
 }
 
 -(void)viewClickChat:(NSNumber*)userID {
     [self.router pushToChatWithUser:userID];
+}
+
+- (void)viewSearchUsersWithQuery:(NSString *)query {
+    [self.interactor getModelsWithQuery:query];
 }
 
 #pragma mark -  <SearchingInteractorInterfaceOutput

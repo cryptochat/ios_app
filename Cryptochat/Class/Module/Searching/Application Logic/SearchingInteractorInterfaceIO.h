@@ -10,7 +10,7 @@
 @class SearchingModel;
 
 @protocol SearchingInteractorInterfaceInput <NSObject>
--(void)getModels;
+-(void)getModelsWithQuery:(NSString *)query;
 @end
 
 @protocol SearchingInteractorInterfaceOutput <NSObject>

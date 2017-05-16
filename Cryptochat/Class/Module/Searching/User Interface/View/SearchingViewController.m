@@ -37,7 +37,7 @@ static CGFloat cell_height = 63;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    [_tableView setBackgroundColor:[UIColor clearColor]];
+    [_tableView setBackgroundColor:[UIColor whiteColor]];
 }
 
 
@@ -75,38 +75,15 @@ static CGFloat cell_height = 63;
 #pragma mark - SearchingViewInterfaceOutputView <NSObject>
 
 -(void)updateView:(NSArray<SearchingModel*>*)arrModels{
+    if (_arrModels) {
+        [_arrModels removeAllObjects];
+    }
     _arrModels = (NSMutableArray*)arrModels;
     [_tableView reloadData];
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    NSString* uperSearchString = [searchText uppercaseString];
-    NSString* lowerSearchString = [searchText lowercaseString];
-    
-    NSMutableArray<SearchingModel*>* buffArray = [NSMutableArray new];
-    for(SearchingModel* model in _arrModels){
-        
-        if([model.name hasPrefix:searchText] || [model.name hasPrefix:lowerSearchString] || [model.name hasPrefix:uperSearchString] || [[model.name lowercaseString] hasPrefix:lowerSearchString] ){
-            [buffArray addObject:model];
-        }
-    }
-    
-    NSMutableArray<SearchingModel*>* newBuff = [NSMutableArray new];
-    [newBuff addObjectsFromArray:buffArray];
-    
-    for(SearchingModel* model in _arrModels){
-        BOOL isExist = NO;
-        for(SearchingModel* existModel in buffArray){
-            if(existModel.index == model.index){
-                isExist = YES;
-            }
-        }
-        if(!isExist){
-            [newBuff addObject:model];
-        }
-    }
-    _arrModels = newBuff;
-    
-    [_tableView reloadData];
+    [self.presenter viewSearchUsersWithQuery:searchText];
 }
+
 @end

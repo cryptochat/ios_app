@@ -17,4 +17,5 @@
 
 -(void)viewInit;
 -(void)viewClickChat:(NSNumber*)userID;
+- (void)viewSearchUsersWithQuery:(NSString *)query;
 @end

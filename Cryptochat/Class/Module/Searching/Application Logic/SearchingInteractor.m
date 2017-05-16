@@ -28,9 +28,9 @@
     return self;
 }
 
--(void)getModels{
+-(void)getModelsWithQuery:(NSString *)query{
     
-    [_userService getUsersWithToken:[_authService getAuthToken] query:nil complete:^(TransportResponseStatus status, NSArray<InterlocutorModel *> *userArray) {
+    [_userService getUsersWithToken:[_authService getAuthToken] query:query complete:^(TransportResponseStatus status, NSArray<InterlocutorModel *> *userArray) {
         
         NSMutableArray* buffArray = [NSMutableArray new];
         
