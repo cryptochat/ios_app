@@ -14,6 +14,7 @@
 #import "UiKit/UINavigationController.h"
 #import "UiKit/UIView.h"
 #import "SearchingDelegateInterface.h"
+#import "ChatRouter.h"
 
 static NSString* nameStoryboard = @"ChatList";
 static NSString* identifierViewController = @"SearchingViewController";
@@ -107,5 +108,10 @@ static NSString* identifierViewController = @"SearchingViewController";
     _searchController.searchResultsController.view.hidden = NO;
 }
 
+-(void)pushToChatWithUser:(NSNumber *)userID{
+    [self willDismissSearchController:_searchController];
+    ChatRouter *router = [ChatRouter new];
+    [router pushChatInterfaceFromNavigationwController:self.navController userID:userID delegate:self.presenter];
+}
 
 @end

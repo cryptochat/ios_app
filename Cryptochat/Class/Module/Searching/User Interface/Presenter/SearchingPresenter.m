@@ -17,6 +17,10 @@
     [self.interactor getModels];
 }
 
+-(void)viewClickChat:(NSNumber*)userID {
+    [self.router pushToChatWithUser:userID];
+}
+
 #pragma mark -  <SearchingInteractorInterfaceOutput
 
 

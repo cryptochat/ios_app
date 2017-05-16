@@ -16,5 +16,5 @@
 @protocol SearchingViewInterfaceInputPresenter <NSObject>
 
 -(void)viewInit;
-
+-(void)viewClickChat:(NSNumber*)userID;
 @end

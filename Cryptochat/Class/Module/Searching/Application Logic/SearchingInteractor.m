@@ -39,7 +39,7 @@
             model.name = [NSString stringWithFormat:@"%@ %@", intModel.interlocutorFirstName, intModel.interlocutorLastName];
             model.photoURL = intModel.interlocutorURLAvatar;
             [buffArray addObject:model];
-            model.index = intModel.valueID;
+            model.index = intModel.valueID.intValue;
         }
         [self.presenter updateView:buffArray];
     }];

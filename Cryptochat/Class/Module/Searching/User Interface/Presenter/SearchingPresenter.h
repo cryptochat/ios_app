@@ -11,9 +11,9 @@
 #import "SearchingInteractorInterfaceIO.h"
 #import "SearchingRouter.h"
 #import "SearchingDelegateInterface.h"
+#import "ChatDelegateInterface.h"
 
-
-@interface SearchingPresenter : NSObject <SearchingInteractorInterfaceOutput, SearchingViewInterfaceInputPresenter>
+@interface SearchingPresenter : NSObject <SearchingInteractorInterfaceOutput, SearchingViewInterfaceInputPresenter, ChatDelegateInterface>
 
 @property (nonatomic, weak) id<SearchingViewInterfaceOutputView> userInterface;
 @property (nonatomic, strong) id<SearchingInteractorInterfaceInput> interactor;

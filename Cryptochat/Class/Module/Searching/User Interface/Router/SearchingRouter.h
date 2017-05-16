@@ -19,4 +19,6 @@
 
 -(void)presentSearchingInterfaceFromNavController:(UINavigationController*)navController
                                          delegate:(id<SearchingDelegateInterface>)delegate;
+
+-(void)pushToChatWithUser:(NSNumber *)userID;
 @end

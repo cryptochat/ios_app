@@ -20,6 +20,7 @@ static CGFloat cell_height = 63;
 @implementation SearchingViewController{
     NSMutableArray<SearchingModel*>* _arrModels;
     NSMutableArray<SearchingModel*>* _searchModels;
+    NSNumber *itemIndexInArray;
     BOOL shouldSearch;
 }
 
@@ -54,6 +55,20 @@ static CGFloat cell_height = 63;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return cell_height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    itemIndexInArray = [NSNumber numberWithInteger:indexPath.row];
+    SearchingModel *model = [self searchItemModelFromArray];
+    //[self.presenter viewClickChat:@(model.index)];
+}
+
+-(SearchingModel*)searchItemModelFromArray{
+    if (_arrModels.count >= [itemIndexInArray integerValue] && _arrModels.count > 0){
+        return [_arrModels objectAtIndex:[itemIndexInArray integerValue]];
+    }
+    return nil;
 }
 
 
