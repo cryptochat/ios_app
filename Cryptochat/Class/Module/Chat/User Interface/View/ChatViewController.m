@@ -29,7 +29,6 @@ static NSString* identifierCell = @"BubbleCell";
 @implementation ChatViewController {
     UIRefreshControl *_refreshControl;
     CGFloat cellSizeHeight;
-    NSInteger oldArrayCount;
     BOOL isRefresh;
 }
 
@@ -82,7 +81,6 @@ static NSString* identifierCell = @"BubbleCell";
     self.chatTableView.transform = CGAffineTransformMakeRotation(-M_PI);
     __weak ChatViewController *weakself = self;
     [weakself.chatTableView addInfiniteScrollWithHandler:^( UITableView* tableView) {
-        oldArrayCount = weakself.messagesArray.count;
         [weakself.presenter viewDownloadNewMessagesWithOffset:@(weakself.messagesArray.count)];
     }];
     [self addRefreshControl];
@@ -213,8 +211,8 @@ static NSString* identifierCell = @"BubbleCell";
 
 #pragma mark - refresh
 - (void)handlerRefresh {
-    oldArrayCount = self.messagesArray.count;
-    [self.presenter viewDownloadNewMessagesWithOffset:@(self.messagesArray.count)];
+    //[self.messagesArray removeAllObjects];
+    [self.presenter viewInit];
 }
 
 - (void)instertItemArray:(NSArray*)arrayNewIntem {
@@ -226,7 +224,7 @@ static NSString* identifierCell = @"BubbleCell";
     
     [self.messagesArray addObjectsFromArray:arrayNewIntem];
     [self.chatTableView insertRowsAtIndexPaths:arrayNewIndex withRowAnimation:UITableViewRowAnimationNone];
-    [self performSelector:@selector(scrollToLastMessage) withObject:nil afterDelay:0.1];
+    //[self performSelector:@selector(scrollToLastMessage) withObject:nil afterDelay:0.1];
 
 }
 
