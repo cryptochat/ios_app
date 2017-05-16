@@ -8,6 +8,7 @@
 
 #import "ChatInteractor.h"
 #import "ChatService.h"
+#import "ChatMessageModel.h"
 
 @interface ChatInteractor()<ChatServiceDelegate>
 @property (strong, nonatomic)ChatService *chatService;
@@ -20,6 +21,8 @@
     self = [super init];
     if (self) {
         self.chatService = [ChatService new];
+        [self.chatService setDelegate:self];
+        [self.chatService startConfigChat];
     }
     
     return self;
@@ -32,4 +35,26 @@
     }];
     
 }
+
+-(void)sendMessageToUser:(NSNumber *)userID message:(NSString *)message {
+    ChatMessageModel *model = [ChatMessageModel new];
+    model.message = message;
+    model.valueID = userID;
+    model.fromMe = YES;
+    [self.chatService sendMessage:model];
+}
+
+-(void)chatServiceChangeStatus:(ChatServiceStatus)status {
+    
+}
+
+-(void)chatSerivceReceivedMessage:(ChatMessageModel*)message {
+    
+}
+
+-(void)chatServiceMessageConfirmed:(ChatMessageModel*)message {
+    [self.presenter successSendMessage:message];
+}
+
+
 @end

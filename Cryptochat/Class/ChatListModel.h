@@ -12,7 +12,11 @@
 
 @property (strong, nonatomic) NSDate* createdDate;
 @property (strong, nonatomic) NSString* lastMessage;
+@property (strong, nonatomic) NSNumber* valueID;
+@property (strong, nonatomic) NSURL* URLAvatar;
+@property (strong, nonatomic) NSURL* URLAvatarBig;
+@property (strong, nonatomic) NSURL* URLAvatarMedium;
+@property (strong, nonatomic) NSURL* URLAvatarSmall;
 @property (assign, nonatomic) BOOL isRead;
 @property (assign, nonatomic) BOOL isMy;
-@property(strong, nonatomic)NSNumber* valueID;
 @end

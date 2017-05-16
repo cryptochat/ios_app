@@ -66,6 +66,12 @@ static NSString *NullString = @"null";
         double miliSec = takeOffTime.doubleValue;
         model.createdDate = [NSDate dateWithTimeIntervalSince1970:miliSec];
         
+        NSDictionary *dicAvatar = bufDic[@"interlocutor"][@"avatar"];
+        model.URLAvatar = [dicAvatar[@"url"] isEqual:[NSNull null]] ? (nil) : ([NSURL URLWithString:dicAvatar[@"url"]]);
+        model.URLAvatarBig = [dicAvatar[@"big"][@"url"] isEqual:[NSNull null]] ? (nil) : ([NSURL URLWithString:dicAvatar[@"big"][@"url"]]);
+        model.URLAvatarMedium = [dicAvatar[@"medium"][@"url"] isEqual:[NSNull null]] ? (nil) : ([NSURL URLWithString:dicAvatar[@"medium"][@"url"]]);
+        model.URLAvatarSmall = [dicAvatar[@"small"][@"url"] isEqual:[NSNull null]] ? (nil) : ([NSURL URLWithString:dicAvatar[@"small"][@"url"]]);
+        
         [bufArray addObject:model];
     }
     
@@ -95,6 +101,7 @@ static NSString *NullString = @"null";
         model.lastName = user[@"last_name"];
         model.userName = user[@"username"];
         model.valueID = [user[@"id"] isEqual:[NSNull null]] ? @(0) : user[@"id"];
+        
         
         [bufArray addObject:model];
     }

@@ -28,7 +28,6 @@ static NSString* identifierCell = @"BubbleCell";
 
 @implementation ChatViewController {
     UIRefreshControl *_refreshControl;
-    NSString *messageStr;
     CGFloat cellSizeHeight;
     NSInteger oldArrayCount;
     BOOL isRefresh;
@@ -110,7 +109,6 @@ static NSString* identifierCell = @"BubbleCell";
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     [self.chatTableView setContentOffset:CGPointZero animated:NO];
-    messageStr = textField.text;
 }
 
 #pragma mark - BubbleViewCellDataSource
@@ -206,6 +204,7 @@ static NSString* identifierCell = @"BubbleCell";
     for (MessageViewModel *messModel in self.messagesArray) {
         if ([message isEqualToMessage:messModel]) {
             messModel.isSeccussSent = message.isSeccussSent;
+            messModel.userURLAvatar = message.userURLAvatar;
             [_chatTableView reloadData];
         }
     }
@@ -250,7 +249,7 @@ static NSString* identifierCell = @"BubbleCell";
 }
 
 
-#pragma mark - keyboardWasShown
+#pragma mark - Keyboard
 - (void)keyboardWasShown:(NSNotification *)aNotification {
     NSDictionary *userInfo = [aNotification userInfo];
     CGRect keyboardInfoFrame = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -258,7 +257,6 @@ static NSString* identifierCell = @"BubbleCell";
     [self performSelector:@selector(scrollToLastMessage) withObject:nil afterDelay:0.1];
 }
 
-#pragma mark - keyboardWillBeHidden
 - (void)keyboardWillBeHidden:(NSNotification *)aNotification {
     NSDictionary *userInfo = [aNotification userInfo];
     CGRect keyboardInfoFrame = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -266,12 +264,11 @@ static NSString* identifierCell = @"BubbleCell";
     
 }
 
-#pragma mark - dismissKeyboard
 - (void)dismissKeyboard {
     [self.messageTextField resignFirstResponder];
 }
 
-#pragma mark - touchesBegan
+#pragma mark - TouchesBegan
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     if(![touch.view isMemberOfClass:[UITextField class]]) {
@@ -279,7 +276,7 @@ static NSString* identifierCell = @"BubbleCell";
     }
 }
 
-#pragma mark - scroll
+#pragma mark - Actions
 - (void)scrollToLastMessage {
     if(self.messagesArray.count > 0){
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -289,5 +286,11 @@ static NSString* identifierCell = @"BubbleCell";
     }
 }
 
+- (IBAction)onSend:(UIButton *)sender {
+    if (self.messageTextField.text.length != 0) {
+        [self.presenter viewSendMessage:self.messageTextField.text];
+        self.messageTextField.text = nil;
+    }
+}
 
 @end
