@@ -121,9 +121,10 @@ const CGFloat AvatarImageOffsetY = 10.0f;
         
         self.bubbleView.transform = CGAffineTransformIdentity;
         
-        [self.dateLabel setFrame:CGRectMake(self.frame.size.width - (size.width + BubbleWidthOffset + AvatarImageOffsetX) - BubbleImageSize - 8.0f,
+        CGFloat dateX = self.frame.size.width - AvatarImageOffsetX - BubbleImageSize - 8.0f;
+        [self.dateLabel setFrame:CGRectMake(0,
                                             2*AvatarImageOffsetY + self.bubbleView.frame.size.height,
-                                            self.bubbleView.frame.size.width, 20)];
+                                            dateX, 20)];
         self.dateLabel.textAlignment = NSTextAlignmentRight;
         
         return;
@@ -145,7 +146,7 @@ const CGFloat AvatarImageOffsetY = 10.0f;
         
         [self.dateLabel setFrame:CGRectMake(BubbleWidthOffset + 3*AvatarImageOffsetX,
                                             2*AvatarImageOffsetY + self.bubbleView.frame.size.height,
-                                            self.bubbleView.frame.size.width, 20)];
+                                            self.frame.size.width - (BubbleWidthOffset + 3*AvatarImageOffsetX), 20)];
         self.dateLabel.textAlignment = NSTextAlignmentLeft;
         
         [self.nameLabel setFrame:CGRectMake(AvatarImageOffsetX, self.bubbleView.frame.size.height + 20.0f, self.bubbleView.frame.size.width, 20)];
